@@ -1,0 +1,1 @@
+/opt/cbi/make/004/private/script/workspace_auto/workspace_symlink_locale_delete.sh

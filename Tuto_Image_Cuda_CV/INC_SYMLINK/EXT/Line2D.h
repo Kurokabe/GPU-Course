@@ -1,0 +1,1 @@
+/opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable/INC/primitives/Line2D.h

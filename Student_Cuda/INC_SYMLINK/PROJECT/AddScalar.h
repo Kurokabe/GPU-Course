@@ -1,0 +1,1 @@
+/home/bilat/CBI/CoursCuda/toStudent/code/WCuda/Student_Cuda/src/cpp/core/01_addScalar/b_objet/host/AddScalar.h

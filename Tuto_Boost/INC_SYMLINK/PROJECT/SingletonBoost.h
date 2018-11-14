@@ -1,0 +1,1 @@
+/home/bilat/CBI/CoursCuda/toStudent/code/WCuda/Tuto_Boost/src/cpp/core/boost/synchronization/SingletonBoost.h

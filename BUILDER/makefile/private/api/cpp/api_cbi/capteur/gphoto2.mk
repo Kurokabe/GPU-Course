@@ -1,0 +1,1 @@
+/opt/cbi/make/004/private/api/cpp/api_cbi/capteur/gphoto2.mk

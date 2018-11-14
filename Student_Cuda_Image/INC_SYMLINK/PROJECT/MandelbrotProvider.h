@@ -1,0 +1,1 @@
+/home/bilat/CBI/CoursCuda/toStudent/code/WCuda/Student_Cuda_Image/src/cpp/core/02_Mandelbrot/b_provider/MandelbrotProvider.h

@@ -1,0 +1,1 @@
+/home/bilat/CBI/CoursCuda/toStudent/code/WCuda/Tuto_Image_CV/src/core/imageVideo/01_animable/ImageVideo.h
