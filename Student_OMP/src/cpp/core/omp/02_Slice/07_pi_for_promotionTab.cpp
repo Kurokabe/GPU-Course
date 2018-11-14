@@ -50,8 +50,32 @@ bool isPiOMPforPromotionTab_Ok(int n)
  */
 double piOMPforPromotionTab(int n)
     {
-   //TODO
-    return -1;
+    const int NB_THREAD = OmpTools::setAndGetNaturalGranularity(); //Ligne de configuration pour utiliser autant de threads disponibles que possible
+
+        double tabSumThread [NB_THREAD];
+        const double DX = 1 / (double) n;
+
+        //Réduction intra-thread parallèle
+    #pragma omp parallel
+    	{
+    	const int TID = OmpTools::getTid();
+
+    	double sumThread = 0;
+#pragma omp parallel for
+	for (int s = TID; s < n; s += NB_THREAD)
+    	    {
+    	    double xs = s * DX;
+    	    sumThread += fpi(xs);
+    	    }
+    	tabSumThread[TID] = sumThread;
+    	}
+    	//Reduction inter-thread séquentiel
+    	double sum = 0;
+    	for(int i=0;i<=NB_THREAD;i++)
+    	    {
+    	    sum+=tabSumThread[i];
+    	    }
+        return sum/n;
     }
 
 

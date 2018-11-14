@@ -10,8 +10,6 @@
  |*		Imported	 	*|
  \*-------------------------------------*/
 
-
-
 /*--------------------------------------*\
  |*		Public			*|
  \*-------------------------------------*/
@@ -47,12 +45,16 @@ bool isPiOMPforReduction_Ok(int n)
  */
 double piOMPforReduction(int n)
     {
-  //TODO
-    return -1;
+    const double dx = 1 / (double)n;
+        double sum = 0;
+#pragma omp parallel for reduction(+:sum)
+        for (int i = 0; i <= n; ++i)
+    	{
+    	double xi = i * dx;
+    	sum += fpi(xi);
+    	}
+        return sum / n;
     }
-
-
-
 
 /*----------------------------------------------------------------------*\
  |*			End	 					*|
