@@ -44,30 +44,16 @@ bool isPiOMPforAtomic_Ok(int n)
  */
 double piOMPforAtomic(int n)
     {
-    const int NB_THREAD = OmpTools::setAndGetNaturalGranularity(); //Ligne de configuration pour utiliser autant de threads disponibles que possible
-
-    double sum = 0;
-
-    const double DX = 1 / (double) n;
-
-    //Réduction intra-thread parallèle
-#pragma omp parallel
-	{
-	const int TID = OmpTools::getTid();
-
-	double sumThread = 0;
+    const double dx = 1 / (double)n;
+        double sum = 0;
 #pragma omp parallel for
-	for (int s = TID; s < n; s += NB_THREAD)
-	    {
-	    double xs = s * DX;
-	    sumThread += fpi(xs);
-	    }
+        for (int i = 0; i <= n; ++i)
+    	{
+    	double xi = i * dx;
 #pragma omp atomic
-	sum += sumThread;
-
-	}
-
-    return sum / n;
+    	sum += fpi(xi);
+    	}
+        return sum / n;
     }
 
 /*----------------------------------------------------------------------*\
