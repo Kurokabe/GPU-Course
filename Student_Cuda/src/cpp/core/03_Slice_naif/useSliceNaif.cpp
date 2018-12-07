@@ -47,10 +47,12 @@ bool isSliceNaifOK(const Grid& grid)
 
     float piHat;
 
-    // TODO use SliceNaif
+    SliceNaif sliceNaif(grid, nbSlice, &piHat);
+    sliceNaif.run();
+    piHat/=nbSlice;
 
     bool isOk = MathTools::isEquals((double) piHat, PI, 1e-4);
-
+    cout << "valeur de pi : " << piHat << " , isok? : " << isOk << endl;
     return isOk;
     }
 

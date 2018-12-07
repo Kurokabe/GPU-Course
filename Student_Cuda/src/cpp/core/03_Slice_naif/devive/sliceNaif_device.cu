@@ -40,7 +40,19 @@ static __device__ float f(float x);
  */
 __global__ void reductionIntraThread(float* tabGM, int nbSlice)
     {
-    // TODO SliceNaif
+    const int TID=threadIdx.x+(blockIdx.x*blockDim.x) ; //global à la grille
+    const int NB_THREAD= blockDim.x*gridDim.x; //nbThreadTotal
+
+    const float DX = 1/(float)nbSlice;
+    int s=TID;
+    float sum = 0;
+    while(s<nbSlice)
+	{
+	    float xs = s*DX;
+	    sum+=f(xs);
+	    s+=NB_THREAD;
+	}
+    tabGM[TID]=sum;
     }
 
 /**
@@ -51,7 +63,8 @@ __global__ void reductionIntraThread(float* tabGM, int nbSlice)
  */
 __global__ void ecrasementGM(float* tabGM, int moitier)
     {
-    // TODO SliceNaif+
+    const int TID=threadIdx.x+(blockIdx.x*blockDim.x);
+    tabGM[TID] += tabGM[TID + moitier];
     }
 
 /*--------------------------------------*\
@@ -60,7 +73,7 @@ __global__ void ecrasementGM(float* tabGM, int moitier)
 
 __device__ float f(float x)
     {
-    // TODO SliceNaif
+    return 4/(1+x*x);
     }
 
 /*----------------------------------------------------------------------*\

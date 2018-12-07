@@ -45,8 +45,12 @@ __global__ void addVector(float* ptrDevV1, float* ptrDevV2, float* ptrDevW, int 
 //	{
 //	printf("Coucou from device tid = %d", TID); //required   Device::synchronize(); after the call of kernel
 //	}
-
-    //TODO addVector pattern entrelacement
+    int s = TID;
+    while (s < n)
+	{
+	ptrDevW[s] = ptrDevV1[s] + ptrDevV2[s];
+	s += NB_THREAD;
+	}
     }
 
 /**
@@ -55,7 +59,8 @@ __global__ void addVector(float* ptrDevV1, float* ptrDevV2, float* ptrDevW, int 
  */
 __global__ void addVector11(float* ptrDevV1, float* ptrDevV2, float* ptrDevW, int n)
     {
-    // TODO addVector pattern  1<-->1
+    const int TID = Indice2D::tid();
+    ptrDevW[TID] = ptrDevV1[TID]+ptrDevV2[TID];
     }
 
 /*--------------------------------------*\

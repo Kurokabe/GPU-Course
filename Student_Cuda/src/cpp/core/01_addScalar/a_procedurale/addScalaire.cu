@@ -73,10 +73,10 @@ __host__ int addScalarGPU(int a, int b) // __host__ facultatif
 /**
  * Hyp : 1 seul thread, ie dg(1,1,1) et db (1,1,1)
  */
-__global__ void addScalar(int a, int b, int* ptrDevC)
+__global__ void addScalar(int a, int b, int* ptrDevC) //Bloc blanc
     {
     *ptrDevC = a + b; // Hyp: 1 seul thread
-
+    //Résultat dans le device
     // debug
     printf("[GPU] %d + %d = %d", a, b, *ptrDevC);
     }

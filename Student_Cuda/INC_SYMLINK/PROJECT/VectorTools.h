@@ -1,1 +1,1 @@
-/home/bilat/CBI/CoursCuda/toStudent/code/WCuda/Student_Cuda/src/cpp/core/02_addVector/00_tools/VectorTools.h
+/home/arc19/CUDA/toStudent/code/WCuda/Student_Cuda/src/cpp/core/02_addVector/00_tools/VectorTools.h

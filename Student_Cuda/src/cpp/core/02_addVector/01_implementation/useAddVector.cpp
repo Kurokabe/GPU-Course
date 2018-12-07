@@ -45,7 +45,9 @@ bool isAddVecteurOk(const Grid& grid, int n)
 
     // Partie interessante GPGPU
 	{
-	// TODO use AddVector
+	AddVector addVector(grid, ptrV1, ptrV2, ptrW, n);
+	addVector.run();
+
 	}
 
     // check

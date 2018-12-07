@@ -38,14 +38,14 @@ AddVector::AddVector(const Grid& grid, float* ptrV1, float* ptrV2, float* ptrW, 
 	// MM (malloc Device)
 	    {
 	    Device::malloc(&ptrDevV1, sizeVector);
-	    // TODO ptrV2
-	    // TODO ptrW
+	    Device::malloc(&ptrDevV2, sizeVector);
+	    Device::malloc(&ptrDevW, sizeVector);
 	    }
 
 	// MM (copy Host->Device)
 	    {
 	    Device::memcpyHToD(ptrDevV1, ptrV1, sizeVector);
-	    // TODO ptrV2
+	    Device::memcpyHToD(ptrDevV2, ptrV2, sizeVector);
 	    }
 
 	}
@@ -62,9 +62,8 @@ AddVector::~AddVector(void)
     //MM (device free)
 	{
 	Device::free(ptrDevV1);
-	// TODO ptrV2
-	// TODO ptrW
-
+	Device::free(ptrDevV2);
+	Device::free(ptrDevW);
 	}
     }
 
@@ -87,7 +86,7 @@ void AddVector::run()
 
     // MM (Device -> Host)
 	{
-	// TODO
+	Device::memcpyDToH(ptrW, ptrDevW, sizeVector);
 	}
     }
 

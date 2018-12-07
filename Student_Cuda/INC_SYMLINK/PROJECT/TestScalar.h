@@ -1,1 +1,1 @@
-/home/bilat/CBI/CoursCuda/toStudent/code/WCuda/Student_Cuda/src/cpp/test/unit/02_Test_Scalar/TestScalar.h
+/home/arc19/CUDA/toStudent/code/WCuda/Student_Cuda/src/cpp/test/unit/02_Test_Scalar/TestScalar.h

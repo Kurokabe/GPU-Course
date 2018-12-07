@@ -35,7 +35,10 @@ SliceNaif::SliceNaif(const Grid& grid, int nbSlice, float* ptrPiHat) :
 
     // MM
 	{
-	// TODO SliceNaif
+	//MM(malloc Device)
+	    {
+	    Device::malloc(&tabGM, sizeTabGM);
+	    }
 	}
 
     // Grid
@@ -49,7 +52,7 @@ SliceNaif::~SliceNaif(void)
     {
     //MM (device free)
 	{
-	// TODO SliceNaif
+	Device::free(tabGM);
 	}
     }
 
@@ -63,11 +66,24 @@ void SliceNaif::run()
 	{
 	// emploi uniquemnet du kernel : reductionIntraThread
 
-	// TODO SliceNaif
+	reductionIntraThread<<<dg, db>>>(tabGM, nbSlice);
 
 	// Reduction paralle sur cpu du tableau promu ramener coter host
 	    {
-	    // TODO SliceNaif
+
+	    int moitier = nTabGM/2;
+	    dg.x = moitier;
+	    db.x = 1;
+	    while(moitier>=1)
+		{
+		ecrasementGM<<<dg, db>>>(tabGM, moitier);
+		moitier/=2;
+		dg.x=moitier;
+		}
+	    }
+	    //MM (Device -> Host)
+	    {
+	    Device::memcpyDToH(ptrPiHat, tabGM,sizeof(float));
 	    }
 	}
 
@@ -83,7 +99,6 @@ void SliceNaif::run()
 	//
 	// Note:
 	//	Attendez la version de slice en SM pour un code 100% parallel sur GPU, sans boucle sur CPU.
-
 
 	// TODO SliceNaif+
 	}
