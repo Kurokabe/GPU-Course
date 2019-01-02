@@ -1,4 +1,4 @@
-#include "SliceNaif.h"
+#include "Slice.h"
 
 #include <iostream>
 #include <assert.h>
@@ -27,7 +27,7 @@ extern __global__ void ecrasementGM(float* tabGM, int moitier);
  |*		Constructeur			*|
  \*-------------------------------------*/
 
-SliceNaif::SliceNaif(const Grid& grid, int nbSlice, float* ptrPiHat) :
+Slice::Slice(const Grid& grid, int nbSlice, float* ptrPiHat) :
 	ptrPiHat(ptrPiHat), nbSlice(nbSlice)
     {
     this->nTabGM = grid.threadCounts();
@@ -48,7 +48,7 @@ SliceNaif::SliceNaif(const Grid& grid, int nbSlice, float* ptrPiHat) :
 	}
     }
 
-SliceNaif::~SliceNaif(void)
+Slice::~Slice(void)
     {
     //MM (device free)
 	{
@@ -60,7 +60,7 @@ SliceNaif::~SliceNaif(void)
  |*		Methode			*|
  \*-------------------------------------*/
 
-void SliceNaif::run()
+void Slice::run()
     {
     // v1 : promotion tab, reduction coter host
 	{
@@ -100,7 +100,7 @@ void SliceNaif::run()
 	// Note:
 	//	Attendez la version de slice en SM pour un code 100% parallel sur GPU, sans boucle sur CPU.
 
-	// TODO SliceNaif+
+	// TODO Slice+
 	}
     }
 

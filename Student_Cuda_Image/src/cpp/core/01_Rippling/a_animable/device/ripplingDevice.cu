@@ -27,13 +27,20 @@ __global__ void rippling(uchar4* ptrDevPixels, uint w, uint h, float t);
 
 __global__ void rippling(uchar4* ptrDevPixels, uint w, uint h, float t)
     {
-    // TODO instacier RipplingMath
-
+    RipplingMath ripplingMath = RipplingMath(w, h);
     const int TID = Indice2D::tid();
     const int NB_THREAD = Indice2D::nbThread();
     const int WH = w * h;
 
-    // TODO Rippling GPU  pattern entrelacement
+    int i;
+    int j;
+    int s = TID;
+    while (s < WH)
+	{
+	IndiceTools::toIJ(s, w, &i, &j);
+	ripplingMath.colorIJ(&ptrDevPixels[s], i, j, t);
+	s += NB_THREAD;
+	}
     }
 
 /*----------------------------------------------------------------------*\

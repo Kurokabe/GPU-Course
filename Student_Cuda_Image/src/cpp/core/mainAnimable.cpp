@@ -66,7 +66,8 @@ int mainAnimable(Settings& settings)
 
 void rippling()
     {
-    const int NB_ITERATION = 50000;
+    //const int NB_ITERATION = 50000;
+    const int NB_ITERATION = 500;
 
     RipplingProvider provider;
     animer<uchar4>(&provider, NB_ITERATION);

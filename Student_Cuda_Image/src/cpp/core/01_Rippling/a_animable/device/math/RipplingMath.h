@@ -30,7 +30,7 @@ class RipplingMath
 	// constructeur copie: pas besoin car pas attribut ptr
 
 	__device__
-	    virtual ~RipplingMath(void)
+	      virtual ~RipplingMath(void)
 	    {
 	    // rien
 	    }
@@ -76,16 +76,16 @@ class RipplingMath
 	    {
 	    float result;
 	    dij(i, j, &result); // warning : dij return void. Ne peut pas etre "imbriquer dans une fonction"
-
 	    result = result / 10;
-	    // TODO Rippling GPU : cf formules math rippling.pdf
+	    *ptrlevelGris = 128.0f + 127.0f*(cosf(result-t/7.0f)/(result+1.0f));
 	    }
 
 	__device__
 	void dij(int i, int j, float* ptrResult)
 	    {
-	    //TODO Rippling GPU cf fonction math pdf
-
+	    float fi = i - dim2;
+	    float fj = j - dim2;
+	    *ptrResult = sqrtf(fi * fi + fj * fj);
 	    // Ne pas utiliser la fonction pow pour elever au carrer !
 	    // Utiliser l'opérateur *
 	    }

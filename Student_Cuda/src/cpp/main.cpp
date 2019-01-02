@@ -51,7 +51,7 @@ int main(void)
     // Server Cuda2: in [0,3]	(4 Devices)
     // Server Cuda3: in [0,2]	(2 Devices)
     int DEVICE_ID = 0;
-    bool IS_TEST = false;
+    bool IS_TEST = true;
 
     Options option(IS_TEST, DEVICE_ID);
 

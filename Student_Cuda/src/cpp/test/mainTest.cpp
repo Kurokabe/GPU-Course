@@ -10,6 +10,7 @@
 #include "TestHello.h"
 #include "TestVector.h"
 #include "TestScalar.h"
+#include "TestSlice.h"
 
 using std::string;
 using std::cout;
@@ -65,6 +66,7 @@ bool testALL()
     testSuite.add(std::auto_ptr < Suite > (new TestHello()));
     testSuite.add(std::auto_ptr < Suite > (new TestScalar()));
     testSuite.add(std::auto_ptr < Suite > (new TestVector()));
+    testSuite.add(std::auto_ptr < Suite > (new TestSlice()));
 
     string output = "out/test";
     return runTestHtml(output, testSuite); // Attention: html create in ./workingDirectory/out

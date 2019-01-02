@@ -16,7 +16,7 @@ extern bool helloCuda(void);
 extern bool isAddScalarGPU_proceduraleOk(void);
 extern bool isAddScalarGPU_ObjetOk(void);
 extern bool isAddVecteurOk(int n);
-extern bool isSliceNaifOK();
+extern bool isSliceOK();
 
 /*--------------------------------------*\
  |*		Public			*|
@@ -43,7 +43,7 @@ int mainCore()
     isOk &= isAddScalarGPU_proceduraleOk();
     isOk &= isAddScalarGPU_ObjetOk();
     isOk &= isAddVecteurOk(9);
-    isOk &= isSliceNaifOK();
+    isOk &= isSliceOK();
 
     cout << "\nisOK = " << isOk << endl;
     cout << "\nEnd : mainCore" << endl;

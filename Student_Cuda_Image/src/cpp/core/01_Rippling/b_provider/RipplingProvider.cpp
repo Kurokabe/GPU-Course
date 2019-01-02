@@ -29,8 +29,11 @@ Animable_I<uchar4>* RipplingProvider::createAnimable()
     int mp = Device::getMPCount();
     int coreMP = Device::getCoreCountMP();
 
-    Grid grid;  // TODO Rippling GPU grid:  definissez une grille cuda (dg, db)
-    assert(false);// to delete once implement
+
+    dim3 dg = dim3(24, 1, 1);
+    dim3 db = dim3(768, 1, 1);
+    Grid grid(dg, db);  // TODO Rippling GPU grid:  definissez une grille cuda (dg, db)
+
 
     return new Rippling(grid, w, h, dt);
     }

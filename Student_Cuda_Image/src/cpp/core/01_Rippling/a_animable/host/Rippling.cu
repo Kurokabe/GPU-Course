@@ -61,8 +61,7 @@ void Rippling::process(uchar4* ptrDevPixels, uint w, uint h, const DomaineMath& 
     // TODO Rippling GPU
     // lancer le kernel avec <<<dg,db>>>
     // le kernel est importer ci-dessus (ligne 19)
-
-    assert(false);// to delete once implement
+    rippling<<<dg, db>>>(ptrDevPixels, w, h, t);
     }
 
 /**
