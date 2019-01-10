@@ -53,10 +53,7 @@ Mandelbrot::~Mandelbrot()
 void Mandelbrot::process(uchar4* ptrDevPixels, uint w, uint h, const DomaineMath& domaineMath)
     {
     int n = t;
-
-    assert(false);// to delete once implement
-    // TODO Mandelbrot GPU
-    // lauch kernel (line 18)
+    mandelbrot<<<dg, db>>>(ptrDevPixels, w, h, domaineMath, n);
     }
 
 /**

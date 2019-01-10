@@ -45,6 +45,17 @@ class MandelbrotMath
 	__device__
 	void colorXY(uchar4* ptrColorIJ, float x, float y, int n)
 	    {
+	    int k = suite(x, y, n);
+	    if(k>=n) {
+		ptrColorIJ->x = 0;
+		ptrColorIJ->y = 0;
+		ptrColorIJ->z = 0;
+		ptrColorIJ->w = 255;
+	    } else {
+		float h = k/(float)n;
+		ColorTools::HSB_TO_RVB(h, ptrColorIJ);
+	    }
+
 	    // TODO Mandelbrot GPU
 	    // Calculer la suite en (x,y)
 	    // Colorier
@@ -62,6 +73,7 @@ class MandelbrotMath
 	    //		ptrColorIJ->z = 128;
 	    //		ptrColorIJ->w = 255; // opacity facultatif
 	    //		}
+
 	    }
 
     private:
@@ -69,10 +81,24 @@ class MandelbrotMath
 	__device__
 	int suite(float x, float y, int n)
 	    {
-	    // TODO Mandelbrot GPU
+	    int i = 0;
+	    float z = 0;
+	    float a = 0;
+	    float b = 0;
+	    float aCopy = a;
+	    while(i<=n && converge(a, b)) {
+		aCopy = a;
+		a = a*a-b*b+x;
+		b = 2*aCopy*b+y;
+		++i;
+	    }
+	    return i;
+	    }
 
-	    // Calculer la suite en (x,y) jusqu'à n, à moins que critere arret soit atteint avant
-	    // return le nombre d'element de la suite calculer
+	__device__
+	bool converge(float x, float y)
+	    {
+		return x*x + y*y <= 4;
 	    }
 
 	/*--------------------------------------*\

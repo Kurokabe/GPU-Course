@@ -32,7 +32,7 @@ Animable_I<uchar4>* RipplingProvider::createAnimable()
 
     dim3 dg = dim3(24, 1, 1);
     dim3 db = dim3(768, 1, 1);
-    Grid grid(dg, db);  // TODO Rippling GPU grid:  definissez une grille cuda (dg, db)
+    Grid grid(dg, db);
 
 
     return new Rippling(grid, w, h, dt);
