@@ -44,9 +44,14 @@ class RaytracingMath
 	    xySol.x = i;
 	    xySol.y = j;
 
+	    ptrColorIJ->w = 255; // opacity facultatif
+	    ptrColorIJ->x = 0;
+	    ptrColorIJ->y = 0;
+	    ptrColorIJ->z = 0;
+
 	    color(xySol, t, ptrColorIJ); // update colorij
 
-	    ptrColorIJ->w = 255; // opacity facultatif
+	    //color(xySol, t, ptrColorIJ);
 
 	    // Conseil:
 	    // 		Etape 1 : 	Commencer par afficher une image uniforme grise (128 par exemple)
@@ -56,10 +61,10 @@ class RaytracingMath
 
 	    // debug temp
 	    //		{
-	    //		ptrColorIJ->x = 128;
-	    //		ptrColorIJ->y = 128;
-	    //		ptrColorIJ->z = 128;
-	    //		ptrColorIJ->w = 255; // opacity facultatif
+//	    		ptrColorIJ->x = 128;
+//	    		ptrColorIJ->y = 128;
+//	    		ptrColorIJ->z = 128;
+//	    		ptrColorIJ->w = 255; // opacity facultatif
 	    //		}
 	    }
 
@@ -68,9 +73,31 @@ class RaytracingMath
 	__device__
 	void color(const float2& xySol, float t, uchar4* ptrColorXY)
 	    {
-	    // TODO Raytracing GPU math
-	    // process a color for the pixel (x,y)
-	    // use methode of classe Sphere
+	    float minDistance = 9999999999999;
+	    int indexClosestSphere = -1;
+	    float closestSphereDz;
+	    for(int i = 0; i<nbSpheres; ++i)
+		{
+		Sphere sphere = ptrDevTabSpheres[i];
+		float hcarre = sphere.hCarre(xySol);
+		if(sphere.isEnDessous(hcarre))
+		    {
+		    float dz = sphere.dz(hcarre);
+		    float distance = sphere.distance(dz);
+		    if(distance<minDistance)
+			{
+			indexClosestSphere = i;
+			closestSphereDz = dz;
+			}
+		    }
+		}
+	        if(indexClosestSphere>=0)
+		    {
+		    Sphere closestSphere = ptrDevTabSpheres[indexClosestSphere];
+		    float hue = closestSphere.hue(t);
+		    float brightness= closestSphere.brightness(closestSphereDz);
+		    ColorTools::HSB_TO_RVB(hue, 1, brightness, ptrColorXY);
+		    }
 	    }
 
 	/*--------------------------------------*\

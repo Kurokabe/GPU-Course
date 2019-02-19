@@ -59,8 +59,8 @@ Raytracing::~Raytracing()
 	{
 	case GM:
 	    {
-	    assert(false); // to delete once implement
-	    // ??
+	    //assert(false); // to delete once implement
+	Device::free(ptrDevTabSpheres);
 	    break;
 	    }
 	case CM:
@@ -93,8 +93,9 @@ void Raytracing::process(uchar4* ptrDevPixels, uint w, uint h, const DomaineMath
 	{
 	case GM:
 	    {
-	    assert(false);// to delete once implement
+	    //assert(false);// to delete once implement
 	    // Call the kernel kernelRaytacingGM (line 25)
+	    kernelRaytacingGM<<<dg,db>>>(ptrDevPixels, w, h, t, ptrDevTabSpheres, nbSpheres);
 	    break;
 	    }
 	case CM:
@@ -131,8 +132,9 @@ void Raytracing::uploadToDevice(Sphere* ptrTabSpheres)
 	{
 	case GM:
 	    {
-	    assert(false);// to delete once implement
-	    // ??
+	    //assert(false);// to delete once implement
+	    Device::malloc(&ptrDevTabSpheres, sizeSpheres);
+	    Device::memcpyHToD(ptrDevTabSpheres, ptrTabSpheres, sizeSpheres);
 	    break;
 	    }
 	case CM:

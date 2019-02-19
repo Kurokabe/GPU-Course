@@ -47,7 +47,8 @@ __host__ void uploadToCM(Sphere* ptrTabSpheres, int nbSpheres)
     {
     assert(nbSpheres == NB_SPHERE);
 
-    assert(false);// to delete once implement
+    //assert(false);// to delete once implement
+    Device::memcpyToCM(TAB_SPHERES_CM, ptrTabSpheres, nbSpheres * sizeof(Sphere));
 
     // TODO Raytracing GPU CM
     // mettre ptrTabSpheres dans TAB_SPHERES_CM (line 16)
@@ -60,6 +61,7 @@ __host__ void uploadToCM(Sphere* ptrTabSpheres, int nbSpheres)
 __global__ void kernelRaytacingGM(uchar4* ptrDevPixels, uint w, uint h, float t, Sphere* ptrTabSpheresGM, int nbSpheres)
     {
     // TODO Raytracing GPU GM
+    work(ptrDevPixels, w, h, t, ptrTabSpheresGM, nbSpheres);
     // call work with good input
     }
 
@@ -89,6 +91,23 @@ __global__ void kernelRaytacingCM(uchar4* ptrDevPixels, uint w, uint h, float t,
  */
 __device__ void work(uchar4* ptrDevPixels, uint w, uint h, float t, Sphere* ptrDevTabSpheres, int nbSpheres)
     {
+    RaytracingMath raytracingMath = RaytracingMath(ptrDevTabSpheres, nbSpheres);
+    const int TID = Indice2D::tid();
+    const int NB_THREAD = Indice2D::nbThread();
+    const int WH = w * h;
+
+    int i;	// in [0,h[
+    int j; 	// in [0,w[
+
+
+    int s = TID;  // in [0,...
+    while (s < WH)
+	{
+	IndiceTools::toIJ(s, w, &i, &j); 	// update (i, j)
+
+	raytracingMath.color(&ptrDevPixels[s], i, j, t);
+	s += NB_THREAD;
+	}
     // TODO Raytracing GPU device side
     // create RaytracingMath
     // entrelacement

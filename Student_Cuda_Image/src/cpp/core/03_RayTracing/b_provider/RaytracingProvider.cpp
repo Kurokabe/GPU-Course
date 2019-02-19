@@ -22,7 +22,7 @@
 Animable_I<uchar4>* RaytracingProvider::createAnimable()
     {
     // Animation;
-    float dt = 2 * PI / 1000;
+    float dt = 2 * PI / 10;
 
     // Dimension
     int w = 16 * 80;
@@ -33,8 +33,10 @@ Animable_I<uchar4>* RaytracingProvider::createAnimable()
     int coreMP = Device::getCoreCountMP();
 
     // TODO Raytracing GPU grid
-    Grid grid;
-    assert(false);// to delete once implement
+    dim3 dg = dim3(48, 1, 1);
+    dim3 db = dim3(800, 1, 1);
+    Grid grid(dg, db);
+    //assert(false);// to delete once implement
 
     // Essayer les trois!
     MemoryType memoryType=GM;
