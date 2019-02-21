@@ -30,6 +30,7 @@ __global__ void kernelRaytacingCM(uchar4* ptrDevPixels, uint w, uint h, float t,
  \*-------------------------------------*/
 
 static __device__ void work(uchar4* ptrDevPixels, uint w, uint h, float t, Sphere* ptrDevTabSpheres, int nbSpheres);
+static __device__ void copyGMToSM(Sphere* tabGM, Sphere* tabSM, int n);
 
 /*----------------------------------------------------------------------*\
  |*			Implementation 					*|
@@ -47,7 +48,6 @@ __host__ void uploadToCM(Sphere* ptrTabSpheres, int nbSpheres)
     {
     assert(nbSpheres == NB_SPHERE);
 
-    //assert(false);// to delete once implement
     Device::memcpyToCM(TAB_SPHERES_CM, ptrTabSpheres, nbSpheres * sizeof(Sphere));
 
     // TODO Raytracing GPU CM
@@ -60,14 +60,16 @@ __host__ void uploadToCM(Sphere* ptrTabSpheres, int nbSpheres)
 
 __global__ void kernelRaytacingGM(uchar4* ptrDevPixels, uint w, uint h, float t, Sphere* ptrTabSpheresGM, int nbSpheres)
     {
-    // TODO Raytracing GPU GM
     work(ptrDevPixels, w, h, t, ptrTabSpheresGM, nbSpheres);
     // call work with good input
     }
 
 __global__ void kernelRaytacingSM(uchar4* ptrDevPixels, uint w, uint h, float t, Sphere* ptrTabSpheresGM, int nbSpheres)
     {
-    // TODO Raytracing GPU SM
+    extern __shared__ Sphere tabSM[];
+    copyGMToSM(ptrTabSpheresGM, tabSM, nbSpheres);
+    __syncthreads(); // Barrière de synchronisation des threads du block
+    work(ptrDevPixels, w, h, t, tabSM, nbSpheres);
     // call work with good input
     }
 
@@ -108,9 +110,20 @@ __device__ void work(uchar4* ptrDevPixels, uint w, uint h, float t, Sphere* ptrD
 	raytracingMath.color(&ptrDevPixels[s], i, j, t);
 	s += NB_THREAD;
 	}
-    // TODO Raytracing GPU device side
     // create RaytracingMath
     // entrelacement
+    }
+
+__device__ void copyGMToSM(Sphere* tabGM, Sphere* tabSM, int n)
+    {
+    int tidLocal = Indice2D::tidLocal();
+    int nbThreadLocal = Indice2D::nbThreadLocal();
+    int s = tidLocal;
+    while(s<n)
+	{
+	tabSM[s] = tabGM[s];
+	s+=nbThreadLocal;
+	}
     }
 
 /*----------------------------------------------------------------------*\

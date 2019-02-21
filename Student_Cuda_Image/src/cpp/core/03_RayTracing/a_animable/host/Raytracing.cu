@@ -71,8 +71,7 @@ Raytracing::~Raytracing()
 	    }
 	case SM:
 	    {
-	    assert(false);// to delete once implement
-	    // ??
+	    Device::free(ptrDevTabSpheres);
 	    break;
 	    }
 	}
@@ -106,8 +105,8 @@ void Raytracing::process(uchar4* ptrDevPixels, uint w, uint h, const DomaineMath
 	    }
 	case SM:
 	    {
-	    assert(false);// to delete once implement
 	    // Call the kernel kernelRaytacingSM (line 27)
+	    kernelRaytacingSM<<<dg, db, sizeSpheres>>>(ptrDevPixels, w, h, t, ptrDevTabSpheres, nbSpheres);
 	    break;
 	    }
 	}
@@ -132,7 +131,6 @@ void Raytracing::uploadToDevice(Sphere* ptrTabSpheres)
 	{
 	case GM:
 	    {
-	    //assert(false);// to delete once implement
 	    Device::malloc(&ptrDevTabSpheres, sizeSpheres);
 	    Device::memcpyHToD(ptrDevTabSpheres, ptrTabSpheres, sizeSpheres);
 	    break;
@@ -145,8 +143,8 @@ void Raytracing::uploadToDevice(Sphere* ptrTabSpheres)
 	    }
 	case SM:
 	    {
-	    assert(false);// to delete once implement
-	    // ??
+	    Device::malloc(&ptrDevTabSpheres, sizeSpheres);
+	    Device::memcpyHToD(ptrDevTabSpheres, ptrTabSpheres, sizeSpheres);
 	    break;
 	    }
 	}

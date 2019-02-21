@@ -22,7 +22,7 @@
 Animable_I<uchar4>* RaytracingProvider::createAnimable()
     {
     // Animation;
-    float dt = 2 * PI / 10;
+    float dt = 2 * PI / 1000;
 
     // Dimension
     int w = 16 * 80;
@@ -32,16 +32,14 @@ Animable_I<uchar4>* RaytracingProvider::createAnimable()
     int mp = Device::getMPCount();
     int coreMP = Device::getCoreCountMP();
 
-    // TODO Raytracing GPU grid
-    dim3 dg = dim3(48, 1, 1);
-    dim3 db = dim3(800, 1, 1);
+    dim3 dg = dim3(24, 1, 1);
+    dim3 db = dim3(1024, 1, 1);
     Grid grid(dg, db);
-    //assert(false);// to delete once implement
 
     // Essayer les trois!
-    MemoryType memoryType=GM;
+//    MemoryType memoryType=GM;
 //    MemoryType memoryType=CM;
-//    MemoryType memoryType=SM;
+    MemoryType memoryType=SM;
 
     return new Raytracing(grid, w, h, dt, NB_SPHERE,memoryType); // NB_SPHERE define "nbSphere.h"
     }

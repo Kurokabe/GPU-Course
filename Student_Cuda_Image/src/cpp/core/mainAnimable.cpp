@@ -51,9 +51,9 @@ int mainAnimable(Settings& settings)
     cout << "\n[Animable] mode" << endl;
 
     // Please, un a la fois!
-    rippling();
+//    rippling();
 //    mandelbrot(); // Conseil : use nFixe (by example nMin=nMax=80)
-//    raytracing();
+    raytracing();
 
     cout << "\n[Animable] end" << endl;
 

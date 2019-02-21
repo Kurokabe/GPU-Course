@@ -1,3 +1,3 @@
 #pragma once
 
-#define NB_SPHERE 2300
+#define NB_SPHERE 1700
