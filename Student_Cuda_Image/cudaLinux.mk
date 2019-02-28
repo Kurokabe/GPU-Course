@@ -3,10 +3,10 @@
 #
 # Notes
 #
-#	(N1)	Les options de compilation sont souvent les memes d'un projet à l'autre.
-#			Ces options communes à tout le workspace se trouve daan la partie public du projet BUILDER.
+#	(N1)	Les options de compilation sont souvent les memes d'un projet ï¿½ l'autre.
+#			Ces options communes ï¿½ tout le workspace se trouve daan la partie public du projet BUILDER.
 #			
-#	(N2)	Vous pouvez redefinir ou surcharger ces options dans ce present .mk pour customizer un projet spécifique.
+#	(N2)	Vous pouvez redefinir ou surcharger ces options dans ce present .mk pour customizer un projet spï¿½cifique.
 #
 #	(N3)	Pour modifier la configuration de tous vos projets, modifier directement les .mk generiques dans le BUILDER
 #
@@ -30,7 +30,7 @@ override CXXLDFLAGS+=#
 # nvcc  #
 #########
 
-#override NVCCFLAGS+= --ptxas-options=-v
+override NVCCFLAGS+= --ptxas-options=-v
 override NVCCLDFLAGS+=
  
 #########

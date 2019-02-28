@@ -65,8 +65,7 @@ Raytracing::~Raytracing()
 	    }
 	case CM:
 	    {
-	    assert(false);// to delete once implement
-	    // ??
+	    //null
 	    break;
 	    }
 	case SM:
@@ -99,8 +98,7 @@ void Raytracing::process(uchar4* ptrDevPixels, uint w, uint h, const DomaineMath
 	    }
 	case CM:
 	    {
-	    assert(false);// to delete once implement
-	    // Call the kernel kernelRaytacingCM (line 26)
+	    kernelRaytacingCM<<<dg, db>>>(ptrDevPixels, w, h, t, nbSpheres);
 	    break;
 	    }
 	case SM:
@@ -137,8 +135,7 @@ void Raytracing::uploadToDevice(Sphere* ptrTabSpheres)
 	    }
 	case CM:
 	    {
-	    assert(false);// to delete once implement
-	    // ?? use uploadToCM
+	    uploadToCM(ptrTabSpheres, nbSpheres);
 	    break;
 	    }
 	case SM:

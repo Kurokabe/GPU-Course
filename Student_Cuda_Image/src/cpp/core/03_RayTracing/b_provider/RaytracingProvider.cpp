@@ -37,9 +37,9 @@ Animable_I<uchar4>* RaytracingProvider::createAnimable()
     Grid grid(dg, db);
 
     // Essayer les trois!
-//    MemoryType memoryType=GM;
-//    MemoryType memoryType=CM;
-    MemoryType memoryType=SM;
+//    MemoryType memoryType=G<>M;
+    MemoryType memoryType=CM;
+//    MemoryType memoryType=SM;
 
     return new Raytracing(grid, w, h, dt, NB_SPHERE,memoryType); // NB_SPHERE define "nbSphere.h"
     }
