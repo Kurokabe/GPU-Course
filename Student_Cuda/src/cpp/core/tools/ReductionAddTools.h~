@@ -1,0 +1,85 @@
+#pragma once
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+class ReductionAddTools
+    {
+    public:
+
+	/**
+	 * Hypothese:
+	 *
+	 * 	(H1) 	On suppose que T est un type simple sur lequel atomicAdd existe
+	 *
+	 * Exemple :
+	 * 		ReductionAddTools.add<int>(tabSm,ptrDevResultatGM);
+	 *
+	 * Contraintes :
+	 *
+	 * 	(C1) 	|tabSM| puissance de 2, comme 32,64,128,256,512,1024
+	 * 	(C2)	|ThreadByBlock|=|tabSM|
+	 * 	(C3)	Reduction intra-thread laisser a l'utilsiateur
+	 *
+	 * Warning :
+	 *
+	 * 	(W1)	ptrDevResultatGM n'est pas un tableau
+	 * 	(W2)	Oubliez pas le MM pour  ptrDevResultatGM
+	 * 	(W3)	Oubliez pas l'initialisation de ptrDevResultatGM ( a 0 pour de l'addiction)
+	 */
+	template <typename T>
+	static __device__ void reductionADD(T* tabSM, T* ptrDevResultatGM)
+	    {
+	    // TODO reductionIntraBlock puis reductionInterblock
+
+	    // __synctrhreads();// pour touts les threads d'un meme block, necessaires? ou?
+	    }
+
+    private:
+
+	/*--------------------------------------*\
+	|*	reductionIntraBlock		*|
+	 \*-------------------------------------*/
+
+	/**
+	 * used in reductionIntraBlock
+	 */
+	template <typename T>
+	static __device__ void ecrasement(T* tabSM, int middle)
+	    {
+	    // TODO
+	    // Ecrasement sucessifs dans une boucle
+	    // __synctrhreads();// pour touts les threads d'un meme block, necessaires? ou?
+
+	    // Rappel : |ThreadByBlock|=|tabSM|
+	    }
+
+	/**
+	 * Sur place, le resultat est dans tabSM[0]
+	 */
+	template <typename T>
+	static __device__ void reductionIntraBlock(T* tabSM)
+	    {
+	    // TODO
+	    // Ecrasement sucessifs dans une boucle (utiliser methode ecrasement ci-dessus)
+	    // __synctrhreads();// pour touts les threads d'un meme block, necessaires? ou?
+	    }
+
+	/*--------------------------------------*\
+	|*	reductionInterblock		*|
+	 \*-------------------------------------*/
+
+	template <typename T>
+	static __device__ void reductionInterblock(T* tabSM, T* ptrDevResultatGM)
+	    {
+	    // TODO
+	    // utiliser atomicAdd(pointeurDestination, valeurSource);
+	    // warning : atomicAdd existe pas forcement pour tous les types simples!!
+	    }
+
+    };
+
+/*----------------------------------------------------------------------*\
+|*			End	 					*|
+ \*---------------------------------------------------------------------*/

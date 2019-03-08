@@ -82,7 +82,6 @@ class MandelbrotMath
 	int suite(float x, float y, int n)
 	    {
 	    int i = 0;
-	    float z = 0;
 	    float a = 0;
 	    float b = 0;
 	    float aCopy = a;
