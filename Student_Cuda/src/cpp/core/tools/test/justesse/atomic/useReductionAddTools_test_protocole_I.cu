@@ -51,7 +51,6 @@ __host__ bool isReductionAddTools_I_Ok(const Grid& grid)
     Device::memcpyHToD(ptrResGM, ptrRes, sizeof(int));
     fillOne<<<grid.dg, grid.db, sizeof(int)*grid.db.x>>>(ptrResGM);
     Device::memcpyDToH(ptrRes, ptrResGM, sizeof(int));
-
     return *ptrRes == grid.db.x * grid.dg.x;
     }
 
@@ -70,9 +69,8 @@ __global__ void fillOne(int* ptrDevResultGM)
 
     extern __shared__ int tabSM[];
     reductionIntraThread(tabSM);
+    __syncthreads();
     ReductionAddTools::reductionADD(tabSM, ptrDevResultGM);
-
-    // __syncthreads(); // des threads de meme block!// utile? ou?
     }
 
 __device__ void reductionIntraThread(int* tabSM)

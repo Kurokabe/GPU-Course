@@ -49,8 +49,8 @@ int mainCore()
     isOk &= isAddScalarGPU_ObjetOk();
     isOk &= isAddVecteurOk(9);
     isOk &= isSliceOK();
-    dim3 dg = dim3(124, 1, 1);  		// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
-    dim3 db = dim3(124, 1, 1);   		// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
+    dim3 dg = dim3(2048);  		// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
+    dim3 db = dim3(1024, 1, 1);   		// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
     Grid grid(dg, db);
     isOk &= isReductionAddTools_I_Ok(grid);
 
