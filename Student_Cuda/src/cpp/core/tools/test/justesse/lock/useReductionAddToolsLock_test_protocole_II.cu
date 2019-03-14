@@ -3,6 +3,8 @@
 #include "ReductionAddToolsLock.h"
 #include "Grid.h"
 
+#include "Device.h"
+
 using std::cout;
 using std::endl;
 
@@ -40,6 +42,15 @@ __host__ bool isReductionAddToolsLock_II_Ok(const Grid& grid)
     // appeler kernel
     // MM recuprer resultat
     // cheker resultat
+    long* ptrRes = new long[sizeof(long)];
+    long* ptrResGM;
+    *ptrRes = 0;
+    Device::malloc(&ptrResGM, sizeof(long));
+    Device::memcpyHToD(ptrResGM, ptrRes, sizeof(long));
+    fillTidGlobal<<<grid.dg, grid.db,sizeof(long)*grid.db.x>>>(ptrResGM);
+    Device::memcpyDToH(ptrRes, ptrResGM, sizeof(long));
+    long n = grid.db.x * grid.dg.x;
+    return * ptrRes == n/2*(n-1);
     }
 
 /*----------------------------------------------------------------------*\
@@ -55,7 +66,10 @@ __global__ void fillTidGlobal(long* ptrDevResultGM)
     // TODO declaration tabSM
     // reductionIntraThread
     // ReductionAddToolsLock
-
+    extern __shared__ long tabSM[];
+    reductionIntraThread(tabSM);
+    __syncthreads();
+    ReductionAddToolsLock::reductionADD(tabSM, ptrDevResultGM);
     // __syncthreads(); // des threads de meme block!// utile? ou?
     }
 
@@ -63,6 +77,7 @@ __device__ void reductionIntraThread(long* tabSM)
     {
     // TODO entrelacement et remplissage tabSM
     // rappel : |tabSM|=|threadByBlock|
+    tabSM[threadIdx.x] = blockDim.x * blockIdx.x + threadIdx.x;
     }
 
 /*----------------------------------------------------------------------*\

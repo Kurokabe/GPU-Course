@@ -24,7 +24,9 @@ class ReductionAddToolsLock
 	static __device__ void reductionADD(T* tabSM, T* ptrDevResultatGM)
 	    {
 	    Lock lock=Lock(&mutex);//le meme lock pour tous les threads, mutex declarer comme va globale ci-dessus
-
+	    reductionIntraBlock(tabSM);
+	    __syncthreads();
+	    reductionInterblock(tabSM, ptrDevResultatGM, &lock);
 	    // TODO idem version sans lock (presque)
 	    }
 
@@ -38,18 +40,30 @@ class ReductionAddToolsLock
 	 * used dans une boucle in reductionIntraBlock
 	 */
 	template <typename T>
-	static __device__ void ecrasement(T* tabSM, int middle,Lock* ptrLock)
+	static __device__ void ecrasement(T* tabSM, int middle)
 	    {
 	    // TODO idem version sans lock (presque)
+	    const int TIDLocal = threadIdx.x;
+	    if(TIDLocal<middle)
+		{
+		tabSM[TIDLocal] += tabSM[TIDLocal+middle];
+		}
 	    }
 
 	/**
 	 * Sur place, le resultat est dans tabSM[0]
 	 */
 	template <typename T>
-	static __device__ void reductionIntraBlock(T* tabSM,Lock* ptrLock)
+	static __device__ void reductionIntraBlock(T* tabSM)
 	    {
 	    // TODO idem version sans lock (presque)
+	    int middle = blockDim.x/2;
+	    while(middle>=1)
+		{
+		ecrasement(tabSM, middle);
+		__syncthreads();
+		middle/=2;
+		}
 	    }
 
 	/*--------------------------------------*\
@@ -61,10 +75,14 @@ class ReductionAddToolsLock
 	    {
 	    // TODO
 
-	    ptrLock->lock();
 	    // warning : atomicAdd n'existe pas dans cette version, on utlise le lock pour s'en sortir
 	    // TODO
-	    ptrLock->unlock();
+	    if(threadIdx.x==0)
+		{
+		ptrLock->lock();
+		*ptrDevResultatGM += tabSM[0];
+		ptrLock->unlock();
+		}
 	    }
 
     };
