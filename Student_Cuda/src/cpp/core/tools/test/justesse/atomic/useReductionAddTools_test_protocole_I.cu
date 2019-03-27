@@ -21,6 +21,7 @@ using std::endl;
  * contrainte : db puissance de 2
  */
 __host__ bool isReductionAddTools_I_Ok(const Grid& grid); // __host__ facultatif
+__host__ bool isReductionAddTools_I_Ok();
 
 /*---------------------*\
 |*	private		*|
@@ -38,7 +39,6 @@ static __device__ void reductionIntraThread(int* tabSM);
  */
 __host__ bool isReductionAddTools_I_Ok(const Grid& grid)
     {
-    // TODO
     // MM pour ptrDevResultGM (oubliez pas initialisation)
     // appeler kernel
     // MM recuprer resultat
@@ -72,6 +72,7 @@ __host__ bool isReductionAddTools_I_Ok()
 	    isOk &= isReductionAddTools_I_Ok(grid);
 	    }
 	}
+    return isOk;
     }
 
 /*----------------------------------------------------------------------*\

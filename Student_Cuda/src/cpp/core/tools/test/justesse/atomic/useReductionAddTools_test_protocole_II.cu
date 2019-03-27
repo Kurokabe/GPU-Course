@@ -22,6 +22,7 @@ using std::endl;
  * contrainte : db puissance de 2
  */
 __host__ bool isReductionAddTools_II_Ok(const Grid& grid); // __host__ facultatif
+__host__ bool isReductionAddTools_II_Ok(); // __host__ facultatif
 
 /*---------------------*\
 |*	private		*|
@@ -53,6 +54,27 @@ __host__ bool isReductionAddTools_II_Ok(const Grid& grid)
     Device::memcpyDToH(ptrRes, ptrResGM, sizeof(int));
     long n = grid.db.x * grid.dg.x;
     return *ptrRes == n/2*(n-1);
+    }
+
+__host__ bool isReductionAddTools_II_Ok()
+    {
+    bool isOk = true;
+    dim3 dg = dim3(1,1,1);
+    dim3 db = dim3(2, 1, 1);
+    Grid grid(dg, db);
+    for(int i = 1; i<=64; ++i)
+    	{
+    	dg.x = i;
+    	grid.dg = dg;
+    	for(int j = 2; j<=1024; j*=2)
+    	    {
+    	    db.x = j;
+    	    grid.db = db;
+    	    cout << grid << endl;
+    	    isOk &= isReductionAddTools_II_Ok(grid);
+    	    }
+    	}
+    return isOk;
     }
 
 /*----------------------------------------------------------------------*\
