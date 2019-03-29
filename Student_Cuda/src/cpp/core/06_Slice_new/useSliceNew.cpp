@@ -51,13 +51,23 @@ bool isSliceNewOK(const Grid& grid)
 
 bool isSliceNewOK()
     {
-    int coreMP = Device::getCoreCountMP();
-
-    dim3 dg = dim3(64, 1, 1);  		// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
-    dim3 db = dim3(coreMP * 4, 1, 1);   		// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
-    Grid grid(dg, db); // puissance de 2 pour etre compatible avec la version naivePlus
-
-    return isSliceNewOK(grid);
+    bool isOk = true;
+    dim3 dg = dim3(1,1,1);
+    dim3 db = dim3(2, 1, 1);
+    Grid grid(dg, db);
+    for(int i = 16; i<=64; ++i) //Démarrage à 16 afin d'avoir des tests assez rapides
+	{
+	dg.x = i;
+	grid.dg = dg;
+	for(int j = 4; j<=1024; j*=2)
+	    {
+	    db.x = j;
+	    grid.db = db;
+	    cout << grid << endl;
+	    isOk &= isSliceNewOK(grid);
+	    }
+	}
+    return isOk;
     }
 
 /*----------------------------------------------------------------------*\
