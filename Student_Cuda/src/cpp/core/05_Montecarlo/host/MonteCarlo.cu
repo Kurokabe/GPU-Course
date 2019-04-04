@@ -62,6 +62,16 @@ void MonteCarlo::run()
     *ptrPiHat = 4* *ptrResultat / (double)nbFlechette; //Utilisation de m à 4 semble plus précis.
     }
 
+int MonteCarlo::getFlecheSousCourbe()
+    {
+    return *ptrResultat;
+    }
+
+int MonteCarlo::getFlecheTiree()
+    {
+    return nbFlechette;
+    }
+
 /*----------------------------------------------------------------------*\
  |*			End	 					*|
  \*---------------------------------------------------------------------*/

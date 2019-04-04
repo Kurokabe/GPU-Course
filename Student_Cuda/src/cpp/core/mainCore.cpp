@@ -1,7 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
 
-
 #include "Grid.h"
 #include "Device.h"
 
@@ -27,6 +26,7 @@ extern bool isReductionAddToolsLock_I_Ok();
 extern bool isReductionAddToolsLock_II_Ok();
 extern bool isSliceNewOK();
 extern bool isMonteCarloOK();
+extern bool isMonteCarloMultiGPUOK(const Grid& grid);
 
 /*--------------------------------------*\
  |*		Public			*|
@@ -54,7 +54,7 @@ int mainCore()
 //    isOk &= isAddScalarGPU_ObjetOk();
 //    isOk &= isAddVecteurOk(9);
 //    isOk &= isSliceOK();
-    dim3 dg = dim3(64,1,1);  		// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
+    dim3 dg = dim3(64, 1, 1);  		// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
     dim3 db = dim3(1024, 1, 1);   		// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
     Grid grid(dg, db);
 //    isOk &= isReductionAddTools_I_Ok();
@@ -62,8 +62,8 @@ int mainCore()
 //    isOk &= isReductionAddToolsLock_I_Ok();
 //    isOk &= isReductionAddToolsLock_II_Ok();
 //    isOk &= isSliceNewOK();
-    isOk &= isMonteCarloOK();
-
+//    isOk &= isMonteCarloOK();
+    isOk &= isMonteCarloMultiGPUOK(grid);
     cout << "\nisOK = " << isOk << endl;
     cout << "\nEnd : mainCore" << endl;
 

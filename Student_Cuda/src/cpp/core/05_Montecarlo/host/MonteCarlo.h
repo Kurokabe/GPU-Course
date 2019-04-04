@@ -27,6 +27,8 @@ class MonteCarlo
 	public:
 
 	    void run();
+	    int getFlecheSousCourbe();
+	    int getFlecheTiree();
 
 	    /*--------------------------------------*\
 	    |*		Attributs		*|
