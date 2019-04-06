@@ -52,12 +52,12 @@ SceneCube* SceneCubeCreator::getScene()
 
 void SceneCubeCreator::createImages()
     {
-    ptrImage1 = RipplingProvider().createImageGL();
-    ptrImage2 = RaytracingProvider().createImageGL();
+    ptrImage1 = RaytracingProvider().createImageGL();
+    ptrImage2 = RipplingProvider().createImageGL();
 
-    ptrImage3 = MandelbrotProvider().createImageGL(); //TODO Create mandelbrot provider with another domain
-    ptrImage4 = MandelbrotProvider().createImageGL(); //TODO Create mandelbrot provider with another domain
-    ptrImage5 = MandelbrotProvider().createImageGL(); //TODO Create mandelbrot provider with another domain
+    ptrImage3 = MandelbrotProvider().createImageGL(-1.24693, -1.24681, -0.377491, -0.37739);
+    ptrImage4 = MandelbrotProvider().createImageGL(-1.26751, -1.23104, -0.393991, -0.361493);
+    ptrImage5 = MandelbrotProvider().createImageGL(-1.36149, -1.07329, -0.486157, -0.228306);
     ptrImage6 = MandelbrotProvider().createImageGL();
     }
 
