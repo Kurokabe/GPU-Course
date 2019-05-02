@@ -13,7 +13,7 @@
 #include "TestSlice.h"
 #include "TestReduction.h"
 #include "TestMonteCarlo.h"
-#include "unit/04_Test_Slice_sm/TestSliceNew.h"
+#include "TestSliceSM.h"
 
 using std::string;
 using std::cout;
@@ -71,12 +71,11 @@ bool testALL()
     testSuite.add(std::auto_ptr < Suite > (new TestVector()));
     testSuite.add(std::auto_ptr < Suite > (new TestSlice()));
     testSuite.add(std::auto_ptr < Suite > (new TestReduction()));
-    testSuite.add(std::auto_ptr < Suite > (new TestSliceNew()));
+    testSuite.add(std::auto_ptr < Suite > (new TestSliceSM()));
     testSuite.add(std::auto_ptr < Suite > (new TestMonteCarlo()));
 
     string output = "out/test";
     return runTestHtml(output, testSuite); // Attention: html create in ./workingDirectory/out
-    //return runTestConsole(output, testSuite);
     }
 
 /*----------------------------------------------------------------------*\

@@ -147,7 +147,7 @@ void barivox(Provider_I<T>* ptrProvider, string titre, int nbIteration)
     VariateurData variateurDb(coreMp, nbThreadBlockMax, warpSize); 	// (min,max,step)  Attention : A definir intelligement selon le GPU !
 
     // Run
-    const bool IS_ANIMATOR_VERBOSITY_ENABLE = false; //TODO CBI BarivoxOption
+    const bool IS_ANIMATOR_VERBOSITY_ENABLE = false;
     const bool IS_BARIVOX_VERBOSITY_ENABLE = true;
 
 

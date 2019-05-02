@@ -1,4 +1,4 @@
-#include "../04_Test_Slice_sm/TestSliceNew.h"
+#include "TestSliceSM.h"
 
 /*----------------------------------------------------------------------*\
  |*			Declaration 					*|
@@ -17,15 +17,15 @@ extern bool isSliceNewOK();
 /*--------------------------------------*\
  |*		Constructor		*|
  \*-------------------------------------*/
-TestSliceNew::TestSliceNew()
+TestSliceSM::TestSliceSM()
     {
-    TEST_ADD(TestSliceNew::testSliceNew);
+    TEST_ADD(TestSliceSM::testSliceSM);
     }
 
 /*--------------------------------------*\
 |*		Methodes		*|
  \*-------------------------------------*/
-void TestSliceNew::testSliceNew(void)
+void TestSliceSM::testSliceSM(void)
     {
     TEST_ASSERT(isSliceNewOK());
     }

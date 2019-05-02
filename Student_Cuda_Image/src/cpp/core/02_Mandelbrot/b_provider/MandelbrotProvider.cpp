@@ -32,8 +32,8 @@ Animable_I<uchar4>* MandelbrotProvider::createAnimable()
     int mp = Device::getMPCount();
     int coreMP = Device::getCoreCountMP();
 
-    dim3 dg = dim3(24, 1, 1);
-    dim3 db = dim3(768, 1, 1);
+    dim3 dg = dim3(48, 1, 1);
+    dim3 db = dim3(384, 1, 1);
     Grid grid(dg, db);
 
     return new Mandelbrot(grid, w, h, domaineMath, nMin, nMax);

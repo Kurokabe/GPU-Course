@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="CppTest - http://cpptest.sourceforge.net" />
+  
+  <title>Unit Tests Results</title>
+  
+  <style type="text/css" media="screen">
+    <!--
+    hr  {
+      width: 100%;
+      border-width: 0px;
+      height: 1px;
+      color: #cccccc;
+      background-color: #cccccc;
+      padding: 0px;
+    }
+    
+    table {
+      width:100%;
+      border-collapse:separate;
+      border-spacing: 2px;
+      border:0px;
+    }
+    tr {
+      margin:0px;
+      padding:0px;
+    }
+    td {
+      margin:0px;
+      padding:1px;
+    }
+    .table_summary {
+    }
+    .table_suites {
+    }
+    .table_suite {
+    }
+    .table_result {
+      margin: 0px 0px 1em 0px;
+    }
+    .tablecell_title {
+      background-color: #a5cef7;
+      font-weight: bold;
+    }
+    
+    .tablecell_success {
+      background-color: #efefe7;
+    }
+    
+    .tablecell_error {
+      color: #ff0808;
+      background-color: #efefe7;
+      font-weight: bold;
+    }
+    p.spaced {
+      margin: 0px;
+      padding: 1em 0px 2em 0px;
+    }
+    p.unspaced {
+      margin: 0px;
+      padding: 0px 0px 2em 0px;
+    }
+    -->
+  </style>
+</head>
+
+<body>
+
+<h1><a name="top"></a>Unit Tests Results</h1>
+
+<div style="text-align:right">
+Designed by <a href="http://cpptest.sourceforge.net">CppTest</a>
+</div>
+<hr />
+
+<h2>Summary</h2>
+<table summary="Summary of test results" class="table_summary">
+  <tr>
+    <td style="width:30%" class="tablecell_title">Tests</td>
+    <td style="width:30%" class="tablecell_title">Errors</td>
+    <td style="width:30%" class="tablecell_title">Success</td>
+    <td style="width:10%" class="tablecell_title">Time (s)</td>
+  </tr>
+  <tr>
+    <td style="width:30%" class="tablecell_success">19</td>
+    <td style="width:30%" class="tablecell_success">0</td>
+    <td style="width:30%" class="tablecell_success">100%</td>
+    <td style="width:10%" class="tablecell_success">35.000000</td>
+  </tr>
+</table>
+<hr />
+
+<h2>Test suites</h2>
+<table summary="Test Suites" class="table_suites">
+  <tr>
+    <td class="tablecell_title">Name</td>
+    <td style="width:10%" class="tablecell_title">Tests</td>
+    <td style="width:10%" class="tablecell_title">Errors</td>
+    <td style="width:10%" class="tablecell_title">Success</td>
+    <td style="width:10%" class="tablecell_title">Time (s)</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success"><a href="#TestHello">TestHello</a></td>
+    <td style="width:10%" class="tablecell_success">1</td>
+    <td style="width:10%" class="tablecell_success">0</td>
+    <td style="width:10%" class="tablecell_success">100%</td>
+    <td style="width:10%" class="tablecell_success">0.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success"><a href="#TestScalar">TestScalar</a></td>
+    <td style="width:10%" class="tablecell_success">2</td>
+    <td style="width:10%" class="tablecell_success">0</td>
+    <td style="width:10%" class="tablecell_success">100%</td>
+    <td style="width:10%" class="tablecell_success">0.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success"><a href="#TestVector">TestVector</a></td>
+    <td style="width:10%" class="tablecell_success">4</td>
+    <td style="width:10%" class="tablecell_success">0</td>
+    <td style="width:10%" class="tablecell_success">100%</td>
+    <td style="width:10%" class="tablecell_success">1.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success"><a href="#TestSlice">TestSlice</a></td>
+    <td style="width:10%" class="tablecell_success">6</td>
+    <td style="width:10%" class="tablecell_success">0</td>
+    <td style="width:10%" class="tablecell_success">100%</td>
+    <td style="width:10%" class="tablecell_success">0.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success"><a href="#TestReduction">TestReduction</a></td>
+    <td style="width:10%" class="tablecell_success">4</td>
+    <td style="width:10%" class="tablecell_success">0</td>
+    <td style="width:10%" class="tablecell_success">100%</td>
+    <td style="width:10%" class="tablecell_success">0.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success"><a href="#TestSliceSM">TestSliceSM</a></td>
+    <td style="width:10%" class="tablecell_success">1</td>
+    <td style="width:10%" class="tablecell_success">0</td>
+    <td style="width:10%" class="tablecell_success">100%</td>
+    <td style="width:10%" class="tablecell_success">1.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success"><a href="#TestMonteCarlo">TestMonteCarlo</a></td>
+    <td style="width:10%" class="tablecell_success">1</td>
+    <td style="width:10%" class="tablecell_success">0</td>
+    <td style="width:10%" class="tablecell_success">100%</td>
+    <td style="width:10%" class="tablecell_success">33.000000</td>
+  </tr>
+</table>
+<hr />
+
+<h3><a name="TestHello"></a>Suite: TestHello</h3>
+<table summary="Details for suite TestHello" class="table_suite">
+  <tr>
+    <td class="tablecell_title">Name</td>
+    <td style="width:10%" class="tablecell_title">Errors</td>
+    <td style="width:10%" class="tablecell_title">Success</td>
+    <td style="width:10%" class="tablecell_title">Time (s)</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">hello</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">0.000000</td>
+  </tr>
+</table>
+<p class="spaced"><a href="#top">Back to top</a>
+</p>
+<h3><a name="TestScalar"></a>Suite: TestScalar</h3>
+<table summary="Details for suite TestScalar" class="table_suite">
+  <tr>
+    <td class="tablecell_title">Name</td>
+    <td style="width:10%" class="tablecell_title">Errors</td>
+    <td style="width:10%" class="tablecell_title">Success</td>
+    <td style="width:10%" class="tablecell_title">Time (s)</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testProcedurale</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">0.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testObjet</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">0.000000</td>
+  </tr>
+</table>
+<p class="spaced"><a href="#top">Back to top</a>
+</p>
+<h3><a name="TestVector"></a>Suite: TestVector</h3>
+<table summary="Details for suite TestVector" class="table_suite">
+  <tr>
+    <td class="tablecell_title">Name</td>
+    <td style="width:10%" class="tablecell_title">Errors</td>
+    <td style="width:10%" class="tablecell_title">Success</td>
+    <td style="width:10%" class="tablecell_title">Time (s)</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testAddition</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">0.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testAddition64</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">0.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testAddition128</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">0.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testAdditionGrid</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">1.000000</td>
+  </tr>
+</table>
+<p class="spaced"><a href="#top">Back to top</a>
+</p>
+<h3><a name="TestSlice"></a>Suite: TestSlice</h3>
+<table summary="Details for suite TestSlice" class="table_suite">
+  <tr>
+    <td class="tablecell_title">Name</td>
+    <td style="width:10%" class="tablecell_title">Errors</td>
+    <td style="width:10%" class="tablecell_title">Success</td>
+    <td style="width:10%" class="tablecell_title">Time (s)</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testSlice</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">0.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testSlice64</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">0.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testSlice128</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">0.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testSlice256</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">0.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testSlice512</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">0.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testSlice1024</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">0.000000</td>
+  </tr>
+</table>
+<p class="spaced"><a href="#top">Back to top</a>
+</p>
+<h3><a name="TestReduction"></a>Suite: TestReduction</h3>
+<table summary="Details for suite TestReduction" class="table_suite">
+  <tr>
+    <td class="tablecell_title">Name</td>
+    <td style="width:10%" class="tablecell_title">Errors</td>
+    <td style="width:10%" class="tablecell_title">Success</td>
+    <td style="width:10%" class="tablecell_title">Time (s)</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testReductionAtomicI</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">0.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testReductionAtomicII</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">0.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testReductionLockI</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">0.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testReductionLockII</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">0.000000</td>
+  </tr>
+</table>
+<p class="spaced"><a href="#top">Back to top</a>
+</p>
+<h3><a name="TestSliceSM"></a>Suite: TestSliceSM</h3>
+<table summary="Details for suite TestSliceSM" class="table_suite">
+  <tr>
+    <td class="tablecell_title">Name</td>
+    <td style="width:10%" class="tablecell_title">Errors</td>
+    <td style="width:10%" class="tablecell_title">Success</td>
+    <td style="width:10%" class="tablecell_title">Time (s)</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testSliceSM</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">1.000000</td>
+  </tr>
+</table>
+<p class="spaced"><a href="#top">Back to top</a>
+</p>
+<h3><a name="TestMonteCarlo"></a>Suite: TestMonteCarlo</h3>
+<table summary="Details for suite TestMonteCarlo" class="table_suite">
+  <tr>
+    <td class="tablecell_title">Name</td>
+    <td style="width:10%" class="tablecell_title">Errors</td>
+    <td style="width:10%" class="tablecell_title">Success</td>
+    <td style="width:10%" class="tablecell_title">Time (s)</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testMonteCarlo</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">33.000000</td>
+  </tr>
+</table>
+<p class="spaced"><a href="#top">Back to top</a>
+</p>
+<hr />
+
+
+<p>
+  <a href="http://validator.w3.org/#validate-by-upload">
+    Valid XHTML 1.0 Strict
+  </a>
+</p>
+</body>
+</html>

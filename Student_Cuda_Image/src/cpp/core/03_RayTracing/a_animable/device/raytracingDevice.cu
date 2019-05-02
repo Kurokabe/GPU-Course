@@ -47,8 +47,6 @@ static __device__ void copyGMToSM(Sphere* tabGM, Sphere* tabSM, int n);
 __host__ void uploadToCM(Sphere* ptrTabSpheres, int nbSpheres)
     {
     assert(nbSpheres == NB_SPHERE);
-//    int size = nbSpheres * sizeof(Sphere);
-//    Device::memcpyToCM(TAB_SPHERES_CM, ptrTabSpheres, size); //FIXME
     HANDLE_ERROR(cudaMemcpyToSymbol(TAB_SPHERES_CM, ptrTabSpheres, nbSpheres*sizeof(Sphere), 0, cudaMemcpyHostToDevice));
     }
 
@@ -59,7 +57,6 @@ __host__ void uploadToCM(Sphere* ptrTabSpheres, int nbSpheres)
 __global__ void kernelRaytacingGM(uchar4* ptrDevPixels, uint w, uint h, float t, Sphere* ptrTabSpheresGM, int nbSpheres)
     {
     work(ptrDevPixels, w, h, t, ptrTabSpheresGM, nbSpheres);
-    // call work with good input
     }
 
 __global__ void kernelRaytacingSM(uchar4* ptrDevPixels, uint w, uint h, float t, Sphere* ptrTabSpheresGM, int nbSpheres)
@@ -68,7 +65,6 @@ __global__ void kernelRaytacingSM(uchar4* ptrDevPixels, uint w, uint h, float t,
     copyGMToSM(ptrTabSpheresGM, tabSM, nbSpheres);
     __syncthreads(); // Barrière de synchronisation des threads du block
     work(ptrDevPixels, w, h, t, tabSM, nbSpheres);
-    // call work with good input
     }
 
 __global__ void kernelRaytacingCM(uchar4* ptrDevPixels, uint w, uint h, float t, int nbSpheres)
@@ -82,16 +78,10 @@ __global__ void kernelRaytacingCM(uchar4* ptrDevPixels, uint w, uint h, float t,
 
 /**
  * Methode commune au 3 kernel ci-dessus.
- * Ici on ne sait pas si derriere ptrDevTabSpheres, c'est
- * 	- de la GM?
- * 	- de la SM?
- * 	- de la CM?
- * Pas d'importance, c'est un pointeur et on travail avec!
  */
 __device__ void work(uchar4* ptrDevPixels, uint w, uint h, float t, Sphere* ptrDevTabSpheres, int nbSpheres)
     {
     RaytracingMath raytracingMath = RaytracingMath(ptrDevTabSpheres, nbSpheres);
-//    const int TID = Indice2D::tid();
     const int NB_THREAD = Indice2D::nbThread();
     const int WH = w * h;
 

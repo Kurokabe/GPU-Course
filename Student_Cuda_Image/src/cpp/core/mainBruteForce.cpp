@@ -56,8 +56,8 @@ int mainBrutForce(Settings& settings)
 
     // Please, un a la fois!
     //rippling();
-//    mandelbrot(); // Conseil : use nFixe (by example nMin=nMax=80)
-    raytracing();
+    mandelbrot(); // Conseil : use nFixe (by example nMin=nMax=80)
+//    raytracing();
 
     cout << "\n[BruteForce] end" << endl;
 

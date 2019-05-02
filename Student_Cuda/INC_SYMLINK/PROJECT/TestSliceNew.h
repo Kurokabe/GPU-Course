@@ -1,1 +1,0 @@
-/home/arc19/CUDA/toStudent/code/WCuda/Student_Cuda/src/cpp/test/unit/06_Test_SliceNew/TestSliceNew.h

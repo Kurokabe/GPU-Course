@@ -1,1 +1,1 @@
-/home/arc19/CUDA/toStudent/code/WCuda/Tuto_Cpp//src/cpp/test/01_hello/TestHello.h
+/home/arc19/CUDA/toStudent/code/WCuda/Tuto_Cpp/src/cpp/test/01_hello/TestHello.h

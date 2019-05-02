@@ -1,1 +1,1 @@
-/home/arc19/CUDA/toStudent/code/WCuda/Tuto_Cpp//src/cpp/core/10_advanced/b_enfer_or_not/Array.h
+/home/arc19/CUDA/toStudent/code/WCuda/Tuto_Cpp/src/cpp/core/10_advanced/b_enfer_or_not/Array.h

@@ -1,1 +1,1 @@
-/home/arc19/CUDA/toStudent/code/WCuda/Tuto_Boost//src/cpp/core/boost/thread/Runnable.h
+/home/arc19/CUDA/toStudent/code/WCuda/Tuto_Boost/src/cpp/core/boost/thread/Runnable.h

@@ -53,20 +53,6 @@ class RipplingMath
 	    ptrColorIJ->z = levelGris;
 
 	    ptrColorIJ->w = 255; //opaque
-
-	    // Conseil:
-	    // 		Etape 1 : 	Commencer par afficher une image uniforme grise (128 par exemple)
-	    // 				pour valider tout le pipeline en amont
-	    //
-	    // 		Etape 2:	Puis une fois que l'image grise est valider, attaquer rippling
-
-	    // debug temp
-	    //		{
-	    //		ptrColorIJ->x = 128;
-	    //		ptrColorIJ->y = 128;
-	    //		ptrColorIJ->z = 128;
-	    //		ptrColorIJ->w = 255; // opacity facultatif
-	    //		}
 	    }
 
     private:
@@ -75,7 +61,7 @@ class RipplingMath
 	void f(int i, int j, float t, uchar* ptrlevelGris)
 	    {
 	    float result;
-	    dij(i, j, &result); // warning : dij return void. Ne peut pas etre "imbriquer dans une fonction"
+	    dij(i, j, &result);
 	    result = result / 10;
 	    *ptrlevelGris = 128.0f + 127.0f*(cosf(result-t/7.0f)/(result+1.0f));
 	    }
@@ -86,8 +72,6 @@ class RipplingMath
 	    float fi = i - dim2;
 	    float fj = j - dim2;
 	    *ptrResult = sqrtf(fi * fi + fj * fj);
-	    // Ne pas utiliser la fonction pow pour elever au carrer !
-	    // Utiliser l'opérateur *
 	    }
 
 	/*--------------------------------------*\

@@ -4,19 +4,19 @@
 /*----------------------------------------------------------------------*\
  |*			Declaration 					*|
  \*---------------------------------------------------------------------*/
-class TestSliceNew: public Test::Suite
+class TestSliceSM: public Test::Suite
     {
     /*--------------------------------------*\
     |*		Constructor		     *|
      \*-------------------------------------*/
 	public:
-	TestSliceNew();
+	TestSliceSM();
 
 	/*--------------------------------------*\
 	|*		Methode			*|
 	 \*--------------------------------------*/
 	private:
-	void testSliceNew(void);
+	void testSliceSM(void);
 
     };
 

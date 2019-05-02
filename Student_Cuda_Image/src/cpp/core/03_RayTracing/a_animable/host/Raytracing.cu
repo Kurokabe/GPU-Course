@@ -44,23 +44,19 @@ Raytracing::Raytracing(const Grid& grid, uint w, uint h, float dt, int nbSpheres
     this->t = 0;
 
     // spheres
-	{
-	SphereCreator sphereCreator(nbSpheres, w, h);
-	uploadToDevice(sphereCreator.getTabSphere());
-	} // SphereCreator depiler, donc detruit, tabSphere cote host detruit!
+    SphereCreator sphereCreator(nbSpheres, w, h);
+    uploadToDevice(sphereCreator.getTabSphere());
 
     cout << "[Raytracing] : memoryType : " << memoryType;
     }
 
 Raytracing::~Raytracing()
     {
-    // TODO Raytracing GPU MemoryManagement free
     switch (memoryType)
 	{
 	case GM:
 	    {
-	    //assert(false); // to delete once implement
-	Device::free(ptrDevTabSpheres);
+	    Device::free(ptrDevTabSpheres);
 	    break;
 	    }
 	case CM:

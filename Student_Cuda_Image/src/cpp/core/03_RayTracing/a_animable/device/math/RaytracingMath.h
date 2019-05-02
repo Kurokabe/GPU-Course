@@ -50,22 +50,6 @@ class RaytracingMath
 	    ptrColorIJ->z = 0;
 
 	    color(xySol, t, ptrColorIJ); // update colorij
-
-	    //color(xySol, t, ptrColorIJ);
-
-	    // Conseil:
-	    // 		Etape 1 : 	Commencer par afficher une image uniforme grise (128 par exemple)
-	    // 				pour valider tout le pipeline en amont
-	    //
-	    // 		Etape 2:	Puis une fois que l'image grise est valider, attaquer raytracing
-
-	    // debug temp
-	    //		{
-//	    		ptrColorIJ->x = 128;
-//	    		ptrColorIJ->y = 128;
-//	    		ptrColorIJ->z = 128;
-//	    		ptrColorIJ->w = 255; // opacity facultatif
-	    //		}
 	    }
 
     private:
