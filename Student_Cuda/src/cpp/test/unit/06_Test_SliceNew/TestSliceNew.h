@@ -9,7 +9,8 @@ class TestSliceNew: public Test::Suite
     /*--------------------------------------*\
     |*		Constructor		     *|
      \*-------------------------------------*/
-	public: TestSliceNew();
+	public:
+	TestSliceNew();
 
 	/*--------------------------------------*\
 	|*		Methode			*|
