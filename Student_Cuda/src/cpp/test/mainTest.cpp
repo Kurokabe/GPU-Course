@@ -12,8 +12,8 @@
 #include "TestScalar.h"
 #include "TestSlice.h"
 #include "TestReduction.h"
-#include "TestSliceNew.h"
 #include "TestMonteCarlo.h"
+#include "unit/04_Test_Slice_sm/TestSliceNew.h"
 
 using std::string;
 using std::cout;

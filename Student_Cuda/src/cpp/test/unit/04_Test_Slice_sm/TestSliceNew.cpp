@@ -1,4 +1,4 @@
-#include "TestSliceNew.h"
+#include "../04_Test_Slice_sm/TestSliceNew.h"
 
 /*----------------------------------------------------------------------*\
  |*			Declaration 					*|
