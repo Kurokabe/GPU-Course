@@ -26,6 +26,7 @@ extern bool isReductionAddToolsLock_I_Ok();
 extern bool isReductionAddToolsLock_II_Ok();
 extern bool isSliceNewOK();
 extern bool isMonteCarloOK();
+extern bool isMonteCarloLongOK();
 extern bool isMonteCarloMultiGPUOK(const Grid& grid);
 
 /*--------------------------------------*\
@@ -63,7 +64,8 @@ int mainCore()
 //    isOk &= isReductionAddToolsLock_II_Ok();
 //    isOk &= isSliceNewOK();
 //    isOk &= isMonteCarloOK();
-    isOk &= isMonteCarloMultiGPUOK(grid);
+    isOk &= isMonteCarloLongOK();
+    //isOk &= isMonteCarloMultiGPUOK(grid);
     cout << "\nisOK = " << isOk << endl;
     cout << "\nEnd : mainCore" << endl;
 

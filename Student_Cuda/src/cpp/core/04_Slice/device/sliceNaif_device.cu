@@ -48,9 +48,9 @@ __global__ void reductionIntraThread(float* tabGM, int nbSlice)
     float sum = 0;
     while(s<nbSlice)
 	{
-	    float xs = s*DX;
-	    sum+=f(xs);
-	    s+=NB_THREAD;
+	float xs = s*DX;
+	sum+=f(xs);
+	s+=NB_THREAD;
 	}
     tabGM[TID]=sum;
     }

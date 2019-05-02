@@ -55,23 +55,10 @@ bool isMonteCarloMultiGPUOK(const Grid& grid)
 
 bool isMonteCarloMultiGPUOK()
     {
-    bool isOk = true;
-    dim3 dg = dim3(1,1,1);
-    dim3 db = dim3(2, 1, 1);
+    dim3 dg = dim3(64,1,1);
+    dim3 db = dim3(128, 1, 1);
     Grid grid(dg, db);
-    for(int i = 16; i<=64; ++i) //Démarrage à 16 afin d'avoir des tests assez rapides
-	{
-	dg.x = i;
-	grid.dg = dg;
-	for(int j = 2; j<=1024; j*=2)
-	    {
-	    db.x = j;
-	    grid.db = db;
-	    cout << grid << endl;
-	    isOk &= isMonteCarloMultiGPUOK(grid);
-	    }
-	}
-    return isOk;
+    return isMonteCarloMultiGPUOK(grid);
 
     }
 

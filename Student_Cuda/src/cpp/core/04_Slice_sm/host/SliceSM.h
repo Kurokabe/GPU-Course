@@ -15,7 +15,7 @@
 /**
  * On passse la grille à SliceNaif pour pouvoir facilement la faire varier de l'extérieur pour trouver l'optimum, ou faire des tests avec des grilles différentes
  */
-class SliceNew
+class SliceSM
     {
 	/*--------------------------------------*\
 	|*		Constructor		*|
@@ -27,8 +27,8 @@ class SliceNew
 	 * update piHat
 	 * Hyp : nbThread est une puissance de 2
 	 */
-	SliceNew(const Grid& grid,int nbSlice, float* ptrPiHat);
-	virtual ~SliceNew(void);
+	SliceSM(const Grid& grid,int nbSlice, float* ptrPiHat);
+	virtual ~SliceSM(void);
 
 	/*--------------------------------------*\
 	|*		Methodes		*|

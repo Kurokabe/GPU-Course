@@ -38,11 +38,6 @@ static __device__ void reductionIntraThread(long* tabSM);
  */
 __host__ bool isReductionAddToolsLock_I_Ok(const Grid& grid)
     {
-    // TODO
-    // MM pour ptrDevResultGM (oubliez pas initialisation)
-    // appeler kernel
-    // MM recuprer resultat
-    // cheker resultat
     long* ptrRes = new long[sizeof(long)];
     long* ptrResGM;
     *ptrRes = 0;
@@ -84,20 +79,14 @@ __host__ bool isReductionAddToolsLock_I_Ok()
  */
 __global__ void fillOne(long* ptrDevResultGM)
     {
-    // TODO declaration tabSM
-    // reductionIntraThread
-    // ReductionAddToolsLock
     extern __shared__ long tabSM[];
     reductionIntraThread(tabSM);
     __syncthreads();
     ReductionAddToolsLock::reductionADD(tabSM, ptrDevResultGM);
-    // __syncthreads(); // des threads de meme block!// utile? ou?
     }
 
 __device__ void reductionIntraThread(long* tabSM)
     {
-    // TODO entrelacement et remplissage tabSM
-    // rappel : |tabSM|=|threadByBlock|
     tabSM[threadIdx.x] = 1;
     }
 

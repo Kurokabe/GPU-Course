@@ -39,10 +39,6 @@ static __device__ void reductionIntraThread(int* tabSM);
  */
 __host__ bool isReductionAddTools_I_Ok(const Grid& grid)
     {
-    // MM pour ptrDevResultGM (oubliez pas initialisation)
-    // appeler kernel
-    // MM recuprer resultat
-    // cheker resultat
     int* ptrRes = new int[sizeof(int)];
     int* ptrResGM;
     *ptrRes = 0;

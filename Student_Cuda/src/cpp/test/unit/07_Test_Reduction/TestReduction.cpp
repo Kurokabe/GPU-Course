@@ -1,4 +1,4 @@
-#include "TestSliceSM.h"
+#include "../07_Test_Reduction/TestReduction.h"
 
 /*----------------------------------------------------------------------*\
  |*			Declaration 					*|
@@ -7,27 +7,47 @@
 /*--------------------------------------*\
 |*		Imported	 	*|
  \*-------------------------------------*/
-extern bool isSliceSMOK();
+extern bool isReductionAddTools_I_Ok();
+extern bool isReductionAddTools_II_Ok();
+extern bool isReductionAddToolsLock_I_Ok();
+extern bool isReductionAddToolsLock_II_Ok();
 
 /*----------------------------------------------------------------------*\
  |*			Implementation 					*|
  \*---------------------------------------------------------------------*/
 
-
 /*--------------------------------------*\
  |*		Constructor		*|
  \*-------------------------------------*/
-TestSliceSM::TestSliceSM()
+TestReduction::TestReduction()
     {
-    TEST_ADD(TestSliceSM::testSliceSM);
+    TEST_ADD(TestReduction::testReductionAtomicI);
+    TEST_ADD(TestReduction::testReductionAtomicII);
+    TEST_ADD(TestReduction::testReductionLockI);
+    TEST_ADD(TestReduction::testReductionLockII);
     }
 
 /*--------------------------------------*\
 |*		Methodes		*|
  \*-------------------------------------*/
-void TestSliceSM::testSliceSM(void)
+void TestReduction::testReductionAtomicI(void)
     {
-    TEST_ASSERT(isSliceSMOK());
+    TEST_ASSERT(isReductionAddTools_I_Ok());
+    }
+
+void TestReduction::testReductionAtomicII(void)
+    {
+    TEST_ASSERT(isReductionAddTools_II_Ok());
+    }
+
+void TestReduction::testReductionLockI(void)
+    {
+    TEST_ASSERT(isReductionAddToolsLock_I_Ok());
+    }
+
+void TestReduction::testReductionLockII(void)
+    {
+    TEST_ASSERT(isReductionAddToolsLock_II_Ok());
     }
 
 /*----------------------------------------------------------------------*\

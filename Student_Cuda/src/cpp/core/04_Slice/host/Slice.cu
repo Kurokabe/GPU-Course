@@ -62,51 +62,26 @@ Slice::~Slice(void)
 
 void Slice::run()
     {
-    // v1 : promotion tab, reduction coter host
+
+    reductionIntraThread<<<dg, db>>>(tabGM, nbSlice);
+
+    // Reduction paralle sur cpu du tableau promu ramener coter host
 	{
-	// emploi uniquemnet du kernel : reductionIntraThread
-
-	reductionIntraThread<<<dg, db>>>(tabGM, nbSlice);
-
-	// Reduction paralle sur cpu du tableau promu ramener coter host
+	int moitier = nTabGM/2;
+	dg.x = moitier;
+	db.x = 1;
+	while(moitier>=1)
 	    {
-
-	    int moitier = nTabGM/2;
-	    dg.x = moitier;
-	    db.x = 1;
-	    while(moitier>=1)
-		{
-		ecrasementGM<<<dg, db>>>(tabGM, moitier);
-		moitier/=2;
-		dg.x=moitier;
-		}
-	    }
-	    //MM (Device -> Host)
-	    {
-	    Device::memcpyDToH(ptrPiHat, tabGM,sizeof(float));
+	    ecrasementGM<<<dg, db>>>(tabGM, moitier);
+	    moitier/=2;
+	    dg.x=moitier;
 	    }
 	}
-
-    // v2 : promotion tab, reduction coter device en GM
+	//MM (Device -> Host)
 	{
-	// emploi de deux kernels:
-	//	reductionIntraThread
-	//	ecrasementGM
-	//
-	// Warning:
-	//	(W1) ecrasementGM doit etre lancer dans une boucle coter host
-	//	(W2) On serait tenter de realiser cette boucle coter device, c'est techniquement possible, mais pose de gros problème de synchronisation!
-	//
-	// Note:
-	//	Attendez la version de slice en SM pour un code 100% parallel sur GPU, sans boucle sur CPU.
-
-	// TODO Slice+
+	Device::memcpyDToH(ptrPiHat, tabGM,sizeof(float));
 	}
     }
-
-/*--------------------------------------*\
- |*		Private			*|
- \*-------------------------------------*/
 
 /*----------------------------------------------------------------------*\
  |*			End	 					*|

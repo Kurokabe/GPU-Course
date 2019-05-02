@@ -87,21 +87,14 @@ __host__ bool isReductionAddTools_II_Ok()
  */
 __global__ void fillTidGlobal(int* ptrDevResultGM)
     {
-    // TODO declaration tabSM
-    // reductionIntraThread
-    // ReductionAddTools
     extern __shared__ int tabSM[];
     reductionIntraThread(tabSM);
     __syncthreads();
     ReductionAddTools::reductionADD(tabSM, ptrDevResultGM);
-
-    // __syncthreads(); // des threads de meme block!// utile? ou?
     }
 
 __device__ void reductionIntraThread(int* tabSM)
     {
-    // TODO entrelacement et remplissage tabSM
-    // rappel : |tabSM|=|threadByBlock|
     tabSM[threadIdx.x] = blockDim.x * blockIdx.x + threadIdx.x;
     }
 

@@ -1,4 +1,4 @@
-#include "TestMonteCarlo.h"
+#include "TestMonteCarloLong.h"
 
 /*----------------------------------------------------------------------*\
  |*			Declaration 					*|
@@ -7,7 +7,7 @@
 /*--------------------------------------*\
 |*		Imported	 	*|
  \*-------------------------------------*/
-extern bool isMonteCarloOK();
+extern bool isMonteCarloLongOK();
 
 /*----------------------------------------------------------------------*\
  |*			Implementation 					*|
@@ -16,18 +16,18 @@ extern bool isMonteCarloOK();
 /*--------------------------------------*\
  |*		Constructor		*|
  \*-------------------------------------*/
-TestMonteCarlo::TestMonteCarlo()
+TestMonteCarloLong::TestMonteCarloLong()
     {
-    TEST_ADD(TestMonteCarlo::testMonteCarlo);
+    TEST_ADD(TestMonteCarloLong::testMonteCarloLong);
     }
 
 
 /*--------------------------------------*\
 |*		Methodes		*|
  \*-------------------------------------*/
-void TestMonteCarlo::testMonteCarlo(void)
+void TestMonteCarloLong::testMonteCarloLong(void)
     {
-    TEST_ASSERT(isMonteCarloOK());
+    TEST_ASSERT(isMonteCarloLongOK());
     }
 
 /*----------------------------------------------------------------------*\

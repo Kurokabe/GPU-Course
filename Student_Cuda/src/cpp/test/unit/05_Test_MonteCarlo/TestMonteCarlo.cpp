@@ -1,4 +1,4 @@
-#include "TestReduction.h"
+#include "../05_Test_MonteCarlo/TestMonteCarlo.h"
 
 /*----------------------------------------------------------------------*\
  |*			Declaration 					*|
@@ -7,10 +7,7 @@
 /*--------------------------------------*\
 |*		Imported	 	*|
  \*-------------------------------------*/
-extern bool isReductionAddTools_I_Ok();
-extern bool isReductionAddTools_II_Ok();
-extern bool isReductionAddToolsLock_I_Ok();
-extern bool isReductionAddToolsLock_II_Ok();
+extern bool isMonteCarloOK();
 
 /*----------------------------------------------------------------------*\
  |*			Implementation 					*|
@@ -19,35 +16,18 @@ extern bool isReductionAddToolsLock_II_Ok();
 /*--------------------------------------*\
  |*		Constructor		*|
  \*-------------------------------------*/
-TestReduction::TestReduction()
+TestMonteCarlo::TestMonteCarlo()
     {
-    TEST_ADD(TestReduction::testReductionAtomicI);
-    TEST_ADD(TestReduction::testReductionAtomicII);
-    TEST_ADD(TestReduction::testReductionLockI);
-    TEST_ADD(TestReduction::testReductionLockII);
+    TEST_ADD(TestMonteCarlo::testMonteCarlo);
     }
+
 
 /*--------------------------------------*\
 |*		Methodes		*|
  \*-------------------------------------*/
-void TestReduction::testReductionAtomicI(void)
+void TestMonteCarlo::testMonteCarlo(void)
     {
-    TEST_ASSERT(isReductionAddTools_I_Ok());
-    }
-
-void TestReduction::testReductionAtomicII(void)
-    {
-    TEST_ASSERT(isReductionAddTools_II_Ok());
-    }
-
-void TestReduction::testReductionLockI(void)
-    {
-    TEST_ASSERT(isReductionAddToolsLock_I_Ok());
-    }
-
-void TestReduction::testReductionLockII(void)
-    {
-    TEST_ASSERT(isReductionAddToolsLock_II_Ok());
+    TEST_ASSERT(isMonteCarloOK());
     }
 
 /*----------------------------------------------------------------------*\

@@ -11,9 +11,11 @@
 #include "TestVector.h"
 #include "TestScalar.h"
 #include "TestSlice.h"
-#include "TestReduction.h"
-#include "TestMonteCarlo.h"
 #include "TestSliceSM.h"
+#include "TestMonteCarlo.h"
+#include "TestReduction.h"
+#include "TestMonteCarloLong.h"
+#include "TestMonteCarloMultiGPU.h"
 
 using std::string;
 using std::cout;
@@ -73,6 +75,8 @@ bool testALL()
     testSuite.add(std::auto_ptr < Suite > (new TestReduction()));
     testSuite.add(std::auto_ptr < Suite > (new TestSliceSM()));
     testSuite.add(std::auto_ptr < Suite > (new TestMonteCarlo()));
+    testSuite.add(std::auto_ptr < Suite > (new TestMonteCarloLong()));
+    testSuite.add(std::auto_ptr < Suite > (new TestMonteCarloMultiGPU()));
 
     string output = "out/test";
     return runTestHtml(output, testSuite); // Attention: html create in ./workingDirectory/out

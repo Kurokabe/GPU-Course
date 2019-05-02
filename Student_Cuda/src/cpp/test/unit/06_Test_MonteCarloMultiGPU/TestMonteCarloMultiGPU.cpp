@@ -1,4 +1,4 @@
-#include "TestSliceSM.h"
+#include "TestMonteCarloMultiGPU.h"
 
 /*----------------------------------------------------------------------*\
  |*			Declaration 					*|
@@ -7,27 +7,27 @@
 /*--------------------------------------*\
 |*		Imported	 	*|
  \*-------------------------------------*/
-extern bool isSliceSMOK();
+extern bool isMonteCarloMultiGPUOK();
 
 /*----------------------------------------------------------------------*\
  |*			Implementation 					*|
  \*---------------------------------------------------------------------*/
 
-
 /*--------------------------------------*\
  |*		Constructor		*|
  \*-------------------------------------*/
-TestSliceSM::TestSliceSM()
+TestMonteCarloMultiGPU::TestMonteCarloMultiGPU()
     {
-    TEST_ADD(TestSliceSM::testSliceSM);
+    TEST_ADD(TestMonteCarloMultiGPU::testMonteCarloMultiGPU);
     }
+
 
 /*--------------------------------------*\
 |*		Methodes		*|
  \*-------------------------------------*/
-void TestSliceSM::testSliceSM(void)
+void TestMonteCarloMultiGPU::testMonteCarloMultiGPU(void)
     {
-    TEST_ASSERT(isSliceSMOK());
+    TEST_ASSERT(isMonteCarloMultiGPUOK());
     }
 
 /*----------------------------------------------------------------------*\

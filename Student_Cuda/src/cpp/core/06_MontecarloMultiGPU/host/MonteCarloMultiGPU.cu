@@ -27,11 +27,12 @@ using std::endl;
 MonteCarloMultiGPU::MonteCarloMultiGPU(const Grid& grid, int nbFlechette, float* ptrPiHat) :
 	ptrPiHat(ptrPiHat), nbFlechette(nbFlechette), grid(grid)
     {
+    //null
     }
 
 MonteCarloMultiGPU::~MonteCarloMultiGPU(void)
     {
-
+    //null
     }
 
 /*--------------------------------------*\
@@ -45,7 +46,6 @@ void MonteCarloMultiGPU::run()
     int nbFlechetteReel = 0;
     int nbFlechetteGPU = nbFlechette / nGPU; //Perte des virgules
 
-//#pragma omp parallel for reduction(+:sum)
 #pragma omp parallel for
     for (int deviceId = 0; deviceId < nGPU; ++deviceId)
 	{

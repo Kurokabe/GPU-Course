@@ -84,10 +84,10 @@ Designed by <a href="http://cpptest.sourceforge.net">CppTest</a>
     <td style="width:10%" class="tablecell_title">Time (s)</td>
   </tr>
   <tr>
-    <td style="width:30%" class="tablecell_success">19</td>
+    <td style="width:30%" class="tablecell_success">21</td>
     <td style="width:30%" class="tablecell_success">0</td>
     <td style="width:30%" class="tablecell_success">100%</td>
-    <td style="width:10%" class="tablecell_success">35.000000</td>
+    <td style="width:10%" class="tablecell_success">122.000000</td>
   </tr>
 </table>
 <hr />
@@ -120,7 +120,7 @@ Designed by <a href="http://cpptest.sourceforge.net">CppTest</a>
     <td style="width:10%" class="tablecell_success">4</td>
     <td style="width:10%" class="tablecell_success">0</td>
     <td style="width:10%" class="tablecell_success">100%</td>
-    <td style="width:10%" class="tablecell_success">1.000000</td>
+    <td style="width:10%" class="tablecell_success">13.000000</td>
   </tr>
   <tr>
     <td class="tablecell_success"><a href="#TestSlice">TestSlice</a></td>
@@ -134,21 +134,35 @@ Designed by <a href="http://cpptest.sourceforge.net">CppTest</a>
     <td style="width:10%" class="tablecell_success">4</td>
     <td style="width:10%" class="tablecell_success">0</td>
     <td style="width:10%" class="tablecell_success">100%</td>
-    <td style="width:10%" class="tablecell_success">0.000000</td>
+    <td style="width:10%" class="tablecell_success">1.000000</td>
   </tr>
   <tr>
     <td class="tablecell_success"><a href="#TestSliceSM">TestSliceSM</a></td>
     <td style="width:10%" class="tablecell_success">1</td>
     <td style="width:10%" class="tablecell_success">0</td>
     <td style="width:10%" class="tablecell_success">100%</td>
-    <td style="width:10%" class="tablecell_success">1.000000</td>
+    <td style="width:10%" class="tablecell_success">0.000000</td>
   </tr>
   <tr>
     <td class="tablecell_success"><a href="#TestMonteCarlo">TestMonteCarlo</a></td>
     <td style="width:10%" class="tablecell_success">1</td>
     <td style="width:10%" class="tablecell_success">0</td>
     <td style="width:10%" class="tablecell_success">100%</td>
-    <td style="width:10%" class="tablecell_success">33.000000</td>
+    <td style="width:10%" class="tablecell_success">37.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success"><a href="#TestMonteCarloLong">TestMonteCarloLong</a></td>
+    <td style="width:10%" class="tablecell_success">1</td>
+    <td style="width:10%" class="tablecell_success">0</td>
+    <td style="width:10%" class="tablecell_success">100%</td>
+    <td style="width:10%" class="tablecell_success">70.000000</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success"><a href="#TestMonteCarloMultiGPU">TestMonteCarloMultiGPU</a></td>
+    <td style="width:10%" class="tablecell_success">1</td>
+    <td style="width:10%" class="tablecell_success">0</td>
+    <td style="width:10%" class="tablecell_success">100%</td>
+    <td style="width:10%" class="tablecell_success">1.000000</td>
   </tr>
 </table>
 <hr />
@@ -223,7 +237,7 @@ Designed by <a href="http://cpptest.sourceforge.net">CppTest</a>
     <td class="tablecell_success">testAdditionGrid</td>
     <td class="tablecell_success">0</td>
     <td class="tablecell_success">true</td>
-    <td class="tablecell_success">1.000000</td>
+    <td class="tablecell_success">13.000000</td>
   </tr>
 </table>
 <p class="spaced"><a href="#top">Back to top</a>
@@ -305,7 +319,7 @@ Designed by <a href="http://cpptest.sourceforge.net">CppTest</a>
     <td class="tablecell_success">testReductionLockII</td>
     <td class="tablecell_success">0</td>
     <td class="tablecell_success">true</td>
-    <td class="tablecell_success">0.000000</td>
+    <td class="tablecell_success">1.000000</td>
   </tr>
 </table>
 <p class="spaced"><a href="#top">Back to top</a>
@@ -322,7 +336,7 @@ Designed by <a href="http://cpptest.sourceforge.net">CppTest</a>
     <td class="tablecell_success">testSliceSM</td>
     <td class="tablecell_success">0</td>
     <td class="tablecell_success">true</td>
-    <td class="tablecell_success">1.000000</td>
+    <td class="tablecell_success">0.000000</td>
   </tr>
 </table>
 <p class="spaced"><a href="#top">Back to top</a>
@@ -339,7 +353,41 @@ Designed by <a href="http://cpptest.sourceforge.net">CppTest</a>
     <td class="tablecell_success">testMonteCarlo</td>
     <td class="tablecell_success">0</td>
     <td class="tablecell_success">true</td>
-    <td class="tablecell_success">33.000000</td>
+    <td class="tablecell_success">37.000000</td>
+  </tr>
+</table>
+<p class="spaced"><a href="#top">Back to top</a>
+</p>
+<h3><a name="TestMonteCarloLong"></a>Suite: TestMonteCarloLong</h3>
+<table summary="Details for suite TestMonteCarloLong" class="table_suite">
+  <tr>
+    <td class="tablecell_title">Name</td>
+    <td style="width:10%" class="tablecell_title">Errors</td>
+    <td style="width:10%" class="tablecell_title">Success</td>
+    <td style="width:10%" class="tablecell_title">Time (s)</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testMonteCarloLong</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">70.000000</td>
+  </tr>
+</table>
+<p class="spaced"><a href="#top">Back to top</a>
+</p>
+<h3><a name="TestMonteCarloMultiGPU"></a>Suite: TestMonteCarloMultiGPU</h3>
+<table summary="Details for suite TestMonteCarloMultiGPU" class="table_suite">
+  <tr>
+    <td class="tablecell_title">Name</td>
+    <td style="width:10%" class="tablecell_title">Errors</td>
+    <td style="width:10%" class="tablecell_title">Success</td>
+    <td style="width:10%" class="tablecell_title">Time (s)</td>
+  </tr>
+  <tr>
+    <td class="tablecell_success">testMonteCarloMultiGPU</td>
+    <td class="tablecell_success">0</td>
+    <td class="tablecell_success">true</td>
+    <td class="tablecell_success">1.000000</td>
   </tr>
 </table>
 <p class="spaced"><a href="#top">Back to top</a>

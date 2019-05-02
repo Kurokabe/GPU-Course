@@ -1,5 +1,5 @@
 
-#include "../../04_Slice_sm/host/SliceNew.h"
+#include "SliceSM.h"
 
 #include <iostream>
 #include <assert.h>
@@ -25,7 +25,7 @@ extern __global__ void kernelSliceSM(float* ptrDevResultat,int nbSlice);
  |*		Constructeur		*|
  \*-------------------------------------*/
 
-SliceNew::SliceNew(const Grid& grid, int nbSlice, float* ptrPiHat) : ptrPiHat(ptrPiHat), nbSlice(nbSlice)
+SliceSM::SliceSM(const Grid& grid, int nbSlice, float* ptrPiHat) : ptrPiHat(ptrPiHat), nbSlice(nbSlice)
     {
     this->sizeTabGM = sizeof(float); // [octet]
 
@@ -37,7 +37,7 @@ SliceNew::SliceNew(const Grid& grid, int nbSlice, float* ptrPiHat) : ptrPiHat(pt
 
     }
 
-SliceNew::~SliceNew(void)
+SliceSM::~SliceSM(void)
     {
     Device::free (ptrDevResultat);
     }
@@ -46,7 +46,7 @@ SliceNew::~SliceNew(void)
  |*		Methode			*|
  \*-------------------------------------*/
 
-void SliceNew::run()
+void SliceSM::run()
     {
     kernelSliceSM<<<dg,db,sizeof(float)*db.x>>>(ptrDevResultat,nbSlice);
     Device::memcpyDToH(ptrPiHat, ptrDevResultat, sizeof(float));
