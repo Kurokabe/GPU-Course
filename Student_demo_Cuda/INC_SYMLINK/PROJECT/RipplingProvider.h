@@ -1,1 +1,1 @@
-/home/arc19/CUDA/toStudent/code/WCuda/Student_demo_Cuda/../Student_Cuda_Image/src/cpp/core/01_Rippling/b_provider/RipplingProvider.h
+/home/arc19/CUDA/toStudent/code/WCuda/Student_demo_Cuda//../Student_Cuda_Image/src/cpp/core/01_Rippling/b_provider/RipplingProvider.h

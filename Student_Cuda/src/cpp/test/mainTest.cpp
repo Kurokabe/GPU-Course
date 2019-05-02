@@ -72,8 +72,8 @@ bool testALL()
     testSuite.add(std::auto_ptr < Suite > (new TestScalar()));
     testSuite.add(std::auto_ptr < Suite > (new TestVector()));
     testSuite.add(std::auto_ptr < Suite > (new TestSlice()));
-    testSuite.add(std::auto_ptr < Suite > (new TestReduction()));
     testSuite.add(std::auto_ptr < Suite > (new TestSliceSM()));
+    testSuite.add(std::auto_ptr < Suite > (new TestReduction()));
     testSuite.add(std::auto_ptr < Suite > (new TestMonteCarlo()));
     testSuite.add(std::auto_ptr < Suite > (new TestMonteCarloLong()));
     testSuite.add(std::auto_ptr < Suite > (new TestMonteCarloMultiGPU()));

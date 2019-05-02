@@ -20,13 +20,13 @@ extern bool isAddScalarGPU_proceduraleOk(void);
 extern bool isAddScalarGPU_ObjetOk(void);
 extern bool isAddVecteurOk(int n);
 extern bool isSliceOK();
-extern bool isReductionAddTools_I_Ok();
-extern bool isReductionAddTools_II_Ok();
-extern bool isReductionAddToolsLock_I_Ok();
-extern bool isReductionAddToolsLock_II_Ok();
-extern bool isSliceNewOK();
-extern bool isMonteCarloOK();
-extern bool isMonteCarloLongOK();
+extern bool isSliceSMOK(const Grid& grid);
+extern bool isReductionAddTools_I_Ok(const Grid& grid);
+extern bool isReductionAddTools_II_Ok(const Grid& grid);
+extern bool isReductionAddToolsLock_I_Ok(const Grid& grid);
+extern bool isReductionAddToolsLock_II_Ok(const Grid& grid);
+extern bool isMonteCarloOK(const Grid& grid);
+extern bool isMonteCarloLongOK(const Grid& grid);
 extern bool isMonteCarloMultiGPUOK(const Grid& grid);
 
 /*--------------------------------------*\
@@ -49,23 +49,24 @@ int mainCore();
 
 int mainCore()
     {
+    dim3 dg = dim3(64, 1, 1);  		// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
+    dim3 db = dim3(1024, 1, 1);   		// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
+    Grid grid(dg, db);
+
     bool isOk = true;
 //    isOk &= helloCuda();
 //    isOk &= isAddScalarGPU_proceduraleOk();
 //    isOk &= isAddScalarGPU_ObjetOk();
 //    isOk &= isAddVecteurOk(9);
 //    isOk &= isSliceOK();
-    dim3 dg = dim3(64, 1, 1);  		// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
-    dim3 db = dim3(1024, 1, 1);   		// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
-    Grid grid(dg, db);
-//    isOk &= isReductionAddTools_I_Ok();
-//    isOk &= isReductionAddTools_II_Ok();
-//    isOk &= isReductionAddToolsLock_I_Ok();
-//    isOk &= isReductionAddToolsLock_II_Ok();
-//    isOk &= isSliceNewOK();
-//    isOk &= isMonteCarloOK();
-    isOk &= isMonteCarloLongOK();
-    //isOk &= isMonteCarloMultiGPUOK(grid);
+//    isOk &= isSliceSMOK(grid);
+//    isOk &= isReductionAddTools_I_Ok(grid);
+//    isOk &= isReductionAddTools_II_Ok(grid);
+    isOk &= isReductionAddToolsLock_I_Ok(grid);
+    isOk &= isReductionAddToolsLock_II_Ok(grid);
+//    isOk &= isMonteCarloOK(grid);
+//    isOk &= isMonteCarloLongOK(grid);
+//    isOk &= isMonteCarloMultiGPUOK(grid);
     cout << "\nisOK = " << isOk << endl;
     cout << "\nEnd : mainCore" << endl;
 
