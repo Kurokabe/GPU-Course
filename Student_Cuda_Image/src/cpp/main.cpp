@@ -47,7 +47,7 @@ int main(int argc, char** argv)
     {
     // Server Cuda2: in [0,3]	(4 Devices)
     // Server Cuda3: in [0,2]	(2 Devices)
-    int DEVICE_ID = 2;
+    int DEVICE_ID = 1;
 
     LaunchMode launchMode = LaunchMode::IMAGE; // IMAGE  ANIMABLE  BARIVOX FORCEBRUT
     Settings settings(launchMode, DEVICE_ID, argc, argv);

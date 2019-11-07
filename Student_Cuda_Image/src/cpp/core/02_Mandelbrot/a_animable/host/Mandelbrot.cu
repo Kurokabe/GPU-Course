@@ -65,6 +65,12 @@ void Mandelbrot::animationStep()
     this->t = variateurT.varierAndGet();
     }
 
+void Mandelbrot::setNMinNMax(int nMin, int nMax)
+    {
+    this->nMin = nMin;
+    this->nMax = nMax;
+    this->variateurT = Variateur<int> (Interval<int>(this->nMin, this->nMax), 1);
+    }
 /*----------------------------------------------------------------------*\
  |*			End	 					*|
  \*---------------------------------------------------------------------*/

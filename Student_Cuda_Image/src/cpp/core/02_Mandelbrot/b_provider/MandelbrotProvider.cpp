@@ -3,7 +3,6 @@
 #include <assert.h>
 #include "MathTools.h"
 #include "Grid.h"
-#include "Mandelbrot.h"
 
 /*----------------------------------------------------------------------*\
  |*			Implementation 					*|
@@ -19,8 +18,6 @@
 Animable_I<uchar4>* MandelbrotProvider::createAnimable()
     {
     // Animation;
-    int nMin = 20;
-    int nMax = 120;
 
     DomaineMath domaineMath(this->x1, this->y1, this->x2, this->y2);
 
@@ -35,8 +32,8 @@ Animable_I<uchar4>* MandelbrotProvider::createAnimable()
     dim3 dg = dim3(48, 1, 1);
     dim3 db = dim3(384, 1, 1);
     Grid grid(dg, db);
-
-    return new Mandelbrot(grid, w, h, domaineMath, nMin, nMax);
+    mandelbrot = new Mandelbrot(grid, w, h, domaineMath, this->nMin, this->nMax);
+    return mandelbrot;
     }
 
 /**
@@ -59,7 +56,15 @@ Image_I* MandelbrotProvider::createImageGL(float x1, float x2, float y1, float y
     this->x2 = x2;
     this->y2 = y2;
     ColorRGB_01 colorTexte(0, 1, 0); // Green
+
     return new ImageAnimable_RGBA_uchar4(createAnimable(), colorTexte);
+    }
+
+void MandelbrotProvider::setNMinNMax(int nMin, int nMax)
+    {
+    this->nMin = nMin;
+    this->nMax = nMax;
+    mandelbrot->setNMinNMax(nMin, nMax);
     }
 
 /*----------------------------------------------------------------------*\

@@ -1,0 +1,1 @@
+/home/mse1/CUDA/toStudent/code/WCuda-complete/Tuto_Image_JNI_Cuda/../Student_Cuda_Image/src/cpp/core/02_Mandelbrot/a_animable/device/math/MandelbrotMath.h

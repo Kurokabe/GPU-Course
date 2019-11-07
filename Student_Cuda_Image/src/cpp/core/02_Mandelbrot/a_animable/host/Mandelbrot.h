@@ -47,7 +47,7 @@ class Mandelbrot: public Animable_I<uchar4>
 	/*--------------------------------------*\
 	 |*		Attributs		*|
 	 \*-------------------------------------*/
-
+	void setNMinNMax(int nMin, int nMax);
     private:
 
 	// Inputs
@@ -56,6 +56,7 @@ class Mandelbrot: public Animable_I<uchar4>
 
 	// Tools
 	Variateur<int> variateurT;
+
     };
 
 

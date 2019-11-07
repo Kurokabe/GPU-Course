@@ -36,7 +36,7 @@ void mainCore();
 
 void mainCore()
     {
-    SurfaceStrip_I* ptrSurfaceStrip = Damier3DProvider::createSurfaceStrip();
+    SurfaceStrip_I* ptrSurfaceStrip = Mandelbrot3dProvider::createSurfaceStrip();
 
     SurfaceSceneStrip* ptrScene = new SurfaceSceneStrip(ptrSurfaceStrip);
     ptrScene->setAppearance(RenderMode::RENDER_MODE_FILL);

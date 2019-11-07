@@ -30,7 +30,7 @@ using gpu::DomainMath3D;
 /**
  * static
  */
-SurfaceStrip_I* Damier3DProvider::createSurfaceStrip()
+SurfaceStrip_I* Mandelbrot3dProvider::createSurfaceStrip()
     {
     // Dimension "Image" en noeud
     uint w = 100;
@@ -62,7 +62,7 @@ SurfaceStrip_I* Damier3DProvider::createSurfaceStrip()
     dim3 db = dim3(coreMP, 2, 1);   	// disons, a optimiser selon le gpu, peut drastiqument ameliorer ou baisser les performances
     Grid grid(dg, db);
 
-    return new Damier3D_RGBA(grid, w, h, domaineMath, dt, k); // Model
+    return new Mandelbrot3D_RGBA(grid, w, h, domaineMath, dt, k); // Model
     }
 
 /*--------------------------------------*\

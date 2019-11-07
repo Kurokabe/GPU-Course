@@ -32,7 +32,7 @@ extern __global__ void damier3DCuda(float3* ptrDevVerticesCoord, uchar4* ptrDevV
  |*	Constructeur	    *|
  \*-------------------------*/
 
-Damier3D_RGBA::Damier3D_RGBA(const Grid& grid, int w, int h, const DomainMath3D& domaineMath, float dt, int n) :
+Mandelbrot3D_RGBA::Mandelbrot3D_RGBA(const Grid& grid, int w, int h, const DomainMath3D& domaineMath, float dt, int n) :
 	SurfaceStrip_RGBA_uchar4(w,h,domaineMath ), variateurAnimation(cpu::Interval<float>(0, 2 * PI), dt)
     {
     // Inputs
@@ -45,7 +45,7 @@ Damier3D_RGBA::Damier3D_RGBA(const Grid& grid, int w, int h, const DomainMath3D&
     this->t = 0;
     }
 
-Damier3D_RGBA::~Damier3D_RGBA()
+Mandelbrot3D_RGBA::~Mandelbrot3D_RGBA()
     {
     // rien
     }
@@ -58,7 +58,7 @@ Damier3D_RGBA::~Damier3D_RGBA()
  * Override
  * Call periodicly by the api
  */
-void Damier3D_RGBA::fillVertex(float3* ptrDevVerticesCoord, uchar4* ptrDevVerticesColor, unsigned int w, unsigned int h, const gpu::DomainMath3D& domaineMath)
+void Mandelbrot3D_RGBA::fillVertex(float3* ptrDevVerticesCoord, uchar4* ptrDevVerticesColor, unsigned int w, unsigned int h, const gpu::DomainMath3D& domaineMath)
     {
     damier3DCuda<<<dg,db>>>(ptrDevVerticesCoord,ptrDevVerticesColor,w,h,domaineMath,n,t);
     }
@@ -67,7 +67,7 @@ void Damier3D_RGBA::fillVertex(float3* ptrDevVerticesCoord, uchar4* ptrDevVertic
  * Override
  * Call periodicly by the api
  */
-void Damier3D_RGBA::animationStep(bool& isNeedUpdate)
+void Mandelbrot3D_RGBA::animationStep(bool& isNeedUpdate)
     {
     this->t = variateurAnimation.varierAndGet(); // in [0,2pi]
     }
@@ -76,7 +76,7 @@ void Damier3D_RGBA::animationStep(bool& isNeedUpdate)
  * Override
  * Call periodicly by the api
  */
-void Damier3D_RGBA::paintPrimitives(Graphic2D& graphic2D)
+void Mandelbrot3D_RGBA::paintPrimitives(Graphic2D& graphic2D)
     {
     graphic2D.setFont(TIMES_ROMAN_24);
 

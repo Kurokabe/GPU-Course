@@ -1,1 +1,1 @@
-/home/arc19/CUDA/toStudent/code/WCuda/Student_Cuda_Image/src/cpp/core/01_Rippling/a_animable/device/math/RipplingMath.h
+/home/mse1/CUDA/toStudent/code/WCuda-complete/Student_Cuda_Image/src/cpp/core/01_Rippling/a_animable/device/math/RipplingMath.h

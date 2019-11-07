@@ -68,7 +68,7 @@
  * 			On pourrait ajouter d'autres types predefinis!
  *
  */
-class Damier3D_RGBA: public gpu::SurfaceStrip_RGBA_uchar4
+class Mandelbrot3D_RGBA: public gpu::SurfaceStrip_RGBA_uchar4
     {
 	/*--------------------------------------*\
 	|*		Constructor		*|
@@ -76,9 +76,9 @@ class Damier3D_RGBA: public gpu::SurfaceStrip_RGBA_uchar4
 
     public:
 
-	Damier3D_RGBA(const Grid& grid, int w, int h, const gpu::DomainMath3D& domaineMath,float dt, int n);
+	Mandelbrot3D_RGBA(const Grid& grid, int w, int h, const gpu::DomainMath3D& domaineMath,float dt, int n);
 
-	virtual ~Damier3D_RGBA(void);
+	virtual ~Mandelbrot3D_RGBA(void);
 
 	/*--------------------------------------*\
 	 |*		Methodes		*|

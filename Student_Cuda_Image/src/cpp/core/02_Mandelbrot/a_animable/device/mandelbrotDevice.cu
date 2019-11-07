@@ -36,8 +36,8 @@ __global__ void mandelbrot(uchar4* ptrDevPixels, uint w, uint h, DomaineMath dom
 
     int i;
     int j;
-    float x;
-    float y;
+    double x;
+    double y;
     int s = TID;
     while (s < WH)
 	{

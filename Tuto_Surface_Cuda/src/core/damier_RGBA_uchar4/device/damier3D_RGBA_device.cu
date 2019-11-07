@@ -15,7 +15,7 @@ using namespace gpu;
  |*		Public			*|
  \*-------------------------------------*/
 
-__global__ void damier3DCuda(float3* ptrDevVerticesCoord, uchar4* ptrDevVerticesColor, int w, int h, DomainMath3D domaineMath, int n, float t);
+__global__ void mandelbrot3DCuda(float3* ptrDevVerticesCoord, uchar4* ptrDevVerticesColor, int w, int h, DomainMath3D domaineMath, int n, float t);
 
 /*--------------------------------------*\
  |*		Private			*|
@@ -33,9 +33,9 @@ __global__ void damier3DCuda(float3* ptrDevVerticesCoord, uchar4* ptrDevVertices
  * w nbPoint en x
  * h nbPoint en y
  */
-__global__ void damier3DCuda(float3* ptrDevVerticesCoord, uchar4* ptrDevVerticesColor, int w, int h, DomainMath3D domaineMath, int n, float t)
+__global__ void mandelbrot3DCuda(float3* ptrDevVerticesCoord, uchar4* ptrDevVerticesColor, int w, int h, DomainMath3D domaineMath, int n, float t)
     {
-    Damier3DMath_RGBA damierMath(n);
+    Mandelbrot3DMath_RGBA damierMath(n);
 
     const int TID = Indice2D::tid();
     const int NB_THREAD = Indice2D::nbThread();

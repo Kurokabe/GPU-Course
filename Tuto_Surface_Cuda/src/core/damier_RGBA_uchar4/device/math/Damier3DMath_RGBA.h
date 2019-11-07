@@ -15,7 +15,7 @@ using namespace gpu;
  |*		Public			*|
  \*-------------------------------------*/
 
-class Damier3DMath_RGBA
+class Mandelbrot3DMath_RGBA
     {
 
 	/*--------------------------------------*\

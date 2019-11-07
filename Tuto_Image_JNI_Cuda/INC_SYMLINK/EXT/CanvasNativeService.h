@@ -1,0 +1,1 @@
+/opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Canvas_JNI/INC/CanvasNativeService.h

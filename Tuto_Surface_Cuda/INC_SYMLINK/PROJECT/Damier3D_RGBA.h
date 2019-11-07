@@ -1,1 +1,1 @@
-/home/arc19/CUDA/toStudent/code/WCuda/Tuto_Surface_Cuda/src/core/damier_RGBA_uchar4/host/Damier3D_RGBA.h
+/home/mse1/CUDA/toStudent/code/WCuda-complete/Tuto_Surface_Cuda/src/core/damier_RGBA_uchar4/host/Damier3D_RGBA.h
