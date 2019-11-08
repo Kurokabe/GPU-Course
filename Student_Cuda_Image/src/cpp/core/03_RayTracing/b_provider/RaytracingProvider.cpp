@@ -5,7 +5,6 @@
 
 #include "memoryType.h"
 
-#include "Raytracing.h"
 #include "nbSphere.h"
 
 /*----------------------------------------------------------------------*\
@@ -40,8 +39,8 @@ Animable_I<uchar4>* RaytracingProvider::createAnimable()
     //MemoryType memoryType=GM;
     //MemoryType memoryType=CM;
     MemoryType memoryType=SM;
-
-    return new Raytracing(grid, w, h, dt, NB_SPHERE,memoryType); // NB_SPHERE define "nbSphere.h"
+    ptrRaytracing = new Raytracing(grid, w, h, dt, NB_SPHERE,memoryType);
+    return ptrRaytracing; // NB_SPHERE define "nbSphere.h"
     }
 
 /**
@@ -51,6 +50,14 @@ Image_I* RaytracingProvider::createImageGL(void)
     {
     ColorRGB_01 colorTexte(0, 1, 0); // Green
     return new ImageAnimable_RGBA_uchar4(createAnimable(), colorTexte);
+    }
+
+void RaytracingProvider::setDT(int dt)
+    {
+    if (ptrRaytracing != nullptr)
+	{
+	ptrRaytracing->setDT(dt);
+	}
     }
 
 /*----------------------------------------------------------------------*\

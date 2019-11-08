@@ -32,6 +32,7 @@ Mandelbrot::Mandelbrot(const Grid& grid, uint w, uint h, const DomaineMath& doma
     // Inputs/animation
     this->nMin = nMin;
     this->nMax = nMax;
+    this->dt = 1;
 
     // Tools
     this->t = nMin;
@@ -69,7 +70,13 @@ void Mandelbrot::setNMinNMax(int nMin, int nMax)
     {
     this->nMin = nMin;
     this->nMax = nMax;
-    this->variateurT = Variateur<int> (Interval<int>(this->nMin, this->nMax), 1);
+    this->variateurT = Variateur<int> (Interval<int>(this->nMin, this->nMax), dt);
+    }
+
+void Mandelbrot::setDT(int dt)
+    {
+    this->dt = dt;
+    this->variateurT = Variateur<int> (Interval<int>(this->nMin, this->nMax), dt);
     }
 /*----------------------------------------------------------------------*\
  |*			End	 					*|

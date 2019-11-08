@@ -143,6 +143,11 @@ void Raytracing::uploadToDevice(Sphere* ptrTabSpheres)
 	}
     }
 
+void Raytracing::setDT(int dt)
+    {
+    this->dt = (float)dt / 10;
+    }
+
 /*----------------------------------------------------------------------*\
  |*			End	 					*|
  \*---------------------------------------------------------------------*/

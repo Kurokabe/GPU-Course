@@ -67,6 +67,14 @@ void MandelbrotProvider::setNMinNMax(int nMin, int nMax)
     mandelbrot->setNMinNMax(nMin, nMax);
     }
 
+void MandelbrotProvider::setDT(int dt)
+    {
+    if (mandelbrot != nullptr)
+	{
+	mandelbrot->setDT(dt);
+	}
+    }
+
 /*----------------------------------------------------------------------*\
  |*			End	 					*|
  \*---------------------------------------------------------------------*/

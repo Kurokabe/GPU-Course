@@ -3,6 +3,7 @@
 #include "cudaTools.h"
 
 #include "Provider_I_GPU.h"
+#include "Rippling.h"
 using namespace gpu;
 
 /*----------------------------------------------------------------------*\
@@ -26,6 +27,10 @@ class RipplingProvider: public Provider_I<uchar4>
 
 	virtual Image_I* createImageGL(void);
 
+	void setDT(int dt);
+
+private:
+	Rippling* ptrRippling;
     };
 
 /*----------------------------------------------------------------------*\

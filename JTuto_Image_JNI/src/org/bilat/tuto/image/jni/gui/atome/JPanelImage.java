@@ -5,9 +5,8 @@ import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.BoxLayout;
 import javax.swing.JPanel;
-import javax.swing.JSplitPane;
-import javax.swing.SwingConstants;
 
 public class JPanelImage extends JPanel
 	{
@@ -77,10 +76,10 @@ public class JPanelImage extends JPanel
 
 		setLayout(new BorderLayout());
 
-		//JPanel imagePane = new JPanel();
-		//imagePane.setLayout(new BoxLayout(imagePane, BoxLayout.LINE_AXIS));
+		JPanel imagePane = new JPanel();
+		imagePane.setLayout(new BoxLayout(imagePane, BoxLayout.LINE_AXIS));
 
-		switch(nbrImage)
+		/*switch(nbrImage)
 		{
 		case 1 :
 			//imagePane.add(canvasImages.get(0));
@@ -97,18 +96,21 @@ public class JPanelImage extends JPanel
 		// Doesn't work
 			JSplitPane split1 = new JSplitPane(SwingConstants.VERTICAL, canvasImages.get(0), canvasImages.get(1));
 			JSplitPane split2 = new JSplitPane(SwingConstants.VERTICAL, split1, canvasImages.get(2));
+
+
+			canvasImages.get(0).setMinimumSize(new Dimension(w/3, h));
+			split1.setMinimumSize(new Dimension(w/3, h));
 			//imagePane.add(split2);
 
 			add(split2, BorderLayout.CENTER);
 			break;
-		}
+		}*/
 
-		/*for(CanvasImage canvasImage : canvasImages)
+		for(CanvasImage canvasImage : canvasImages)
 			{
 			imagePane.add(canvasImage);
 			}
-		 */
-		//add(imagePane, BorderLayout.CENTER);
+		add(imagePane, BorderLayout.CENTER);
 		add(panelControle, BorderLayout.SOUTH);
 		}
 

@@ -3,7 +3,6 @@
 #include "RipplingProvider.h"
 #include "MathTools.h"
 #include "Grid.h"
-#include "Rippling.h"
 
 /*----------------------------------------------------------------------*\
  |*			Implementation 					*|
@@ -34,8 +33,8 @@ Animable_I<uchar4>* RipplingProvider::createAnimable()
     dim3 db = dim3(896, 1, 1);
     Grid grid(dg, db);
 
-
-    return new Rippling(grid, w, h, dt);
+    ptrRippling = new Rippling(grid, w, h, dt);
+    return ptrRippling;
     }
 
 /**
@@ -45,6 +44,14 @@ Image_I* RipplingProvider::createImageGL(void)
     {
     ColorRGB_01 colorTexte(0, 1, 0); // Green
     return new ImageAnimable_RGBA_uchar4(createAnimable(), colorTexte);
+    }
+
+void RipplingProvider::setDT(int dt)
+    {
+    if (ptrRippling != nullptr)
+	{
+	ptrRippling->setDT(dt);
+	}
     }
 
 /*----------------------------------------------------------------------*\

@@ -48,11 +48,13 @@ class Mandelbrot: public Animable_I<uchar4>
 	 |*		Attributs		*|
 	 \*-------------------------------------*/
 	void setNMinNMax(int nMin, int nMax);
+	void setDT(int dt);
     private:
 
 	// Inputs
 	int nMin;
 	int nMax;
+	int dt;
 
 	// Tools
 	Variateur<int> variateurT;

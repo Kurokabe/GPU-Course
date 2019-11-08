@@ -75,6 +75,9 @@ int HelloBinding::getCanvasNativeID()
 void HelloBinding::setDt(int dt)
     {
     ptrHello->setDt(dt);
+    ptrMandelbrot->setDT(dt);
+    ptrRippling->setDT(dt);
+    ptrRaytracing->setDT(dt);
     }
 
 void HelloBinding::setNMinNMax(int nMin, int nMax)

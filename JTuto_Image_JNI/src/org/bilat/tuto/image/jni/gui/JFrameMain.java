@@ -5,6 +5,7 @@ import java.awt.BorderLayout;
 import java.util.List;
 
 import javax.swing.JFrame;
+import javax.swing.UIManager;
 import javax.swing.WindowConstants;
 
 import org.bilat.tuto.image.jni.gui.atome.CanvasImage;
@@ -53,6 +54,14 @@ public class JFrameMain extends JFrame
 
 	private void apparence()
 		{
+
+		try {
+		UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+		}
+		catch(Exception e)
+			{
+			e.printStackTrace();
+			}
 		setTitle(TITLE);
 		setSize(w, h);
 		setLocationRelativeTo(null);

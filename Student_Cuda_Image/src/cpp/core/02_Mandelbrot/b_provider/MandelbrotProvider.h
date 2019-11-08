@@ -31,6 +31,7 @@ class MandelbrotProvider: public Provider_I<uchar4>
 	Image_I* createImageGL(float x1, float x2, float y1, float y2);
 
 	void setNMinNMax(int nMin, int nMax);
+	void setDT(int dt);
 
 	double x1;
 	double x2;

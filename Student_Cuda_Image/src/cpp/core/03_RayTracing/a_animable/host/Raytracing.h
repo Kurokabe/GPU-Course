@@ -42,6 +42,8 @@ class Raytracing : public Animable_I<uchar4>
 	 */
 	virtual void animationStep();
 
+	void setDT(int dt);
+
     private:
 
 	/*--------------------------------------*\
