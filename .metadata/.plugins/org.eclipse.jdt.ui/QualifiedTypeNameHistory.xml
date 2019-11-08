@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.junit.Assert"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="org.bilat.thread.naif.AddNaifs"/>
+    <fullyQualifiedTypeName name="org.bilat.thread.use.UseAdds"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="org.bilat.thread.tools.TabTools"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.Future"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.Executor"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ExecutorService"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
+    <fullyQualifiedTypeName name="com.bilat.tuto.graph.jni.moo.SinusMOO"/>
+    <fullyQualifiedTypeName name="com.bilat.tuto.graph.jni.animator.Animable_I"/>
+    <fullyQualifiedTypeName name="com.bilat.tuto.jni.natif.Native"/>
+    <fullyQualifiedTypeName name="com.bilat.canvas.jni.natif.Native"/>
+    <fullyQualifiedTypeName name="com.bilat.canvas.jni.tools.AnimatorJava"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="javax.swing.JSplitPane"/>
+    <fullyQualifiedTypeName name="javax.swing.SwingConstants"/>
+    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
+    <fullyQualifiedTypeName name="javax.swing.BoxLayout"/>
+    <fullyQualifiedTypeName name="javax.swing.event.DocumentEvent"/>
+</qualifiedTypeNameHistroy>

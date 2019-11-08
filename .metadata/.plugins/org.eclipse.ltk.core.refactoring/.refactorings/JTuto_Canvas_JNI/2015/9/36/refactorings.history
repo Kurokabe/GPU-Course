@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;JTuto_Canvas_JNI/runWindows.cmd&apos; to &apos;run.cmd&apos;" description="Rename resource &apos;runWindows.cmd&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="runWindows.cmd" name="run.cmd" stamp="1441379768286" updateReferences="true"/>
+</session>

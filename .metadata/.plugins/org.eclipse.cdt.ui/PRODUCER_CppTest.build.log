@@ -1,0 +1,110 @@
+16:02:20 **** Build of configuration IntelWin_parallel for project PRODUCER_CppTest ****
+makeIntelWin.bat jall 
+init make
+init API-EXT
+init API-CBI
+
+[INTEL] : jall  
+
+Copyright (C) 1985-2015 Intel Corporation. All rights reserved.
+Intel(R) Compiler 16.0 Update 1 (package 146)
+ 
+
+==================================================================================
+[CBI] -> Target Name  : Cpp_Test_intel_64
+[CBI] ->
+[CBI] -> Build     	  : Q:/cedric.bilat/Targets/Cpp_Test/bin/Cpp_Test_intel_64.lib
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : STATIC_LIB
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : cedric.bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : /EHsc
+[CBI] ->              : /MD
+[CBI] ->              : /O3
+[CBI] ->              : /Qpar-threshold100
+[CBI] ->              : /Qparallel
+[CBI] ->              : /QxHost
+[CBI] ->              : /fast
+[CBI] ->              : /nologo
+
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/core/
+[CBI] ->              : src/core/extension/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+
+[CBI] -> API_LIB :
+
+[CBI] -> API_BIN :
+
+[CBI] -> API_LIBRARIES :
+
+[CBI] -> Create folder : Q:/cedric.bilat/Targets/Cpp_Test/bin
+[CBI] -> Create folder : Q:/cedric.bilat/Targets/Cpp_Test/obj
+
+[CBI] -> Compilation parallel (6 threads)
+
+suite.cpp
+htmloutput.cpp
+compileroutput.cpp
+textoutput.cpp
+collectoroutput.cpp
+time.cpp
+utils.cpp
+missing.cpp
+source.cpp
+testTools.cpp
+
+xilib: executing 'lib'
+Microsoft (R) Library Manager Version 12.00.30501.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/OUT:Q:/cedric.bilat/Targets/Cpp_Test/bin/Cpp_Test_intel_64.lib 
+C:/Users/CEDRIC~1.BIL/AppData/Local/Temp\547626_ipo3\suite.obj 
+C:/Users/CEDRIC~1.BIL/AppData/Local/Temp\547628_ipo2\htmloutput.obj 
+C:/Users/CEDRIC~1.BIL/AppData/Local/Temp\547630_ipo2\compileroutput.obj 
+C:/Users/CEDRIC~1.BIL/AppData/Local/Temp\547632_ipo2\textoutput.obj 
+C:/Users/CEDRIC~1.BIL/AppData/Local/Temp\547634_ipo2\collectoroutput.obj 
+C:/Users/CEDRIC~1.BIL/AppData/Local/Temp\547636_ipo2\time.obj 
+C:/Users/CEDRIC~1.BIL/AppData/Local/Temp\547638_ipo2\utils.obj 
+C:/Users/CEDRIC~1.BIL/AppData/Local/Temp\547640_ipo2\missing.obj 
+C:/Users/CEDRIC~1.BIL/AppData/Local/Temp\547642_ipo2\source.obj 
+C:/Users/CEDRIC~1.BIL/AppData/Local/Temp\547644_ipo2\testTools.obj 
+
+==================================================================================
+[CBI] -> Target Name  : Cpp_Test_intel_64
+[CBI] -> Location     : Q:/cedric.bilat/Targets/Cpp_Test/bin/Cpp_Test_intel_64.lib
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : STATIC_LIB
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : cedric.bilat
+[CBI] ->
+[CBI] -> Compilateur  : INTEL (icl)
+[CBI] -> Task	      : End Compiling-Archive !
+[CBI] -> Time		  : 7 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/Cpp_Test_intel_64.lib
+
+[CBI] -> Cpp_Test_intel_64 : End ALL!
+
+
+16:02:28 Build Finished (took 8s.250ms)
+

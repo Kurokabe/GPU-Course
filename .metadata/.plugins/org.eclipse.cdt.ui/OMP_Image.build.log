@@ -1,0 +1,335 @@
+10:52:13 **** Incremental Build of configuration IntelLinux_parallel for project OMP_Image ****
+cbicc intel jall 
+
+--------------------------------------------------------
+[Runtime] : intel x86
+--------------------------------------------------------
+
+
+[cuda]        : /usr/local
+
+[jni]         : /usr/lib/jvm/java-8-oracle
+
+[X11]         : /usr/include/X11
+
+[MKL]         : /opt/intel/mkl
+[Runtime] : Intel : /opt/intel
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+[pleora]      : /opt/api/ext/pleora
+
+[glm]      : /opt/api/ext/GLM
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SCENE_3D_HOME              = /opt/api/cbi/infographie/scene3d
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CV_HOME        = /opt/api/cbi/tools/bilat_tools_image_cv
+     BILAT_TOOLS_CUDA_3D_HOME         = /opt/api/cbi/tools/bilat_tools_cuda_3D
+     BILAT_TOOLS_JNI_HOME             = /opt/api/cbi/tools/bilat_tools_jni
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME                 = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                   = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                   = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                    = /opt/api/cbi/capteur/bilat_tau2
+     BILAT_SPEECH_HOME                  = /opt/api/cbi/capteur/bilat_speech
+     BILAT_GPS_HOME                     = /opt/api/cbi/capteur/bilat_gps
+     BILAT_PIPES_P2P_HOME               = /opt/api/cbi/capteur/bilat_pipes_p2p
+     BILAT_PIPES_CLIENT_HOME            = /opt/api/cbi/capteur/bilat_pipes_client
+     BILAT_PIPES_CLIENT_SERVER_JAVA_HOME= /opt/api/cbi/capteur/bilat_pipes_client_server_java
+
+--------------------------------------------------------
+[Runtime] : intel x86 : Ready!
+--------------------------------------------------------
+
+
+[INTEL] : jall
+
+icpc (ICC) 18.0.3 20180410
+Copyright (C) 1985-2018 Intel Corporation.  All rights reserved.
+
+==================================================================================
+[CBI] -> Target Name  : OMP_Image_intel_x86_64
+[CBI] ->
+[CBI] -> Build     	  : /tmp/ramdrive/bilat/Targets/OMP_Image/bin/OMP_Image_intel_x86_64.run
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fast
+[CBI] ->              : -par-threshold100
+[CBI] ->              : -parallel
+[CBI] ->              : -qopenmp
+[CBI] ->              : -std=c++11
+[CBI] ->              : -w
+[CBI] ->              : -xHost
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/core/01_Rippling/a_animable/
+[CBI] ->              : src/core/01_Rippling/a_animable/math/
+[CBI] ->              : src/core/01_Rippling/b_provider/
+[CBI] ->              : src/core/02_Mandelbrot_Julia/00_Common/b_moo/
+[CBI] ->              : src/core/02_Mandelbrot_Julia/00_Common/c_math/
+[CBI] ->              : src/core/02_Mandelbrot_Julia/01_Mandelbrot/a_animable/
+[CBI] ->              : src/core/02_Mandelbrot_Julia/01_Mandelbrot/a_animable/math/
+[CBI] ->              : src/core/02_Mandelbrot_Julia/01_Mandelbrot/b_provider/
+[CBI] ->              : src/core/02_Mandelbrot_Julia/02_Julia/a_animable/
+[CBI] ->              : src/core/02_Mandelbrot_Julia/02_Julia/a_animable/math/
+[CBI] ->              : src/core/02_Mandelbrot_Julia/02_Julia/b_provider/
+[CBI] ->              : src/core/03_convolution/benchmark/
+[CBI] ->              : src/core/03_convolution/moo/host/
+[CBI] ->              : src/core/03_convolution/moo/tools/algo/
+[CBI] ->              : src/core/03_convolution/provider/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable/INC/primitives
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable_GL/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable_GL/INC/primitives
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_FreeGlut_Tools/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_FreeGlut/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_FreeGlut/INC/common
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_FreeGlut/INC/cpu
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL/INC/common
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL/INC/cpu
+[CBI] ->              : /opt/api/cbi/infographie/opengl/303/Bilat_OpenGL_Tools/INC
+[CBI] ->              : /opt/api/cbi/infographie/tools/303/Bilat_tools_dll/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/303_006/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/303_006/INC/namespace_cpu
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_image/303_006/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_image/303_006/INC/imp
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_image/303_006/INC/imp/api_animateur
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_image/303_006/INC/imp/api_image_link
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_image/303_006/INC/imp/api_viewer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_image/303_006/INC/spec
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_image_cv/303_006/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/INC/OMP_Tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/INC/OMP_Tools/header
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/303_006/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/303_006/INC/capture
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/303_006/INC/capture/video
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/303_006/INC/capture/webcam
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/303_006/INC/show
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/303_006/INC/show/shapeOverlay
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/303_006/INC/show/shapeOverlay/appearance
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/303_006/INC/show/shapeOverlay/drawer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/303_006/INC/show/shapeOverlay/shape
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/303_006/INC/show/view
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/303_006/INC/show/view/viewer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/303_006/INC/show/view/viewerMat
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/303_006/INC/tools
+[CBI] ->              : /opt/api/ext/opencv/330/include
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/calib3d
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/core
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/core/cuda
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/core/cuda/detail
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/core/hal
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/core/utils
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/dnn
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/features2d
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/flann
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/highgui
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/imgcodecs
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/imgproc
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/imgproc/detail
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/imgproc/hal
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/ml
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/objdetect
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/photo
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/shape
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/stitching
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/stitching/detail
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/superres
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/video
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/videoio
+[CBI] ->              : /opt/api/ext/opencv/330/include/opencv2/videostab
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable/BIN/intel
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable_GL/BIN/intel
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_FreeGlut_Tools/BIN/intel
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_FreeGlut/BIN/intel
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL/BIN/intel
+[CBI] ->              : /opt/api/cbi/infographie/opengl/303/Bilat_OpenGL_Tools/BIN/intel
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/303_006/BIN/intel
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_image/303_006/BIN/intel
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_image_cv/303_006/BIN/intel
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/BIN/intel
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/303_006/BIN/intel
+[CBI] ->              : /opt/api/ext/opencv/330/lib
+[CBI] ->              : /opt/api/ext/opencv/330/lib/pkgconfig
+
+[CBI] -> API_LIBRARIES_STATIC :
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_303_006_intel_x86_64
+[CBI] ->              : BilatTools_Image_303_006_intel_x86_64
+[CBI] ->              : BilatTools_Image_OpenCV_303_006_intel_x86_64
+[CBI] ->              : BilatTools_OMP_303_006_intel_x86_64
+[CBI] ->              : BilatTools_OpenCV_303_006_intel_x86_64
+[CBI] ->              : Bilat_Fenetrage_Displayable_303_intel_x86_64
+[CBI] ->              : Bilat_Fenetrage_Displayable_GL_303_intel_x86_64
+[CBI] ->              : Bilat_Fenetrage_FreeGlut_Tools_303_intel_x86_64
+[CBI] ->              : Bilat_Image_FreeGlut_303_intel_x86_64
+[CBI] ->              : Bilat_Image_GL_303_intel_x86_64
+[CBI] ->              : Bilat_OpenGL_Tools_303_intel_x86_64
+[CBI] ->              : GL
+[CBI] ->              : GLEW
+[CBI] ->              : GLU
+[CBI] ->              : glut
+[CBI] ->              : opencv_calib3d_gcc484
+[CBI] ->              : opencv_core_gcc484
+[CBI] ->              : opencv_dnn_gcc484
+[CBI] ->              : opencv_features2d_gcc484
+[CBI] ->              : opencv_flann_gcc484
+[CBI] ->              : opencv_highgui_gcc484
+[CBI] ->              : opencv_imgcodecs_gcc484
+[CBI] ->              : opencv_imgproc_gcc484
+[CBI] ->              : opencv_ml_gcc484
+[CBI] ->              : opencv_objdetect_gcc484
+[CBI] ->              : opencv_photo_gcc484
+[CBI] ->              : opencv_shape_gcc484
+[CBI] ->              : opencv_stitching_gcc484
+[CBI] ->              : opencv_superres_gcc484
+[CBI] ->              : opencv_video_gcc484
+[CBI] ->              : opencv_videoio_gcc484
+[CBI] ->              : opencv_videostab_gcc484
+
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/OMP_Image/bin
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/OMP_Image/obj
+
+[CBI] -> Compilation parallel (16 threads)
+
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/main.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/mainAnimable.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/mainImage.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/03_convolution/provider/ConvolutionProvider.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/03_convolution/benchmark/Bench.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/03_convolution/benchmark/useBench.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/03_convolution/moo/tools/algo/Amplifier.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/03_convolution/moo/tools/algo/Convoluer.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/03_convolution/moo/tools/algo/Gray.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/03_convolution/moo/tools/algo/MinMax.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/03_convolution/moo/host/Convolution.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/03_convolution/moo/host/NoyauCreator.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/03_convolution/moo/host/PipelineKernel.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/01_Rippling/a_animable/Rippling.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/01_Rippling/b_provider/RipplingProvider.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/02_Mandelbrot_Julia/01_Mandelbrot/a_animable/Mandelbrot.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/02_Mandelbrot_Julia/01_Mandelbrot/b_provider/MandelbrotProvider.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/02_Mandelbrot_Julia/02_Julia/a_animable/Julia.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/02_Mandelbrot_Julia/02_Julia/b_provider/JuliaProvider.cpp
+[OMP_Image_intel_x86_64] -> icc compiling .cpp : src/core/02_Mandelbrot_Julia/00_Common/b_moo/Fractale.cpp
+
+[CBI] -> Linking to   : /tmp/ramdrive/bilat/Targets/OMP_Image/bin/OMP_Image_intel_x86_64.run
+
+[CBI] -> Library Link :
+[CBI] ->              : -lBilatTools_CPP_303_006_intel_x86_64
+[CBI] ->              : -lBilatTools_Image_303_006_intel_x86_64
+[CBI] ->              : -lBilatTools_Image_OpenCV_303_006_intel_x86_64
+[CBI] ->              : -lBilatTools_OMP_303_006_intel_x86_64
+[CBI] ->              : -lBilatTools_OpenCV_303_006_intel_x86_64
+[CBI] ->              : -lBilat_Fenetrage_Displayable_303_intel_x86_64
+[CBI] ->              : -lBilat_Fenetrage_Displayable_GL_303_intel_x86_64
+[CBI] ->              : -lBilat_Fenetrage_FreeGlut_Tools_303_intel_x86_64
+[CBI] ->              : -lBilat_Image_FreeGlut_303_intel_x86_64
+[CBI] ->              : -lBilat_Image_GL_303_intel_x86_64
+[CBI] ->              : -lBilat_OpenGL_Tools_303_intel_x86_64
+[CBI] ->              : -lGL
+[CBI] ->              : -lGLEW
+[CBI] ->              : -lGLU
+[CBI] ->              : -lglut
+[CBI] ->              : -liomp5
+[CBI] ->              : -lopencv_calib3d_gcc484
+[CBI] ->              : -lopencv_core_gcc484
+[CBI] ->              : -lopencv_dnn_gcc484
+[CBI] ->              : -lopencv_features2d_gcc484
+[CBI] ->              : -lopencv_flann_gcc484
+[CBI] ->              : -lopencv_highgui_gcc484
+[CBI] ->              : -lopencv_imgcodecs_gcc484
+[CBI] ->              : -lopencv_imgproc_gcc484
+[CBI] ->              : -lopencv_ml_gcc484
+[CBI] ->              : -lopencv_objdetect_gcc484
+[CBI] ->              : -lopencv_photo_gcc484
+[CBI] ->              : -lopencv_shape_gcc484
+[CBI] ->              : -lopencv_stitching_gcc484
+[CBI] ->              : -lopencv_superres_gcc484
+[CBI] ->              : -lopencv_video_gcc484
+[CBI] ->              : -lopencv_videoio_gcc484
+[CBI] ->              : -lopencv_videostab_gcc484
+
+==================================================================================
+[CBI] -> Target Name  : OMP_Image_intel_x86_64
+[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/OMP_Image/bin/OMP_Image_intel_x86_64.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : icc
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 3 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/OMP_Image_intel_x86_64.run
+
+[CBI] -> Symlink Project Inc
+[CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
+
+[CBI] -> OMP_Image_intel_x86_64 : End ALL!
+
+
+10:52:17 Build Finished. 0 errors, 0 warnings. (took 3s.782ms)
+

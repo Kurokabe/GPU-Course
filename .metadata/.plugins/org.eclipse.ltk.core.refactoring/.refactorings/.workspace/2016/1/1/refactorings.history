@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Tuto_gphoto2_Linux&apos; to &apos;BilatTools_gphoto2_Linux&apos;" description="Rename resource &apos;Tuto_gphoto2_Linux&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Tuto_gphoto2_Linux" name="BilatTools_gphoto2_Linux" stamp="1452258731372" updateReferences="true"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Tuto_Image_Cuda/src/use&apos; to &apos;core&apos;" description="Rename resource &apos;use&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/use" name="core" stamp="1455534685613" updateReferences="true"/>
+</session>

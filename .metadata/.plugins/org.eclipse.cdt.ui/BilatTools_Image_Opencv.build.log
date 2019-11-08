@@ -1,0 +1,161 @@
+16:38:00 **** Build of configuration Visual_parallel for project BilatTools_Image_Opencv ****
+makeVisual.bat jall 
+init make
+init API-EXT
+init API-CBI
+
+[VISUAL] : jall  
+
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+Microsoft (R) C/C++ Optimizing Compiler Version 18.00.30501 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_Image_OpenCV_visual_64
+[CBI] ->
+[CBI] -> Build     	  : Q:/bilat/Targets/BilatTools_Image_OpenCV/bin/BilatTools_Image_OpenCV_visual_64.lib
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : STATIC_LIB
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : ../BilatTools_CPP/src/core
+[CBI] ->              : ../BilatTools_OpenCV/src/core
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -Ic:/Soft_API/ext/OpenCV/310/include
+[CBI] ->              : -Ic:/Soft_API/ext/OpenCV/310/include/opencv2
+[CBI] ->              : -Ic:/Soft_API/ext/OpenCV/310/include/opencv2/core
+[CBI] ->              : -Ic:/Soft_API/ext/OpenCV/310/include/opencv2/flann
+[CBI] ->              : -Ic:/Soft_API/ext/OpenCV/310/include/opencv2/highgui
+[CBI] ->              : -Ic:/Soft_API/ext/OpenCV/310/include/opencv2/imgproc
+[CBI] ->              : -Ic:/Soft_API/ext/OpenCV/310/include/opencv2/video
+[CBI] ->              : /EHsc
+[CBI] ->              : /MD
+[CBI] ->              : /Ox
+[CBI] ->              : /arch:AVX
+[CBI] ->              : /nologo
+
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/namespace_cpu/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/capture/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/capture/video/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/capture/webcam/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/appearance/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/drawer/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/viewer/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/viewerMat/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/tools/
+[CBI] ->              : src/core/opencv/cpu/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2/core
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2/flann
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2/highgui
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2/imgproc
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2/video
+
+[CBI] -> API_LIB :
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/visual/lib
+
+[CBI] -> API_BIN :
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/visual/bin
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : opencv_calib3d310_visual2013_cuda75.lib
+[CBI] ->              : opencv_core310_visual2013_cuda75.lib
+[CBI] ->              : opencv_features2d310_visual2013_cuda75.lib
+[CBI] ->              : opencv_flann310_visual2013_cuda75.lib
+[CBI] ->              : opencv_highgui310_visual2013_cuda75.lib
+[CBI] ->              : opencv_imgcodecs310_visual2013_cuda75.lib
+[CBI] ->              : opencv_imgproc310_visual2013_cuda75.lib
+[CBI] ->              : opencv_ml310_visual2013_cuda75.lib
+[CBI] ->              : opencv_objdetect310_visual2013_cuda75.lib
+[CBI] ->              : opencv_photo310_visual2013_cuda75.lib
+[CBI] ->              : opencv_shape310_visual2013_cuda75.lib
+[CBI] ->              : opencv_stitching310_visual2013_cuda75.lib
+[CBI] ->              : opencv_superres310_visual2013_cuda75.lib
+[CBI] ->              : opencv_video310_visual2013_cuda75.lib
+[CBI] ->              : opencv_videoio310_visual2013_cuda75.lib
+[CBI] ->              : opencv_videostab310_visual2013_cuda75.lib
+
+[CBI] -> Create folder : Q:/bilat/Targets/BilatTools_Image_OpenCV/bin
+[CBI] -> Create folder : Q:/bilat/Targets/BilatTools_Image_OpenCV/obj
+
+[CBI] -> Compilation parallel (6 threads)
+
+OpencvTools_CPU.cpp
+StringTools.cpp
+Progress.cpp
+Fps.cpp
+Chrono.cpp
+TabTools.cpp
+AleaTools.cpp
+LimitsTools.cpp
+MathTools.cpp
+IndiceTools_CPU.cpp
+ColorTools_CPU.cpp
+CVCaptureVideo.cpp
+CVCaptureWebcam.cpp
+AppearanceShape.cpp
+ShapeDrawer.cpp
+LineDrawer.cpp
+ShapeDrawerTransparant.cpp
+Polygon.cpp
+ShapeGroup.cpp
+Rectangle.cpp
+Shape.cpp
+Circle.cpp
+Line.cpp
+Triangle.cpp
+FactoryImageViewer.cpp
+CVViewerUcharBGR.cpp
+CVViewerMatBGR.cpp
+OpencvTools.cpp
+
+Microsoft (R) Library Manager Version 12.00.30501.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_Image_OpenCV_visual_64
+[CBI] -> Location     : Q:/bilat/Targets/BilatTools_Image_OpenCV/bin/BilatTools_Image_OpenCV_visual_64.lib
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : STATIC_LIB
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : VISUAL (cl)
+[CBI] -> Task	      : End Compiling-Archive !
+[CBI] -> Time		  : 3 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/BilatTools_Image_OpenCV_visual_64.lib
+
+[CBI] -> BilatTools_Image_OpenCV_visual_64 : End ALL!
+
+
+16:38:06 Build Finished (took 6s.219ms)
+

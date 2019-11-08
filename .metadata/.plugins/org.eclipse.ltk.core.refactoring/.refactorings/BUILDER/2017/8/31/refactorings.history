@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BUILDER/makefile/private/common/pthreadnew.mk&apos; to &apos;pthread.mk&apos;" description="Rename resource &apos;pthreadnew.mk&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="makefile/private/common/pthreadnew.mk" name="pthread.mk" stamp="1501849024136" updateReferences="true"/>
+</session>

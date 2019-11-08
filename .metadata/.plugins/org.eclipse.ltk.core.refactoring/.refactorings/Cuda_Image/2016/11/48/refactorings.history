@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Cuda_Image/src/cpp/core/04_raytracing/moo/host/SphereCreator.cpp&apos; to &apos;SphereCreator.cu&apos;" description="Rename resource &apos;SphereCreator.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/cpp/core/04_raytracing/moo/host/SphereCreator.cpp" name="SphereCreator.cu" stamp="1479813614149" updateReferences="true"/>
+</session>

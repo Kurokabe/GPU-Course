@@ -1,0 +1,189 @@
+10:00:59 **** Build of configuration IntelLinux_parallel for project OMP_MOO ****
+cbicc intel jall 
+
+--------------------------------------------------------
+[Runtime] : intel x86
+--------------------------------------------------------
+
+
+[cuda]        : /usr/local
+
+[jni]         : /usr/lib/jvm/java-8-oracle
+
+[X11]         : /usr/include/X11
+
+[MKL]         : /opt/intel/mkl
+[Runtime] : Intel : /opt/intel
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+[pleora]      : /opt/api/ext/pleora
+
+[glm]      : /opt/api/ext/GLM
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SCENE_3D_HOME              = /opt/api/cbi/infographie/scene3d
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CV_HOME        = /opt/api/cbi/tools/bilat_tools_image_cv
+     BILAT_TOOLS_CUDA_3D_HOME         = /opt/api/cbi/tools/bilat_tools_cuda_3D
+     BILAT_TOOLS_JNI_HOME             = /opt/api/cbi/tools/bilat_tools_jni
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME                 = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                   = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                   = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                    = /opt/api/cbi/capteur/bilat_tau2
+     BILAT_SPEECH_HOME                  = /opt/api/cbi/capteur/bilat_speech
+     BILAT_GPS_HOME                     = /opt/api/cbi/capteur/bilat_gps
+     BILAT_PIPES_P2P_HOME               = /opt/api/cbi/capteur/bilat_pipes_p2p
+     BILAT_PIPES_CLIENT_HOME            = /opt/api/cbi/capteur/bilat_pipes_client
+     BILAT_PIPES_CLIENT_SERVER_JAVA_HOME= /opt/api/cbi/capteur/bilat_pipes_client_server_java
+
+--------------------------------------------------------
+[Runtime] : intel x86 : Ready!
+--------------------------------------------------------
+
+
+[INTEL] : jall
+
+icpc (ICC) 18.0.3 20180410
+Copyright (C) 1985-2018 Intel Corporation.  All rights reserved.
+
+==================================================================================
+[CBI] -> Target Name  : OMP_MOO_intel_x86_64
+[CBI] ->
+[CBI] -> Build     	  : /tmp/ramdrive/bilat/Targets/OMP_MOO/bin/OMP_MOO_intel_x86_64.run
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : ../BilatUtil_CPP/src/core
+[CBI] ->              : /opt/api/ext/cpptest/112/LIB_STATIC/intel
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fast
+[CBI] ->              : -openmp
+[CBI] ->              : -par-threshold100
+[CBI] ->              : -parallel
+[CBI] ->              : -std=c++11
+[CBI] ->              : -w
+[CBI] ->              : -xHost
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : ../BilatUtil_CPP/src/core/utils/header/
+[CBI] ->              : src/cpp/core/omp/02_pi/
+[CBI] ->              : src/cpp/core/omp/03_dotProd/
+[CBI] ->              : src/cpp/core/omp/04_histo/
+[CBI] ->              : src/cpp/test/unit/01_Test_Hello/
+[CBI] ->              : src/cpp/test/unit/02_Test_Pi/
+[CBI] ->              : src/cpp/test/unit/03_Test_DotProd/
+[CBI] ->              : src/cpp/test/unit/04_Test_Histo/
+[CBI] ->              : src/cpp/test/unit/05_Test_Montecarlo/
+[CBI] ->              : src/cpp/test/unit/07_Test_Racine2/
+[CBI] ->              : src/cpp/test/unit/08_Test_VectorADD/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/303_006/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/303_006/INC/namespace_cpu
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/INC/OMP_Tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/INC/OMP_Tools/header
+[CBI] ->              : /opt/api/ext/cpptest/112/INC
+[CBI] ->              : /opt/api/ext/cpptest/112/INC/extension
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/303_006/BIN/intel
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/BIN/intel
+
+[CBI] -> API_LIBRARIES_STATIC :
+[CBI] ->              : /opt/api/ext/cpptest/112/LIB_STATIC/intel
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_303_006_intel_x86_64
+[CBI] ->              : BilatTools_OMP_303_006_intel_x86_64
+
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/OMP_MOO/bin
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/OMP_MOO/obj
+
+[CBI] -> Compilation parallel (16 threads)
+
+[OMP_MOO_intel_x86_64] -> icc compiling .cpp : src/main.cpp
+[OMP_MOO_intel_x86_64] -> icc compiling .cpp : src/cpp/test/mainTest.cpp
+[OMP_MOO_intel_x86_64] -> icc compiling .cpp : src/cpp/test/unit/07_Test_Racine2/TestRacine2.cpp
+[OMP_MOO_intel_x86_64] -> icc compiling .cpp : src/cpp/test/unit/05_Test_Montecarlo/TestMontecarloPi.cpp
+[OMP_MOO_intel_x86_64] -> icc compiling .cpp : src/cpp/test/unit/01_Test_Hello/TestHello.cpp
+[OMP_MOO_intel_x86_64] -> icc compiling .cpp : src/cpp/test/unit/02_Test_Pi/TestPi.cpp
+[OMP_MOO_intel_x86_64] -> icc compiling .cpp : src/cpp/test/unit/08_Test_VectorADD/TestVectorAdd.cpp
+[OMP_MOO_intel_x86_64] -> icc compiling .cpp : src/cpp/test/unit/03_Test_DotProd/TestDotProd.cpp
+[OMP_MOO_intel_x86_64] -> icc compiling .cpp : src/cpp/test/unit/04_Test_Histo/TestHisto.cpp
+[OMP_MOO_intel_x86_64] -> icc compiling .cpp : src/cpp/core/mainCore.cpp
+icc: command line error: option '-openmp' is not supported. Please use the replacement option '-qopenmp'
+icc: command line error: option '-openmp' is not supported. Please use the replacement option '-qopenmp'
+icc: command line error: option '-openmp' is not supported. Please use the replacement option '-qopenmp'
+icc: command line error: option '-openmp' is not supported. Please use the replacement option '-qopenmp'
+make[1]: *** [/tmp/ramdrive/bilat/Targets/OMP_MOO/obj/main.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+make[1]: *** [/tmp/ramdrive/bilat/Targets/OMP_MOO/obj/mainTest.o] Error 1
+make[1]: *** [/tmp/ramdrive/bilat/Targets/OMP_MOO/obj/TestRacine2.o] Error 1
+make[1]: *** [/tmp/ramdrive/bilat/Targets/OMP_MOO/obj/TestHello.o] Error 1
+[OMP_MOO_intel_x86_64] -> icc compiling .cpp : src/cpp/core/omp/02_pi/00_pi_tools.cpp
+icc: command line error: option '-openmp' is not supported. Please use the replacement option '-qopenmp'
+icc: command line error: option '-openmp' is not supported. Please use the replacement option '-qopenmp'
+icc: command line error: option '-openmp' is not supported. Please use the replacement option '-qopenmp'
+make[1]: *** [/tmp/ramdrive/bilat/Targets/OMP_MOO/obj/TestMontecarloPi.o] Error 1
+make[1]: *** [/tmp/ramdrive/bilat/Targets/OMP_MOO/obj/TestPi.o] Error 1
+make[1]: *** [/tmp/ramdrive/bilat/Targets/OMP_MOO/obj/TestVectorAdd.o] Error 1
+icc: command line error: option '-openmp' is not supported. Please use the replacement option '-qopenmp'
+make[1]: *** [/tmp/ramdrive/bilat/Targets/OMP_MOO/obj/TestHisto.o] Error 1
+icc: command line error: option '-openmp' is not supported. Please use the replacement option '-qopenmp'
+make[1]: *** [/tmp/ramdrive/bilat/Targets/OMP_MOO/obj/TestDotProd.o] Error 1
+icc: command line error: option '-openmp' is not supported. Please use the replacement option '-qopenmp'
+icc: command line error: option '-openmp' is not supported. Please use the replacement option '-qopenmp'
+make[1]: *** [/tmp/ramdrive/bilat/Targets/OMP_MOO/obj/mainCore.o] Error 1
+make[1]: *** [/tmp/ramdrive/bilat/Targets/OMP_MOO/obj/00_pi_tools.o] Error 1
+make: *** [jall] Error 2
+
+10:00:59 Build Failed. 13 errors, 0 warnings. (took 339ms)
+

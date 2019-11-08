@@ -1,0 +1,215 @@
+22:06:22 **** Build of configuration GCC_parallel for project Tuto_Cpp ****
+cbicc gcc jall 
+
+--------------------------------------------------------
+[Runtime] : gcc x86
+--------------------------------------------------------
+
+
+[cuda]        : /usr/local
+
+[jni]         : /usr/lib/jvm/java-8-oracle
+
+[X11]         : /usr/include/X11
+
+[MKL]         : /opt/intel/mkl
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+[pleora]      : /opt/api/ext/pleora
+
+[glm]      : /opt/api/ext/GLM
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SCENE_3D_HOME              = /opt/api/cbi/infographie/scene3d
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CV_HOME        = /opt/api/cbi/tools/bilat_tools_image_cv
+     BILAT_TOOLS_CUDA_3D_HOME         = /opt/api/cbi/tools/bilat_tools_cuda_3D
+     BILAT_TOOLS_JNI_HOME             = /opt/api/cbi/tools/bilat_tools_jni
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME                 = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                   = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                   = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                    = /opt/api/cbi/capteur/bilat_tau2
+     BILAT_SPEECH_HOME                  = /opt/api/cbi/capteur/bilat_speech
+     BILAT_GPS_HOME                     = /opt/api/cbi/capteur/bilat_gps
+     BILAT_PIPES_P2P_HOME               = /opt/api/cbi/capteur/bilat_pipes_p2p
+     BILAT_PIPES_CLIENT_HOME            = /opt/api/cbi/capteur/bilat_pipes_client
+     BILAT_PIPES_CLIENT_SERVER_JAVA_HOME= /opt/api/cbi/capteur/bilat_pipes_client_server_java
+
+--------------------------------------------------------
+[Runtime] : gcc x86 : Ready!
+--------------------------------------------------------
+
+
+g++ (Ubuntu 4.8.4-2ubuntu1~14.04.4) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+[Make] : GCC : jall
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_CPP_gcc_x86_64
+[CBI] ->
+[CBI] -> Build     	  : /tmp/ramdrive/arc19/Targets/Tuto_CPP/bin/Tuto_CPP_gcc_x86_64.run
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : arc19
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : /opt/api/ext/cpptest/112/LIB_STATIC/gcc
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fomit-frame-pointer
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -march=native
+[CBI] ->              : -std=c++11
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/cpp/core/01_classe/
+[CBI] ->              : src/cpp/core/02_derivate/base/
+[CBI] ->              : src/cpp/core/02_derivate/deriver/
+[CBI] ->              : src/cpp/core/03_structure_cpp/
+[CBI] ->              : src/cpp/core/04_destruction/identity1/
+[CBI] ->              : src/cpp/core/04_destruction/identity2/
+[CBI] ->              : src/cpp/core/05_polymorphisme/dessin/
+[CBI] ->              : src/cpp/core/05_polymorphisme/forme/
+[CBI] ->              : src/cpp/core/05_polymorphisme/forme/cercle/
+[CBI] ->              : src/cpp/core/05_polymorphisme/forme/rectangle/
+[CBI] ->              : src/cpp/core/05_polymorphisme/forme/rectangle/carrer/
+[CBI] ->              : src/cpp/core/06_template/
+[CBI] ->              : src/cpp/core/07_surcharge/a_cout/
+[CBI] ->              : src/cpp/core/07_surcharge/b_add/
+[CBI] ->              : src/cpp/core/07_surcharge/c_crochet/
+[CBI] ->              : src/cpp/core/09_allocation/
+[CBI] ->              : src/cpp/core/10_advanced/a_echaufement/
+[CBI] ->              : src/cpp/core/10_advanced/b_enfer_or_not/
+[CBI] ->              : src/cpp/test/01_hello/
+[CBI] ->              : src/cpp/test/02_calculatrice/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/ext/cpptest/112/INC
+[CBI] ->              : /opt/api/ext/cpptest/112/INC/extension
+
+[CBI] -> API_BIN :
+
+[CBI] -> API_LIBRARIES_STATIC :
+[CBI] ->              : /opt/api/ext/cpptest/112/LIB_STATIC/gcc
+
+[CBI] -> API_LIBRARIES :
+
+[CBI] -> Create folder : /tmp/ramdrive/arc19/Targets/Tuto_CPP/bin
+[CBI] -> Create folder : /tmp/ramdrive/arc19/Targets/Tuto_CPP/obj
+
+[CBI] -> Compilation parallel (16 threads)
+
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/main.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/test/mainTest.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/test/02_calculatrice/TestCalculatrice.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/test/01_hello/TestHello.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/mainCore.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/02_derivate/useDerivate.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/02_derivate/deriver/HeureMinuteSeconde.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/02_derivate/base/HeureMinute.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/09_allocation/Personne.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/09_allocation/useAllocation.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/03_structure_cpp/useStruture.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/06_template/useInterval.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/04_destruction/useIdentity.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/04_destruction/identity1/Identity1.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/04_destruction/identity2/Identity2.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/10_advanced/a_echaufement/Banane.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/10_advanced/a_echaufement/useBanane.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/10_advanced/b_enfer_or_not/Array.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/10_advanced/b_enfer_or_not/useArray.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/05_polymorphisme/usePolymorphisme.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/05_polymorphisme/dessin/Dessin.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/05_polymorphisme/forme/Forme_A.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/05_polymorphisme/forme/cercle/Cercle.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/05_polymorphisme/forme/rectangle/Rectangle.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/05_polymorphisme/forme/rectangle/carrer/Carrer.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/01_classe/Calculatrice.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/01_classe/useCalculatrice.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/07_surcharge/b_add/Prix.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/07_surcharge/b_add/usePrix.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/07_surcharge/a_cout/Homme.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/07_surcharge/a_cout/useHomme.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/07_surcharge/c_crochet/ListInt.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/07_surcharge/c_crochet/useListInt.cpp
+[Tuto_CPP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/08_passage/usePassage.cpp
+
+[CBI] -> Linking to   : /tmp/ramdrive/arc19/Targets/Tuto_CPP/bin/Tuto_CPP_gcc_x86_64.run
+
+[CBI] -> Library Link :
+[CBI] ->              : -lCpp_Test_112_gcc_x86_64
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_CPP_gcc_x86_64
+[CBI] -> Location     : /tmp/ramdrive/arc19/Targets/Tuto_CPP/bin/Tuto_CPP_gcc_x86_64.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : arc19
+[CBI] ->
+[CBI] -> Compilateur  : g++
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 1 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/Tuto_CPP_gcc_x86_64.run
+
+[CBI] -> Symlink Project Inc
+[CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
+
+[CBI] -> Tuto_CPP_gcc_x86_64 : End ALL!
+
+
+22:06:24 Build Finished. 0 errors, 0 warnings. (took 1s.439ms)
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;BilatTools_Intel_MKL/INC_SYMLINK&apos;" deleteContents="false" description="Delete resource &apos;BilatTools_Intel_MKL/INC_SYMLINK&apos;" element1="/BilatTools_Intel_MKL/INC_SYMLINK" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1480946336118"/>
+</session>

@@ -1,0 +1,368 @@
+20:45:20 **** Incremental Build of configuration CudaVisual_parallel for project Tuto_Image_CV_Cuda ****
+makeCudaVisual.bat jall 
+init make
+init API-EXT
+init API-CBI
+
+[CUDA VISUAL] : jall  
+
+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2015 NVIDIA Corporation
+Built on Tue_Aug_11_14:49:10_CDT_2015
+Cuda compilation tools, release 7.5, V7.5.17
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+Microsoft (R) C/C++ Optimizing Compiler Version 18.00.30501 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_Image_CV_Cuda_visual_cuda_75_64
+[CBI] ->
+[CBI] -> Build        : Q:/bilat/Targets/Tuto_Image_CV_Cuda/bin/Tuto_Image_CV_Cuda_visual_cuda_75_64.exe
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	      : EXE
+[CBI] -> Arch	      : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking !
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : ../BilatTools_CPP/src/core
+[CBI] ->              : ../BilatTools_OMP/src/core
+[CBI] ->              : ../BilatTools_Cuda/src/core
+[CBI] ->              : ../BilatTools_Cuda_Image/src/core
+[CBI] ->              : ../BilatTools_OpenCV/src/core
+[CBI] ->              : ../BilatTools_Image_CV_Cuda/src/core
+[CBI] ->              : c:/Soft_API/CBI/opengl/201/Bilat_OpenGL_Tools/LIB/visual
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_Displayable/LIB/visual
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_Displayable_GL/LIB/visual
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_GL/LIB/visual
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_FreeGlut_Tools/LIB/visual
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_FreeGlut/LIB/visual
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_GL_Cuda/LIB/visual_cuda
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_FreeGlut_Cuda/LIB/visual_cuda
+[CBI] ->              : c:/Soft_API/ext/CppTest/112/LIB_STATIC/visual
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : /openmp
+[CBI] ->              : /MD
+[CBI] ->              : /Ox
+[CBI] ->              : /arch:AVX
+
+[CBI] -> CXXLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : /NODEFAULTLIB:LIBCMT
+
+[CBI] -> NVCCFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : --fmad=true
+[CBI] ->              : -arch=sm_20
+[CBI] ->              : -m64
+[CBI] ->              : -use_fast_math
+
+[CBI] -> NVCCLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -arch=sm_20
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/namespace_cpu/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/both/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/device/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/device/curand/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/device/reduction/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/device/synchronisation/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/host/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/header/mixte/
+[CBI] ->              : ../BilatTools_Cuda/src/core/cudatools/nvidia/
+[CBI] ->              : ../BilatTools_Cuda_Image/src/core/tools/
+[CBI] ->              : ../BilatTools_Cuda_Image/src/core/tools/imp/01_api_animateur/
+[CBI] ->              : ../BilatTools_Cuda_Image/src/core/tools/imp/02_api_force_brute/
+[CBI] ->              : ../BilatTools_Cuda_Image/src/core/tools/imp/02_api_force_brute/maillage/
+[CBI] ->              : ../BilatTools_Cuda_Image/src/core/tools/imp/03_api_barivox/
+[CBI] ->              : ../BilatTools_Cuda_Image/src/core/tools/imp/api_image_link/
+[CBI] ->              : ../BilatTools_Cuda_Image/src/core/tools/imp/api_viewer/
+[CBI] ->              : ../BilatTools_Cuda_Image/src/core/tools/spec/
+[CBI] ->              : ../BilatTools_Image_CV_Cuda/src/core/opencv/
+[CBI] ->              : ../BilatTools_OMP/src/core/OMP_Tools/header/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/capture/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/capture/video/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/capture/webcam/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/appearance/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/drawer/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/viewer/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/viewerMat/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/tools/
+[CBI] ->              : src/core/01_imageVideo/01_animable/device/math/
+[CBI] ->              : src/core/01_imageVideo/01_animable/host/
+[CBI] ->              : src/core/01_imageVideo/02_provider/
+
+[CBI] -> LIB_PATH (auto detect):
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_Displayable/LIB/visual/
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_Displayable_GL/LIB/visual/
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_FreeGlut_Tools/LIB/visual/
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_FreeGlut/LIB/visual/
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_FreeGlut_Cuda/LIB/visual_cuda/
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_GL/LIB/visual/
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_GL_Cuda/LIB/visual_cuda/
+[CBI] ->              : c:/Soft_API/CBI/opengl/201/Bilat_OpenGL_Tools/LIB/visual/
+[CBI] ->              : c:/Soft_API/ext/CppTest/112/LIB_STATIC/visual/
+
+[CBI] -> API_INC :
+[CBI] ->              : C:/Soft/Cuda64/ToolKit/include
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_Displayable/INC
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_Displayable/INC/primitives
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_Displayable_GL/INC
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_Displayable_GL/INC/primitives
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_FreeGlut_Tools/INC
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_FreeGlut/INC
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_FreeGlut/INC/common
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_FreeGlut/INC/cpu
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_FreeGlut_Cuda/INC
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_GL/INC
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_GL/INC/common
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_GL/INC/cpu
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_GL/INC/extra
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_GL_Cuda/INC
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_GL_Cuda/INC/gpu
+[CBI] ->              : c:/Soft_API/CBI/opengl/201/Bilat_OpenGL_Tools/INC
+[CBI] ->              : c:/Soft_API/CBI/tools/201/Bilat_tools_dll/INC
+[CBI] ->              : c:/Soft_API/ext/CppTest/112/INC
+[CBI] ->              : c:/Soft_API/ext/CppTest/112/INC/extension
+[CBI] ->              : c:/Soft_API/ext/FreeGlut/300/INC
+[CBI] ->              : c:/Soft_API/ext/GL/001/INC
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2/core
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2/flann
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2/highgui
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2/imgproc
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2/video
+
+[CBI] -> API_LIB :
+[CBI] ->              : C:/Soft/Cuda64/ToolKit/lib/x64
+[CBI] ->              : c:/Soft_API/ext/FreeGlut/300/LIB/visual
+[CBI] ->              : c:/Soft_API/ext/GL/001/LIB/visual
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/visual/lib
+
+[CBI] -> API_BIN :
+[CBI] ->              : C:/Soft/Cuda64/ToolKit/bin
+[CBI] ->              : C:/Soft/Cuda64/ToolKit/lib/x64
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_Displayable/BIN/visual
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_Displayable_GL/BIN/visual
+[CBI] ->              : c:/Soft_API/CBI/fenetrage/201/Bilat_Fenetrage_FreeGlut_Tools/BIN/visual
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_FreeGlut/BIN/visual
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_FreeGlut_Cuda/BIN/visual_cuda
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_GL/BIN/visual
+[CBI] ->              : c:/Soft_API/CBI/image/201/Bilat_Image_GL_Cuda/BIN/visual_cuda
+[CBI] ->              : c:/Soft_API/CBI/opengl/201/Bilat_OpenGL_Tools/BIN/visual
+[CBI] ->              : c:/Soft_API/ext/FreeGlut/300/BIN/visual
+[CBI] ->              : c:/Soft_API/ext/GL/001/BIN/visual
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/visual/bin
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : OpenCL
+[CBI] ->              : cublas
+[CBI] ->              : cuda
+[CBI] ->              : cudadevrt
+[CBI] ->              : cudart
+[CBI] ->              : cudart_static
+[CBI] ->              : cufft
+[CBI] ->              : cufftw
+[CBI] ->              : curand
+[CBI] ->              : cusparse
+[CBI] ->              : freeglut64_visual
+[CBI] ->              : gdi32
+[CBI] ->              : glew64
+[CBI] ->              : glu32
+[CBI] ->              : kernel32
+[CBI] ->              : nppc
+[CBI] ->              : nppi
+[CBI] ->              : npps
+[CBI] ->              : nvblas
+[CBI] ->              : nvcuvid
+[CBI] ->              : opencv_calib3d310_visual2013_cuda75
+[CBI] ->              : opencv_core310_visual2013_cuda75
+[CBI] ->              : opencv_cudaarithm310_visual2013_cuda75
+[CBI] ->              : opencv_cudabgsegm310_visual2013_cuda75
+[CBI] ->              : opencv_cudacodec310_visual2013_cuda75
+[CBI] ->              : opencv_cudafeatures2d310_visual2013_cuda75
+[CBI] ->              : opencv_cudafilters310_visual2013_cuda75
+[CBI] ->              : opencv_cudaimgproc310_visual2013_cuda75
+[CBI] ->              : opencv_cudalegacy310_visual2013_cuda75
+[CBI] ->              : opencv_cudaobjdetect310_visual2013_cuda75
+[CBI] ->              : opencv_cudaoptflow310_visual2013_cuda75
+[CBI] ->              : opencv_cudastereo310_visual2013_cuda75
+[CBI] ->              : opencv_cudawarping310_visual2013_cuda75
+[CBI] ->              : opencv_cudev310_visual2013_cuda75
+[CBI] ->              : opencv_features2d310_visual2013_cuda75
+[CBI] ->              : opencv_flann310_visual2013_cuda75
+[CBI] ->              : opencv_highgui310_visual2013_cuda75
+[CBI] ->              : opencv_imgcodecs310_visual2013_cuda75
+[CBI] ->              : opencv_imgproc310_visual2013_cuda75
+[CBI] ->              : opencv_ml310_visual2013_cuda75
+[CBI] ->              : opencv_objdetect310_visual2013_cuda75
+[CBI] ->              : opencv_photo310_visual2013_cuda75
+[CBI] ->              : opencv_shape310_visual2013_cuda75
+[CBI] ->              : opencv_stitching310_visual2013_cuda75
+[CBI] ->              : opencv_superres310_visual2013_cuda75
+[CBI] ->              : opencv_video310_visual2013_cuda75
+[CBI] ->              : opencv_videoio310_visual2013_cuda75
+[CBI] ->              : opencv_videostab310_visual2013_cuda75
+[CBI] ->              : opengl32
+[CBI] ->              : user32
+
+
+[CBI] -> Compilation parallel (6 threads)
+
+main.obj
+main.cpp
+
+[CBI] -> Linking to   : Q:/bilat/Targets/Tuto_Image_CV_Cuda/bin/Tuto_Image_CV_Cuda_visual_cuda_75_64.exe
+
+[CBI] -> Library Link :
+[CBI] ->
+[CBI] ->              : -lBilat_Fenetrage_Displayable_201_visual_64
+[CBI] ->              : -lBilat_Fenetrage_Displayable_GL_201_visual_64
+[CBI] ->              : -lBilat_Fenetrage_FreeGlut_Tools_201_visual_64
+[CBI] ->              : -lBilat_Image_FreeGlut_201_visual_64
+[CBI] ->              : -lBilat_Image_FreeGlut_Cuda_201_visual_cuda_75_64
+[CBI] ->              : -lBilat_Image_GL_201_visual_64
+[CBI] ->              : -lBilat_Image_GL_Cuda_201_visual_cuda_75_64
+[CBI] ->              : -lBilat_OpenGL_Tools_201_visual_64
+[CBI] ->              : -lCpp_Test_visual_64
+[CBI] ->              : -lOpenCL
+[CBI] ->              : -lcublas
+[CBI] ->              : -lcuda
+[CBI] ->              : -lcudadevrt
+[CBI] ->              : -lcudart
+[CBI] ->              : -lcudart_static
+[CBI] ->              : -lcufft
+[CBI] ->              : -lcufftw
+[CBI] ->              : -lcurand
+[CBI] ->              : -lcusparse
+[CBI] ->              : -lfreeglut64_visual
+[CBI] ->              : -lgdi32
+[CBI] ->              : -lglew64
+[CBI] ->              : -lglu32
+[CBI] ->              : -lkernel32
+[CBI] ->              : -lnppc
+[CBI] ->              : -lnppi
+[CBI] ->              : -lnpps
+[CBI] ->              : -lnvblas
+[CBI] ->              : -lnvcuvid
+[CBI] ->              : -lopencv_calib3d310_visual2013_cuda75
+[CBI] ->              : -lopencv_core310_visual2013_cuda75
+[CBI] ->              : -lopencv_cudaarithm310_visual2013_cuda75
+[CBI] ->              : -lopencv_cudabgsegm310_visual2013_cuda75
+[CBI] ->              : -lopencv_cudacodec310_visual2013_cuda75
+[CBI] ->              : -lopencv_cudafeatures2d310_visual2013_cuda75
+[CBI] ->              : -lopencv_cudafilters310_visual2013_cuda75
+[CBI] ->              : -lopencv_cudaimgproc310_visual2013_cuda75
+[CBI] ->              : -lopencv_cudalegacy310_visual2013_cuda75
+[CBI] ->              : -lopencv_cudaobjdetect310_visual2013_cuda75
+[CBI] ->              : -lopencv_cudaoptflow310_visual2013_cuda75
+[CBI] ->              : -lopencv_cudastereo310_visual2013_cuda75
+[CBI] ->              : -lopencv_cudawarping310_visual2013_cuda75
+[CBI] ->              : -lopencv_cudev310_visual2013_cuda75
+[CBI] ->              : -lopencv_features2d310_visual2013_cuda75
+[CBI] ->              : -lopencv_flann310_visual2013_cuda75
+[CBI] ->              : -lopencv_highgui310_visual2013_cuda75
+[CBI] ->              : -lopencv_imgcodecs310_visual2013_cuda75
+[CBI] ->              : -lopencv_imgproc310_visual2013_cuda75
+[CBI] ->              : -lopencv_ml310_visual2013_cuda75
+[CBI] ->              : -lopencv_objdetect310_visual2013_cuda75
+[CBI] ->              : -lopencv_photo310_visual2013_cuda75
+[CBI] ->              : -lopencv_shape310_visual2013_cuda75
+[CBI] ->              : -lopencv_stitching310_visual2013_cuda75
+[CBI] ->              : -lopencv_superres310_visual2013_cuda75
+[CBI] ->              : -lopencv_video310_visual2013_cuda75
+[CBI] ->              : -lopencv_videoio310_visual2013_cuda75
+[CBI] ->              : -lopencv_videostab310_visual2013_cuda75
+[CBI] ->              : -lopengl32
+[CBI] ->              : -luser32
+
+main.obj
+mainAnimable.obj
+mainBruteForce.obj
+mainImage.obj
+mainBarivox.obj
+ImageVideoProvider.obj
+StringTools.obj
+Progress.obj
+Fps.obj
+TabTools.obj
+Chrono.obj
+AleaTools.obj
+LimitsTools.obj
+MathTools.obj
+IndiceTools_CPU.obj
+ColorTools_CPU.obj
+OmpTools.obj
+cudaTools.obj
+Grid.obj
+Device.obj
+Options.obj
+Settings_GPU.obj
+VariateurData.obj
+ForceBrutOutput.obj
+ProviderGridMaillage2D.obj
+ProviderGridMaillage1D.obj
+GridMaillage.obj
+BarivoxOutput.obj
+CVCaptureVideo.obj
+CVCaptureWebcam.obj
+AppearanceShape.obj
+ShapeDrawer.obj
+LineDrawer.obj
+ShapeDrawerTransparant.obj
+Polygon.obj
+ShapeGroup.obj
+Rectangle.obj
+Shape.obj
+Circle.obj
+Line.obj
+Triangle.obj
+FactoryImageViewer.obj
+CVViewerUcharBGR.obj
+CVViewerMatBGR.obj
+OpencvTools.obj
+OpencvTools_GPU.obj
+imageVideoDevice.obj
+ImageVideo.obj
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_Image_CV_Cuda_visual_cuda_75_64
+[CBI] -> Location     : Q:/bilat/Targets/Tuto_Image_CV_Cuda/bin/Tuto_Image_CV_Cuda_visual_cuda_75_64.exe
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 	      : Win
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : VISUAL (cl) && NVIDIA (nvcc)
+[CBI] -> Task		  : End Compiling-Linking !
+[CBI] -> Time		  : 5 (s)
+==================================================================================
+
+cp: cannot create regular file `../RELEASE/bin/Tuto_Image_CV_Cuda_visual_cuda_75_64.exe': Permission denied
+
+[CBI] -> Deploying    : ../RELEASE/bin/Tuto_Image_CV_Cuda_visual_cuda_75_64.exe
+
+[CBI] -> Tuto_Image_CV_Cuda_visual_cuda_75_64 : End ALL!
+
+
+20:45:32 Build Finished (took 12s.662ms)
+

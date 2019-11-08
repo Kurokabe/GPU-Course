@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BilatTools_Cuda_Image/src/core/cudaImageTools/viewer/VIEWER&apos; to &apos;Viewer.h&apos;" description="Rename resource &apos;VIEWER&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/cudaImageTools/viewer/VIEWER" name="Viewer.h" stamp="1441119672084" updateReferences="true"/>
+</session>

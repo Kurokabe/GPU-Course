@@ -1,0 +1,25 @@
+13:57:50 **** Clean-only build of configuration CudaVisual_parallel for project BilatTools_Cuda_smart_switch ****
+makeCudaVisual.bat clean 
+init make
+init API-EXT
+init API-CBI
+
+[CUDA VISUAL] : clean  
+
+
+==================================================================================
+[CBI] -> Target            : BilatTools_Cuda_Priority_visual_cuda_70_64
+[CBI] -> Task			     : DELETE
+[CBI]
+[CBI] -> Delete .obj       : Q:/cedric.bilat/Targets/BilatTools_Cuda_Priority/obj
+[CBI] -> Delete .bin       : Q:/cedric.bilat/Targets/BilatTools_Cuda_Priority/bin
+[CBI] -> Delete .cubin     : Q:/cedric.bilat/Targets/BilatTools_Cuda_Priority/cubin
+[CBI] -> Delete doc        : Q:/cedric.bilat/Targets/BilatTools_Cuda_Priority/doc
+[CBI]
+[CBI] -> Delete deploy     : ../RELEASE/bin/BilatTools_Cuda_Priority_visual_cuda_70_64.exe
+[CBI] -> Delete deploy doc : ../RELEASE/doc/BilatTools_Cuda_Priority_visual_cuda_70_64.doc.tar.gz
+==================================================================================
+
+
+13:57:52 Build Finished (took 2s.318ms)
+

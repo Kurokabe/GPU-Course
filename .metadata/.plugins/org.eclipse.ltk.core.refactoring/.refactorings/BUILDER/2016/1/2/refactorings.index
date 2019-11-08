@@ -1,0 +1,7 @@
+1452537876967	Rename resource 'target.mk'
+1452537896260	Rename resource 'target.mk'
+1452538131272	Rename resource 'rules.mk'
+1452538138221	Rename resource 'targets.mk'
+1452538329543	Rename resource 'rules_windows.mk'
+1452538336853	Rename resource 'targets_windows.mk'
+1452869596832	Move 'cleanAll.mk' to 'common'

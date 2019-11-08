@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BilatTools_Cuda/src/core/cudatools/cpp/host/Chrono.cpp&apos; to &apos;ChronoCuda.cpp&apos;" description="Rename resource &apos;Chrono.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/cudatools/cpp/host/Chrono.cpp" name="ChronoCuda.cpp" stamp="1479056838607" updateReferences="true"/>
+</session>

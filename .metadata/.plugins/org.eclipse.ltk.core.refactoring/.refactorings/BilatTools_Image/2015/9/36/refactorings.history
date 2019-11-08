@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;BilatTools_Image/src/core/tools/Option.h&apos; to &apos;Settings.h&apos;" description="Rename resource &apos;Option.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/tools/Option.h" name="Settings.h" stamp="1441129442676" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;BilatTools_Image/src/core/tools/Option.cpp&apos; to &apos;Settings.cpp&apos;" description="Rename resource &apos;Option.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/tools/Option.cpp" name="Settings.cpp" stamp="1441129447466" updateReferences="true"/>
+</session>

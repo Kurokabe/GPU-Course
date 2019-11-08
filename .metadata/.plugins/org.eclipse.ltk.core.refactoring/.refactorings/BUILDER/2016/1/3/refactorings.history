@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BUILDER/makefile/private/api/cpp/cbi_image/bilat_image_gl.mk&apos; to &apos;bilat_image_gl.mk.old&apos;" description="Rename resource &apos;bilat_image_gl.mk&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="makefile/private/api/cpp/cbi_image/bilat_image_gl.mk" name="bilat_image_gl.mk.old" stamp="1453475975396" updateReferences="true"/>
+</session>

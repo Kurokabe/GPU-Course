@@ -1,0 +1,153 @@
+14:49:27 **** Incremental Build of configuration CudaVisual for project BilatTools_Cuda_Opencv ****
+makeCudaVisual.bat all 
+init make
+init API-EXT
+init API-CBI
+
+[CUDA VISUAL] : all  
+
+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2015 NVIDIA Corporation
+Built on Tue_Aug_11_14:49:10_CDT_2015
+Cuda compilation tools, release 7.5, V7.5.17
+
+Microsoft (R) C/C++ Optimizing Compiler Version 18.00.30501 for x64
+usage: cl [ option... ] filename... [ /link linkoption... ]
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+../BUILDER/makefile/private/cuda/rules_win.mk:49: warning: overriding recipe for target `Q:/bilat/Targets/BilatTools_Cuda_OpenCV/bin/BilatTools_Cuda_OpenCV_visual_cuda_75_64.lib'
+../BUILDER/makefile/private/cuda/rules_win.mk:15: warning: ignoring old recipe for target `Q:/bilat/Targets/BilatTools_Cuda_OpenCV/bin/BilatTools_Cuda_OpenCV_visual_cuda_75_64.lib'
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_Cuda_OpenCV_visual_cuda_75_64
+[CBI] ->
+[CBI] -> Build        : Q:/bilat/Targets/BilatTools_Cuda_OpenCV/bin/BilatTools_Cuda_OpenCV_visual_cuda_75_64.lib
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	      : STATIC_LIB
+[CBI] -> Arch	      : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking !
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : ../BilatTools_OpenCV/src/core
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : /MD
+[CBI] ->              : /Ox
+[CBI] ->              : /arch:AVX
+
+[CBI] -> CXXLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : /NODEFAULTLIB:LIBCMT
+
+[CBI] -> NVCCFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : --fmad=true
+[CBI] ->              : -arch=sm_20
+[CBI] ->              : -m64
+[CBI] ->              : -use_fast_math
+
+[CBI] -> NVCCLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -arch=sm_20
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : ../BilatTools_OpenCV/src/core/capture/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/capture/video/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/capture/webcam/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/appearance/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/drawer/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/viewer/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/viewerMat/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/tools/
+[CBI] ->              : src/core/cpu/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : C:/Soft/Cuda64/ToolKit/include
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2/core
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2/flann
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2/highgui
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2/imgproc
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/include/opencv2/video
+
+[CBI] -> API_LIB :
+[CBI] ->              : C:/Soft/Cuda64/ToolKit/lib/x64
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/visual/lib
+
+[CBI] -> API_BIN :
+[CBI] ->              : C:/Soft/Cuda64/ToolKit/bin
+[CBI] ->              : C:/Soft/Cuda64/ToolKit/lib/x64
+[CBI] ->              : c:/Soft_API/ext/OpenCV/310/visual/bin
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : OpenCL
+[CBI] ->              : cublas
+[CBI] ->              : cuda
+[CBI] ->              : cudadevrt
+[CBI] ->              : cudart
+[CBI] ->              : cudart_static
+[CBI] ->              : cufft
+[CBI] ->              : cufftw
+[CBI] ->              : curand
+[CBI] ->              : cusparse
+[CBI] ->              : nppc
+[CBI] ->              : nppi
+[CBI] ->              : npps
+[CBI] ->              : nvblas
+[CBI] ->              : nvcuvid
+[CBI] ->              : opencv_calib3d310_visual2013_cuda75
+[CBI] ->              : opencv_core310_visual2013_cuda75
+[CBI] ->              : opencv_cudaarithm310_visual2013_cuda75
+[CBI] ->              : opencv_cudabgsegm310_visual2013_cuda75
+[CBI] ->              : opencv_cudacodec310_visual2013_cuda75
+[CBI] ->              : opencv_cudafeatures2d310_visual2013_cuda75
+[CBI] ->              : opencv_cudafilters310_visual2013_cuda75
+[CBI] ->              : opencv_cudaimgproc310_visual2013_cuda75
+[CBI] ->              : opencv_cudalegacy310_visual2013_cuda75
+[CBI] ->              : opencv_cudaobjdetect310_visual2013_cuda75
+[CBI] ->              : opencv_cudaoptflow310_visual2013_cuda75
+[CBI] ->              : opencv_cudastereo310_visual2013_cuda75
+[CBI] ->              : opencv_cudawarping310_visual2013_cuda75
+[CBI] ->              : opencv_cudev310_visual2013_cuda75
+[CBI] ->              : opencv_features2d310_visual2013_cuda75
+[CBI] ->              : opencv_flann310_visual2013_cuda75
+[CBI] ->              : opencv_highgui310_visual2013_cuda75
+[CBI] ->              : opencv_imgcodecs310_visual2013_cuda75
+[CBI] ->              : opencv_imgproc310_visual2013_cuda75
+[CBI] ->              : opencv_ml310_visual2013_cuda75
+[CBI] ->              : opencv_objdetect310_visual2013_cuda75
+[CBI] ->              : opencv_photo310_visual2013_cuda75
+[CBI] ->              : opencv_shape310_visual2013_cuda75
+[CBI] ->              : opencv_stitching310_visual2013_cuda75
+[CBI] ->              : opencv_superres310_visual2013_cuda75
+[CBI] ->              : opencv_video310_visual2013_cuda75
+[CBI] ->              : opencv_videoio310_visual2013_cuda75
+[CBI] ->              : opencv_videostab310_visual2013_cuda75
+
+[CBI] -> Create folder  : Q:/bilat/Targets/BilatTools_Cuda_OpenCV/bin
+[CBI] -> Create folder  : Q:/bilat/Targets/BilatTools_Cuda_OpenCV/obj
+[CBI] -> Create folder  : Q:/bilat/Targets/BilatTools_Cuda_OpenCV/cubin
+
+OpencvTools_CPU.obj
+OpencvTools_CPU.cpp
+g:\cbi\hearc\rad\running\cudatuto\02_scientifique\01_code\wcuda\bilattools_cuda_opencv\src\core\cpu\OpencvTools_CPU.h(3) : fatal error C1083: Cannot open include file: 'cudaType_CPU.h': No such file or directory
+../BUILDER/makefile/private/cuda/rules_win.mk:74: recipe for target `Q:/bilat/Targets/BilatTools_Cuda_OpenCV/obj/OpencvTools_CPU.obj' failed
+make: *** [Q:/bilat/Targets/BilatTools_Cuda_OpenCV/obj/OpencvTools_CPU.obj] Error 2
+
+14:49:30 Build Finished (took 2s.503ms)
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BilatTools_Cuda/src/core/cudatools/header/host/ConstantMemoryLink.h&apos; to &apos;CMLink.h&apos;" description="Rename resource &apos;ConstantMemoryLink.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/cudatools/header/host/ConstantMemoryLink.h" name="CMLink.h" stamp="1456928472413" updateReferences="true"/>
+</session>

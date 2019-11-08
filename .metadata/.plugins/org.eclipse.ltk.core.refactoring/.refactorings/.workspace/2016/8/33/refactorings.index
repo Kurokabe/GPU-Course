@@ -1,0 +1,4 @@
+1471517350004	Delete 2 resources
+1471517392663	Delete resource 'BUILDER_API/public/postinstall/postinstall.sh'
+1471517499418	Delete resource 'BUILDER_API/private/common/post_install/build.xml'
+1471517739613	Delete resource 'BUILDER_API/private/common/post_install/jni.sh'

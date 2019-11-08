@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Student_Mandelbrot_3D_Cuda/src/core/damier_RGBA_uchar4&apos; to &apos;mandebrot3d_RGBA_uchar4&apos;" description="Rename resource &apos;damier_RGBA_uchar4&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/damier_RGBA_uchar4" name="mandebrot3d_RGBA_uchar4" stamp="1571999732035" updateReferences="true"/>
+</session>

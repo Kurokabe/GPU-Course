@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+/home/mse1/CUDA/toStudent/code/WCuda-complete/.metadata/.plugins/org.eclipse.jdt.core
+830087614.index
+842912573.index
+2031783402.index
+3789023699.index
+646308851.index
+345838780.index

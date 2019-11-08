@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BUILDER/makefile/private/script/workspace_auto/workspace_symlink_delete.sh&apos; to &apos;workspace_symlink_locale_delete.sh&apos;" description="Rename resource &apos;workspace_symlink_delete.sh&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="makefile/private/script/workspace_auto/workspace_symlink_delete.sh" name="workspace_symlink_locale_delete.sh" stamp="1480945971076" updateReferences="true"/>
+</session>

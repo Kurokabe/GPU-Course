@@ -1,0 +1,98 @@
+
+package org.bilat.tuto.image.jni.gui.atome;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JPanel;
+
+public class JPanelImage extends JPanel
+	{
+
+	/*------------------------------------------------------------------*\
+	|*							Constructeurs							*|
+	\*------------------------------------------------------------------*/
+
+	public JPanelImage(int w, int h, int nbrImage)
+		{
+		this.w = w;
+		this.h = h;
+		this.nbrImage = nbrImage;
+
+		geometry();
+		controle();
+		apparance();
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Public							*|
+	\*------------------------------------------------------------------*/
+
+	/*------------------------------*\
+	|*				Get				*|
+	\*------------------------------*/
+
+	public CanvasImage getCanvasImage()
+		{
+		return this.canvasImage;
+		}
+
+	public int getW()
+		{
+		return this.w;
+		}
+
+	public int getH()
+		{
+		return this.h;
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Methodes Private						*|
+	\*------------------------------------------------------------------*/
+
+	private void geometry()
+		{
+		bilatImageAPI();
+
+		swingPure();
+		}
+
+	private void bilatImageAPI()
+		{
+		int dt = JPanelControle.DT_START;
+		canvasImage = new CanvasImage(w, h, dt);
+		}
+
+	private void swingPure()
+		{
+		panelControle = new JPanelControle(canvasImage);
+
+		setLayout(new BorderLayout());
+		add(canvasImage, BorderLayout.CENTER);
+		add(panelControle, BorderLayout.SOUTH);
+		}
+
+	private void controle()
+		{
+		// rien
+		}
+
+	private void apparance()
+		{
+		// rien
+		}
+
+	/*------------------------------------------------------------------*\
+	|*							Attributs Private						*|
+	\*------------------------------------------------------------------*/
+
+	// Inputs
+	private int w;
+	private int h;
+	private int nbrImage;
+
+
+	// Tools
+	private CanvasImage canvasImage;
+	private JPanelControle panelControle;
+	}

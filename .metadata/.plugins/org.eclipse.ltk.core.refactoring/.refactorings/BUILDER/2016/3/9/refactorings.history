@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BUILDER/makefile/private/api/cpp/GL.MK&apos; to &apos;GL.mk&apos;" description="Rename resource &apos;GL.MK&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="makefile/private/api/cpp/GL.MK" name="GL.mk" stamp="1457104411084" updateReferences="true"/>
+</session>

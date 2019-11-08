@@ -1,0 +1,6 @@
+1533313053289	Delete resource 'Cuda_Image/src/cpp/core/09_convolution/moo/host/tools/kernelGray.h'
+1533318537091	Delete resource 'Cuda_Image/src/cpp/core/09_convolution/moo/host/launcherKernel.cu'
+1533318858319	Delete 4 resources
+1533318871314	Delete resource 'Cuda_Image/src/cpp/core/09_convolution/moo/device/math/ConvolutionMath.h'
+1533318883472	Delete resource 'Cuda_Image/src/cpp/core/09_convolution/moo/device/math'
+1533318895063	Delete resource 'Cuda_Image/src/cpp/core/09_convolution/moo/device/convolutionDevice.h'

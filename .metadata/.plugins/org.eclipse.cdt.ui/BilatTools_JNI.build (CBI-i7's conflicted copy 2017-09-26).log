@@ -1,0 +1,249 @@
+14:50:23 **** Incremental Build of configuration GCC_ARM_parallel for project BilatTools_JNI ****
+cbicc gcc arm jall 
+
+--------------------------------------------------------
+Cross Compilation 		       
+--------------------------------------------------------
+
+PLATFORME = jetson
+API       = /opt/arm/jetson
+
+--------------------------------------------------------
+[Runtime] : gcc arm
+--------------------------------------------------------
+
+
+
+[cuda]        : /opt/api/ext/cuda
+
+[jni]         : /opt/api/ext/jni/java-8-openjdk-arm64
+
+[X11]         : /usr/include/X11
+[X11]         : 
+
+[MKL]         : /opt/intel/mkl
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+[opencv]      : RPATH_LINK : /opt/api/ext/cuda/cuda-8.0/lib/gcc_arm:/opt/arm/L4T_1604_2801/usr_lib
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+
+[pleora]      : /opt/api/ext/pleora
+
+[glm]      : /opt/api/ext/GLM
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SCENE_3D_HOME              = /opt/api/cbi/infographie/scene3d
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CV_HOME        = /opt/api/cbi/tools/bilat_tools_image_cv
+     BILAT_TOOLS_CUDA_3D_HOME         = /opt/api/cbi/tools/bilat_tools_cuda_3D
+     BILAT_TOOLS_JNI_HOME             = /opt/api/cbi/tools/bilat_tools_jni
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME                 = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                   = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                   = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                    = /opt/api/cbi/capteur/bilat_tau2
+find: ‘/opt/api/ext/jni/java-8-openjdk-arm64/lib/client’: No such file or directory
+     BILAT_SPEECH_HOME                  = /opt/api/cbi/capteur/bilat_speech
+     BILAT_GPS_HOME                     = /opt/api/cbi/capteur/bilat_gps
+     BILAT_PIPES_P2P_HOME               = /opt/api/cbi/capteur/bilat_pipes_p2p
+     BILAT_PIPES_CLIENT_HOME            = /opt/api/cbi/capteur/bilat_pipes_client
+     BILAT_PIPES_CLIENT_SERVER_JAVA_HOME= /opt/api/cbi/capteur/bilat_pipes_client_server_java
+
+--------------------------------------------------------
+[Runtime] : gcc arm : Ready!
+--------------------------------------------------------
+
+
+aarch64-linux-gnu-g++-5 (Ubuntu/Linaro 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+[Make] : GCC : jall
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_JNI_303_006_gcc_ARM_64
+[CBI] ->
+[CBI] -> Build     	  : /tmp/ramdrive/bilat/Targets/BilatTools_JNI_303_006/bin/libBilatTools_JNI_303_006_gcc_ARM_64.so
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : SHARED_LIB
+[CBI] -> Arch	 	  : ARM_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fPIC
+[CBI] ->              : -std=c++11
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -shared
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/core/header/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/ext/jni/java-8-openjdk-arm64/inc
+[CBI] ->              : /opt/api/ext/jni/java-8-openjdk-arm64/inc/linux
+
+[CBI] -> API_BIN :
+
+[CBI] -> API_LIBRARIES_STATIC :
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : attach
+[CBI] ->              : awt
+[CBI] ->              : awt_headless
+[CBI] ->              : awt_xawt
+[CBI] ->              : dt_socket
+[CBI] ->              : fontmanager
+[CBI] ->              : hprof
+[CBI] ->              : icedtea-sound
+[CBI] ->              : instrument
+[CBI] ->              : j2gss
+[CBI] ->              : j2pcsc
+[CBI] ->              : j2pkcs11
+[CBI] ->              : jaas_unix
+[CBI] ->              : java
+[CBI] ->              : java_crw_demo
+[CBI] ->              : javajpeg
+[CBI] ->              : javalcms
+[CBI] ->              : jawt
+[CBI] ->              : jdwp
+[CBI] ->              : jli
+[CBI] ->              : jsdt
+[CBI] ->              : jsig
+[CBI] ->              : jsound
+[CBI] ->              : jsoundalsa
+[CBI] ->              : management
+[CBI] ->              : mlib_image
+[CBI] ->              : net
+[CBI] ->              : nio
+[CBI] ->              : npt
+[CBI] ->              : saproc
+[CBI] ->              : sctp
+[CBI] ->              : splashscreen
+[CBI] ->              : sunec
+[CBI] ->              : unpack
+[CBI] ->              : verify
+[CBI] ->              : zip
+
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/BilatTools_JNI_303_006/bin
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/BilatTools_JNI_303_006/obj
+
+[CBI] -> Compilation parallel (12 threads)
+
+find: ‘/opt/api/ext/jni/java-8-openjdk-arm64/lib/client’: No such file or directory
+[BilatTools_JNI_303_006_gcc_ARM_64] -> g++ARM compiling .cpp : src/main.cpp
+[BilatTools_JNI_303_006_gcc_ARM_64] -> g++ARM compiling .cpp : src/core/cpp/JvmSettings.cpp
+[BilatTools_JNI_303_006_gcc_ARM_64] -> g++ARM compiling .cpp : src/core/cpp/Jvm.cpp
+
+[BilatTools_JNI_303_006_gcc_ARM_64] -> Linking to   : /tmp/ramdrive/bilat/Targets/BilatTools_JNI_303_006/bin/libBilatTools_JNI_303_006_gcc_ARM_64.so
+
+[BilatTools_JNI_303_006_gcc_ARM_64] -> Library Link :
+
+[CBI] ->              : -lattach
+[CBI] ->              : -lawt
+[CBI] ->              : -lawt_headless
+[CBI] ->              : -lawt_xawt
+[CBI] ->              : -ldt_socket
+[CBI] ->              : -lfontmanager
+[CBI] ->              : -lhprof
+[CBI] ->              : -licedtea-sound
+[CBI] ->              : -linstrument
+[CBI] ->              : -lj2gss
+[CBI] ->              : -lj2pcsc
+[CBI] ->              : -lj2pkcs11
+[CBI] ->              : -ljaas_unix
+[CBI] ->              : -ljava
+[CBI] ->              : -ljava_crw_demo
+[CBI] ->              : -ljavajpeg
+[CBI] ->              : -ljavalcms
+[CBI] ->              : -ljawt
+[CBI] ->              : -ljdwp
+[CBI] ->              : -ljli
+[CBI] ->              : -ljsdt
+[CBI] ->              : -ljsig
+[CBI] ->              : -ljsound
+[CBI] ->              : -ljsoundalsa
+[CBI] ->              : -lmanagement
+[CBI] ->              : -lmlib_image
+[CBI] ->              : -lnet
+[CBI] ->              : -lnio
+[CBI] ->              : -lnpt
+[CBI] ->              : -lsaproc
+[CBI] ->              : -lsctp
+[CBI] ->              : -lsplashscreen
+[CBI] ->              : -lsunec
+[CBI] ->              : -lunpack
+[CBI] ->              : -lverify
+[CBI] ->              : -lzip
+
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_JNI_303_006_gcc_ARM_64
+[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/BilatTools_JNI_303_006/bin/libBilatTools_JNI_303_006_gcc_ARM_64.so
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : SHARED_LIB
+[CBI] -> Arch	 	  : ARM_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : g++ARM
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 1 (s)
+==================================================================================
+
+find: ‘/opt/api/ext/jni/java-8-openjdk-arm64/lib/client’: No such file or directory
+
+[CBI] -> Deploying    : ../RELEASE/bin/libBilatTools_JNI_303_006_gcc_ARM_64.so
+
+[CBI] -> Symlink Project Inc
+[CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
+
+[CBI] -> BilatTools_JNI_303_006_gcc_ARM_64 : End ALL!
+
+
+14:50:24 Build Finished (took 777ms)
+

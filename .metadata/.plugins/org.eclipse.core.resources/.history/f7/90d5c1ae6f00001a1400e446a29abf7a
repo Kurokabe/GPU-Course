@@ -1,0 +1,95 @@
+#include "HelloBinding.h"
+
+#include "RipplingProvider.h"
+using gpu::CanvasImageViewers;
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Constructor		*|
+ \*-------------------------------------*/
+
+HelloBinding::HelloBinding(int w, int h, int dt, int type) :
+	ImageScenario(w, h)
+    {
+    const bool USE_ANIMATION = true;
+    const bool USE_SELECTION = false;
+    const bool SHOW_OVERLAY_DOMAINE = false;
+
+    this->type = type;
+
+    ptrHello = new Hello(w, h, dt);
+    ptrRippling = new RipplingProvider();
+    ptrMandelbrot = new MandelbrotProvider();
+    ptrRaytracing = new RaytracingProvider();
+
+    ImageOption option(USE_SELECTION,USE_ANIMATION ,SHOW_OVERLAY_DOMAINE);
+
+    switch(type)
+	{
+	case 0:
+	    ptrImageViewer = new CanvasImageViewers(ptrRippling->createImageGL(), option);
+	    break;
+	case 1:
+	    ptrImageViewer = new CanvasImageViewers(ptrMandelbrot->createImageGL(), option);
+	    break;
+	case 2:
+	    ptrImageViewer = new CanvasImageViewers(ptrRaytracing->createImageGL(), option);
+	    break;
+	}
+    }
+
+HelloBinding::~HelloBinding()
+    {
+    delete ptrHello;
+    delete ptrImageViewer;
+    }
+
+/*--------------------------------------*\
+|*		Methode			*|
+ \*-------------------------------------*/
+
+/*----------------*\
+|*  	get	  *|
+ \*---------------*/
+
+/**
+ * Override
+ */
+int HelloBinding::getCanvasNativeID()
+    {
+    return ptrImageViewer->getCanvasNativeID();
+    }
+
+/*----------------*\
+|*  	set	  *|
+ \*---------------*/
+
+/**
+ * Animation
+ */
+void HelloBinding::setDt(int dt)
+    {
+    ptrHello->setDt(dt);
+    }
+
+void HelloBinding::setNMinNMax(int nMin, int nMax)
+    {
+    ptrMandelbrot->setNMinNMax(nMin, nMax);
+
+    if (this->type == 1)
+	{
+	ptrImageViewer = new CanvasImageViewers(ptrMandelbrot->createImageGL(), option);
+	}
+    }
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/
+

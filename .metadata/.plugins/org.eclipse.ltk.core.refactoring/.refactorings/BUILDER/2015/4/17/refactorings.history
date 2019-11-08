@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BUILDER/makefile/private/script/workspace_compile.sh&apos; to &apos;workspace_compile.sh_old&apos;" description="Rename resource &apos;workspace_compile.sh&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="makefile/private/script/workspace_compile.sh" name="workspace_compile.sh_old" stamp="1429878586899" updateReferences="true"/>
+</session>

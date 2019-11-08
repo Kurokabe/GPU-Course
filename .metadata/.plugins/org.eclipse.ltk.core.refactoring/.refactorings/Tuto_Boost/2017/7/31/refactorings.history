@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Tuto_Boost/src/cpp/core/std/synchronization/SingletonBoost.cpp&apos; to &apos;SingletonStd.cpp&apos;" description="Rename resource &apos;SingletonBoost.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/cpp/core/std/synchronization/SingletonBoost.cpp" name="SingletonStd.cpp" stamp="1501492758761" updateReferences="true"/>
+</session>

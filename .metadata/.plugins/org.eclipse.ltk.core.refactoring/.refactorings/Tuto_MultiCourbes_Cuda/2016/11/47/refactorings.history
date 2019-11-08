@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Tuto_MultiCourbes_Cuda/src/cpp/core/01_warm_up/02_cuda/device/DataProviderSampleKernel.cu&apos; to &apos;kernel.cu&apos;" description="Rename resource &apos;DataProviderSampleKernel.cu&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/cpp/core/01_warm_up/02_cuda/device/DataProviderSampleKernel.cu" name="kernel.cu" stamp="1479055997137" updateReferences="true"/>
+</session>

@@ -1,0 +1,6 @@
+1475078788002	Rename resource 'bilat_fenetrage_java.mk'
+1475078828967	Rename resource 'bilat_fenetrage_canvas_java.mk'
+1475149712094	Move 'bilat_fenetrage_canvas_java.mk' to 'api_cbi'
+1475149722597	Move 'bilat_image_java.mk' to 'api_cbi'
+1475149833452	Move 'bilat_fenetrage_canvas_java.mk' to 'cbi_fenetrage'
+1475149836645	Move 'bilat_image_java.mk' to 'cbi_image'

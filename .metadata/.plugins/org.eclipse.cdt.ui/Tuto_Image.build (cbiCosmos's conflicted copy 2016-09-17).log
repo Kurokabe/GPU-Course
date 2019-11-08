@@ -1,0 +1,272 @@
+15:56:46 **** Build of configuration GCC_ARM_parallel for project Tuto_Image ****
+cbicc gcc arm jall 
+
+--------------------------------------------------------
+Cross Compilation 		       
+--------------------------------------------------------
+
+PLATFORME = jetson
+API       = /opt/arm/jetson
+
+--------------------------------------------------------
+[Runtime] : gcc arm
+--------------------------------------------------------
+
+
+
+[cuda]        : /opt/api/ext/cuda
+
+[jni]         : /opt/api/ext/jni
+
+[X11]         : /usr/include/X11
+[X11]         : 
+
+[MKL]         : /opt/intel/mkl
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+[opencv]      : RPATH_LINK : /opt/api/ext/cuda/cuda-6.5/lib/gcc_arm:/opt/arm/L4T_1404_240/usr_lib
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+
+[pleora]      : /opt/api/ext/pleora
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SURFACE_HOME               = /opt/api/cbi/infographie/surface
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CVHOME         = /opt/api/cbi/tools/bilat_tools_image_cv
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME               = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                 = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                 = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                  = /opt/api/cbi/capteur/bilat_tau2
+
+--------------------------------------------------------
+[Runtime] : gcc arm : Ready!
+--------------------------------------------------------
+
+
+arm-linux-gnueabihf-g++-4.8 (Ubuntu/Linaro 4.8.4-2ubuntu1~14.04.1) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+[Make] : GCC : jall
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_Image_gcc_jetson_ARM_32
+[CBI] ->
+[CBI] -> Build     	  : /tmp/ramdrive/bilat/Targets/Tuto_Image/bin/Tuto_Image_gcc_jetson_ARM_32.run
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : ARM_32
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fopenmp
+[CBI] ->              : -std=c++11
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/core/01_simple_RGBA_uchar4/01_Vague/01_animable/
+[CBI] ->              : src/core/01_simple_RGBA_uchar4/01_Vague/01_animable/math/
+[CBI] ->              : src/core/01_simple_RGBA_uchar4/01_Vague/02_Provider/
+[CBI] ->              : src/core/01_simple_RGBA_uchar4/02_Damier_zoomable/01_animable/
+[CBI] ->              : src/core/01_simple_RGBA_uchar4/02_Damier_zoomable/01_animable/math/
+[CBI] ->              : src/core/01_simple_RGBA_uchar4/02_Damier_zoomable/02_Provider/
+[CBI] ->              : src/core/02_simple_type/01_Vague_GRAY_uchar/01_animable/
+[CBI] ->              : src/core/02_simple_type/01_Vague_GRAY_uchar/01_animable/math/
+[CBI] ->              : src/core/02_simple_type/01_Vague_GRAY_uchar/02_Provider/
+[CBI] ->              : src/core/02_simple_type/02_Damier_RGBA_float4/01_animable/
+[CBI] ->              : src/core/02_simple_type/02_Damier_RGBA_float4/01_animable/math/
+[CBI] ->              : src/core/02_simple_type/02_Damier_RGBA_float4/02_Provider/
+[CBI] ->              : src/core/02_simple_type/03_Damier_HSBA_float4/01_animable/
+[CBI] ->              : src/core/02_simple_type/03_Damier_HSBA_float4/01_animable/math/
+[CBI] ->              : src/core/02_simple_type/03_Damier_HSBA_float4/02_Provider/
+[CBI] ->              : src/core/02_simple_type/04_Damier_HUE_float/01_animable/
+[CBI] ->              : src/core/02_simple_type/04_Damier_HUE_float/01_animable/math/
+[CBI] ->              : src/core/02_simple_type/04_Damier_HUE_float/02_Provider/
+[CBI] ->              : src/core/03_advanced/01_event/01_image/
+[CBI] ->              : src/core/03_advanced/01_event/01_image/listener/key/
+[CBI] ->              : src/core/03_advanced/01_event/01_image/listener/mouse/
+[CBI] ->              : src/core/03_advanced/01_event/03_provider/
+[CBI] ->              : src/core/03_advanced/02_overlay/01_image/
+[CBI] ->              : src/core/03_advanced/02_overlay/01_image/graphic2D/
+[CBI] ->              : src/core/03_advanced/02_overlay/03_provider/
+[CBI] ->              : src/core/03_advanced/03_domaine/01_image/
+[CBI] ->              : src/core/03_advanced/03_domaine/01_image/listener/key/
+[CBI] ->              : src/core/03_advanced/03_domaine/03_provider/
+[CBI] ->              : src/core/03_advanced/04_opengl_pure/01_opengl/
+[CBI] ->              : src/core/03_advanced/04_opengl_pure/02_glut/
+[CBI] ->              : src/core/03_advanced/04_opengl_pure/03_provider/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable/INC/primitives
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable_GL/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable_GL/INC/primitives
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_FreeGlut_Tools/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_FreeGlut/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_FreeGlut/INC/common
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_FreeGlut/INC/cpu
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL/INC/common
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL/INC/cpu
+[CBI] ->              : /opt/api/cbi/infographie/opengl/205/Bilat_OpenGL_Tools/INC
+[CBI] ->              : /opt/api/cbi/infographie/tools/205/Bilat_tools_dll/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/INC/namespace_cpu
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_image/001/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_image/001/INC/imp
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_image/001/INC/imp/api_animateur
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_image/001/INC/imp/api_image_link
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_image/001/INC/imp/api_viewer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_image/001/INC/spec
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/001/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/001/INC/OMP_Tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/001/INC/OMP_Tools/header
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable_GL/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_FreeGlut_Tools/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_FreeGlut/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/opengl/205/Bilat_OpenGL_Tools/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_image/001/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/001/BIN/gcc_arm
+
+[CBI] -> API_LIBRARIES_STATIC :
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_001_gcc_jetson_ARM_32
+[CBI] ->              : BilatTools_Image_001_gcc_jetson_ARM_32
+[CBI] ->              : BilatTools_OMP_001_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_Fenetrage_Displayable_205_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_Fenetrage_Displayable_GL_205_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_Fenetrage_FreeGlut_Tools_205_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_Image_FreeGlut_205_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_Image_GL_205_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_OpenGL_Tools_205_gcc_jetson_ARM_32
+[CBI] ->              : GL
+[CBI] ->              : GLEW
+[CBI] ->              : GLU
+[CBI] ->              : glut
+
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Tuto_Image/bin
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Tuto_Image/obj
+
+[CBI] -> Compilation parallel (8 threads)
+
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/main.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/mainAnimable.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/mainImage.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/01_simple_RGBA_uchar4/02_Damier_zoomable/01_animable/Damier.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/01_simple_RGBA_uchar4/02_Damier_zoomable/02_Provider/DamierProvider.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/01_simple_RGBA_uchar4/01_Vague/01_animable/Vague.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/01_simple_RGBA_uchar4/01_Vague/02_Provider/VagueProvider.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/03_advanced/01_event/03_provider/EventProvider.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/03_advanced/01_event/01_image/ImageCustomEvent.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/03_advanced/01_event/01_image/listener/mouse/SimpleMouseListener.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/03_advanced/01_event/01_image/listener/key/SimpleKeyListener.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/03_advanced/03_domaine/03_provider/DomaineProvider.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/03_advanced/03_domaine/01_image/ImageCustomDomaine.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/03_advanced/03_domaine/01_image/listener/key/DomaineKeyListener.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/03_advanced/04_opengl_pure/03_provider/MyDisplayableProvider.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/03_advanced/04_opengl_pure/02_glut/MyGLUTWindow.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/03_advanced/04_opengl_pure/01_opengl/MyDisplayable.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/03_advanced/02_overlay/03_provider/OverlayProvider.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/03_advanced/02_overlay/01_image/ImageCustomOverlay.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/03_advanced/02_overlay/01_image/graphic2D/Drawer2D.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/02_simple_type/01_Vague_GRAY_uchar/01_animable/VagueGray.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/02_simple_type/01_Vague_GRAY_uchar/02_Provider/VagueGrayProvider.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/02_simple_type/03_Damier_HSBA_float4/01_animable/DamierHSBAFloat.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/02_simple_type/03_Damier_HSBA_float4/02_Provider/DamierHSBAFloatProvider.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/02_simple_type/04_Damier_HUE_float/01_animable/DamierHueFloat.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/02_simple_type/04_Damier_HUE_float/02_Provider/DamierHueFloatProvider.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/02_simple_type/02_Damier_RGBA_float4/01_animable/DamierRGBAFloat.cpp
+[Tuto_Image_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/02_simple_type/02_Damier_RGBA_float4/02_Provider/DamierRGBAFloatProvider.cpp
+
+[CBI] -> Linking to   : /tmp/ramdrive/bilat/Targets/Tuto_Image/bin/Tuto_Image_gcc_jetson_ARM_32.run
+
+[CBI] -> Library Link :
+[CBI] ->              : -lBilatTools_CPP_001_gcc_jetson_ARM_32
+[CBI] ->              : -lBilatTools_Image_001_gcc_jetson_ARM_32
+[CBI] ->              : -lBilatTools_OMP_001_gcc_jetson_ARM_32
+[CBI] ->              : -lBilat_Fenetrage_Displayable_205_gcc_jetson_ARM_32
+[CBI] ->              : -lBilat_Fenetrage_Displayable_GL_205_gcc_jetson_ARM_32
+[CBI] ->              : -lBilat_Fenetrage_FreeGlut_Tools_205_gcc_jetson_ARM_32
+[CBI] ->              : -lBilat_Image_FreeGlut_205_gcc_jetson_ARM_32
+[CBI] ->              : -lBilat_Image_GL_205_gcc_jetson_ARM_32
+[CBI] ->              : -lBilat_OpenGL_Tools_205_gcc_jetson_ARM_32
+[CBI] ->              : -lGL
+[CBI] ->              : -lGLEW
+[CBI] ->              : -lGLU
+[CBI] ->              : -lglut
+[CBI] ->              : -lgomp
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_Image_gcc_jetson_ARM_32
+[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/Tuto_Image/bin/Tuto_Image_gcc_jetson_ARM_32.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : ARM_32
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : g++ARM
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 3 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/Tuto_Image_gcc_jetson_ARM_32.run
+
+[CBI] -> Tuto_Image_gcc_jetson_ARM_32 : End ALL!
+
+
+15:56:50 Build Finished (took 3s.738ms)
+

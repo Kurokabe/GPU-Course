@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;JTuto_Image_JNI/src/org/bilat/tuto/image/jni/gui/JFrameMain2Images.java&apos;" deleteContents="false" description="Delete resource &apos;JTuto_Image_JNI/src/org/bilat/tuto/image/jni/gui/JFrameMain2Images.java&apos;" element1="/JTuto_Image_JNI/src/org/bilat/tuto/image/jni/gui/JFrameMain2Images.java" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1572606209856"/>
+</session>

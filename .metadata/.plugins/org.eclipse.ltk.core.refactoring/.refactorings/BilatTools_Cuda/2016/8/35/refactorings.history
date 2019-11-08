@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;BilatTools_Cuda/src/test&apos; to &apos;use&apos;" description="Rename resource &apos;test&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/test" name="use" stamp="1471816665231" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;BilatTools_Cuda/src/use/main.cpp&apos; to &apos;use.cpp&apos;" description="Rename resource &apos;main.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/use/main.cpp" name="use.cpp" stamp="1471816679332" updateReferences="true"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BilatTools_OMP/src/core/OMP_Tools/header/ParallelPatern.j&apos; to &apos;ParallelPatern.h&apos;" description="Rename resource &apos;ParallelPatern.j&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/OMP_Tools/header/ParallelPatern.j" name="ParallelPatern.h" stamp="1455545899274" updateReferences="true"/>
+</session>

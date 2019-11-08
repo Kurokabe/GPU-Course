@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Student_OMP/src/cpp/core/omp/01_Hello/01_helloOMP.cpp&apos; to &apos;helloOMP.cpp&apos;" description="Rename resource &apos;01_helloOMP.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/cpp/core/omp/01_Hello/01_helloOMP.cpp" name="helloOMP.cpp" stamp="1537283169440" updateReferences="true"/>
+</session>

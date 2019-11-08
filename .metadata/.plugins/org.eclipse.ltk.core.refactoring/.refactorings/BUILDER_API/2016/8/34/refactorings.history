@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BUILDER_API/public/020_bilat_gphoto2.sh&apos; to &apos;020_bilat_tools_gphoto2.sh&apos;" description="Rename resource &apos;020_bilat_gphoto2.sh&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="public/020_bilat_gphoto2.sh" name="020_bilat_tools_gphoto2.sh" stamp="1471528793717" updateReferences="true"/>
+</session>

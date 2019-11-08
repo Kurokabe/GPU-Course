@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/mse1/CUDA/toStudent/code/WCuda-complete/JTuto_Image_JNI"/>
+		<item value="/home/mse1/CUDA/toStudent/code/WCuda-complete/Tuto_Image_JNI_Cuda"/>
+		<item value="/home/mse1/CUDA/toStudent/code/WCuda-complete/Tuto_Image_JNI"/>
+		<item value="/home/mse1/CUDA/toStudent/code/java_cuda"/>
+		<item value="/home/mse1/Desktop/java_cuda"/>
+	</list>
+	<section name="CleanDialogSettings">
+		<item key="DIALOG_WIDTH" value="575"/>
+		<item key="BUILD_ALL" value="true"/>
+		<item key="TOGGLE_SELECTED" value="true"/>
+		<item key="DIALOG_HEIGHT" value="644"/>
+		<item key="BUILD_NOW" value="false"/>
+		<item key="DIALOG_Y_ORIGIN" value="24"/>
+		<item key="DIALOG_X_ORIGIN" value="449"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/mse1/CUDA/toStudent/code/WCuda-complete/Tuto_Image_JNI"/>
+			<item value="/home/mse1/CUDA/toStudent/code/WCuda-complete/JTuto_Image_JNI"/>
+			<item value="/home/arc19/CUDA/toStudent/code/WCuda/Student_demo_Cuda"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Student_Cuda_corriger"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Student_Corrige_ExercicesCpp"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Tuto_Cpp"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Tuto_JNI_C"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/BilatTools_JNI"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Cuda_Surface_3D"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Tuto_Surface_Cuda"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Tuto_Image_Cuda_3D"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/BilatTools_Cuda_3D"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Cuda_Image_3D"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/TestReductionCuda"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Tuto_Cuda_API"/>
+			<item value="G:\CBI\HEARC\RAD\Running\CudaTuto\02_Scientifique\01_Code\WCuda\Tuto_Image_CV_Cuda"/>
+			<item value="G:\CBI\HEARC\RAD\Running\CudaTuto\02_Scientifique\01_Code\WCuda\Tuto_Image_opencv"/>
+			<item value="G:\CBI\HEARC\RAD\Running\CudaTuto\02_Scientifique\01_Code\WCuda\Tuto_Gphoto2"/>
+			<item value="G:\CBI\HEARC\RAD\Running\CudaTuto\02_Scientifique\01_Code\WCuda\Tuto_V4L"/>
+			<item value="G:\CBI\HEARC\RAD\Running\CudaTuto\02_Scientifique\01_Code\WCuda\BilatTools_Image_Opencv"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="ResourceNavigator">
+		<item key="ResourceWorkingSetFilter.STORE_WORKING_SET" value="Aggregate for window 1376921678049"/>
+		<item key="ResourceViewer.STORE_SORT_TYPE" value="1"/>
+		<item key="LINK_NAVIGATOR_TO_EDITOR" value="true"/>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.eclipse.cdt.ui.newCWizards"/>
+			<item value="org.eclipse.jdt.ui.java"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="928"/>
+		<item key="DIALOG_Y_ORIGIN" value="458"/>
+	</section>
+	<section name="org.eclipse.ui.internal.views.markers.FiltersConfigurationDialog">
+		<item key="SELECTED_FILTER_GROUP" value="selected_CBI"/>
+		<list key="PREV_SELECTED_ELEMENTS">
+		</list>
+	</section>
+</section>

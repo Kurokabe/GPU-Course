@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BilatTools_Cuda/src/core/cudatools/header/device/synchronisation/mathTools.h&apos; to &apos;atomicTools.h&apos;" description="Rename resource &apos;mathTools.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/cudatools/header/device/synchronisation/mathTools.h" name="atomicTools.h" stamp="1441123016767" updateReferences="true"/>
+</session>

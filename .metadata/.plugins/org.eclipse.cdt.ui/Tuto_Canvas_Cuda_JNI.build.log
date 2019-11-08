@@ -1,0 +1,245 @@
+16:04:05 **** Incremental Build of configuration GCC_parallel for project Tuto_Canvas_Cuda_JNI ****
+cbicc gcc jall 
+
+--------------------------------------------------------
+[Runtime] : gcc x86
+--------------------------------------------------------
+
+
+[cuda]        : /usr/local
+
+[jni]         : /usr/lib/jvm
+
+[X11]         : /usr/include/X11
+
+[MKL]         : /opt/intel/mkl
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+[pleora]      : /opt/api/ext/pleora
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SURFACE_HOME               = /opt/api/cbi/infographie/surface
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CVHOME         = /opt/api/cbi/tools/bilat_tools_image_cv
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME               = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                 = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                 = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                  = /opt/api/cbi/capteur/bilat_tau2
+
+--------------------------------------------------------
+[Runtime] : gcc x86 : Ready!
+--------------------------------------------------------
+
+
+g++ (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+[Make] : GCC : jall
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_Canvas_JNI_gcc_x86_64
+[CBI] ->
+[CBI] -> Build     	  : /tmp/ramdrive/bilat/Targets/Tuto_Canvas_JNI/bin/libTuto_Canvas_JNI_gcc_x86_64.so
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : SHARED_LIB
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fPIC
+[CBI] ->              : -fomit-frame-pointer
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -fvisibility=hidden
+[CBI] ->              : -march=native
+[CBI] ->              : -std=c++11
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -shared
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/cpp/core/02_toScenario/
+[CBI] ->              : src/cpp/core/03_scenario/
+[CBI] ->              : src/cpp/core/04_GL/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/206/Bilat_Fenetrage_Canvas_JNI/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/206/Bilat_Fenetrage_Canvas_JNI/INC/private
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/206/Bilat_Fenetrage_Displayable/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/206/Bilat_Fenetrage_Displayable/INC/primitives
+[CBI] ->              : /opt/api/cbi/infographie/tools/206/Bilat_tools_dll/INC
+[CBI] ->              : /usr/lib/jvm/java-8-oracle/include
+[CBI] ->              : /usr/lib/jvm/java-8-oracle/include/linux
+[CBI] ->              : /usr/local/cuda-8.0/include
+[CBI] ->              : /usr/local/cuda-8.0/include/CL
+[CBI] ->              : /usr/local/cuda-8.0/include/crt
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/206/Bilat_Fenetrage_Canvas_JNI/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/206/Bilat_Fenetrage_Displayable/BIN/gcc
+[CBI] ->              : /usr/lib/jvm/java-8-oracle/jre/lib/amd64
+[CBI] ->              : /usr/lib/jvm/java-8-oracle/jre/lib/amd64/jli
+[CBI] ->              : /usr/lib/jvm/java-8-oracle/jre/lib/amd64/server
+[CBI] ->              : /usr/local/cuda-8.0/lib64
+[CBI] ->              : /usr/local/cuda-8.0/lib64/stubs
+
+[CBI] -> API_LIBRARIES_STATIC :
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : Bilat_Fenetrage_Canvas_JNI_206_gcc_x86_64
+[CBI] ->              : Bilat_Fenetrage_Displayable_206_gcc_x86_64
+[CBI] ->              : GL
+[CBI] ->              : GLEW
+[CBI] ->              : GLU
+[CBI] ->              : OpenCL
+[CBI] ->              : attach
+[CBI] ->              : avplugin-53
+[CBI] ->              : avplugin-54
+[CBI] ->              : awt
+[CBI] ->              : awt_headless
+[CBI] ->              : awt_xawt
+[CBI] ->              : bci
+[CBI] ->              : cublas
+[CBI] ->              : cuda
+[CBI] ->              : cudart
+[CBI] ->              : cufft
+[CBI] ->              : cufftw
+[CBI] ->              : cuinj64
+[CBI] ->              : curand
+[CBI] ->              : cusolver
+[CBI] ->              : cusparse
+[CBI] ->              : dcpr
+[CBI] ->              : decora_sse
+[CBI] ->              : deploy
+[CBI] ->              : dt_socket
+[CBI] ->              : fontmanager
+[CBI] ->              : fxplugins
+[CBI] ->              : glass
+[CBI] ->              : gstreamer-lite
+[CBI] ->              : hprof
+[CBI] ->              : instrument
+[CBI] ->              : j2gss
+[CBI] ->              : j2pcsc
+[CBI] ->              : j2pkcs11
+[CBI] ->              : jaas_unix
+[CBI] ->              : java
+[CBI] ->              : java_crw_demo
+[CBI] ->              : javafx_font
+[CBI] ->              : javafx_font_freetype
+[CBI] ->              : javafx_font_pango
+[CBI] ->              : javafx_font_t2k
+[CBI] ->              : javafx_iio
+[CBI] ->              : jawt
+[CBI] ->              : jdwp
+[CBI] ->              : jfr
+[CBI] ->              : jfxmedia
+[CBI] ->              : jfxwebkit
+[CBI] ->              : jli
+[CBI] ->              : jpeg
+[CBI] ->              : jsdt
+[CBI] ->              : jsig
+[CBI] ->              : jsound
+[CBI] ->              : jsoundalsa
+[CBI] ->              : jvm
+[CBI] ->              : kcms
+[CBI] ->              : lcms
+[CBI] ->              : management
+[CBI] ->              : mlib_image
+[CBI] ->              : net
+[CBI] ->              : nio
+[CBI] ->              : npjp2
+[CBI] ->              : nppc
+[CBI] ->              : nppi
+[CBI] ->              : nppial
+[CBI] ->              : nppicc
+[CBI] ->              : nppicom
+[CBI] ->              : nppidei
+[CBI] ->              : nppif
+[CBI] ->              : nppig
+[CBI] ->              : nppim
+[CBI] ->              : nppist
+[CBI] ->              : nppisu
+[CBI] ->              : nppitc
+[CBI] ->              : npps
+[CBI] ->              : npt
+[CBI] ->              : nvToolsExt
+[CBI] ->              : nvblas
+[CBI] ->              : nvgraph
+[CBI] ->              : nvidia-ml
+[CBI] ->              : nvrtc
+[CBI] ->              : nvrtc-builtins
+[CBI] ->              : prism_common
+[CBI] ->              : prism_es2
+[CBI] ->              : prism_sw
+[CBI] ->              : resource
+[CBI] ->              : saproc
+[CBI] ->              : sctp
+[CBI] ->              : splashscreen
+[CBI] ->              : sunec
+[CBI] ->              : t2k
+[CBI] ->              : unpack
+[CBI] ->              : verify
+[CBI] ->              : zip
+
+
+[CBI] -> Compilation parallel (32 threads)
+
+make[1]: Nothing to be done for `compilelink'.
+
+[CBI] -> Symlink Project Inc
+[CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
+
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/libTuto_Canvas_JNI_gcc_x86_64.so
+
+[CBI] -> Tuto_Canvas_JNI_gcc_x86_64 : End ALL!
+
+
+16:04:06 Build Finished (took 327ms)
+
