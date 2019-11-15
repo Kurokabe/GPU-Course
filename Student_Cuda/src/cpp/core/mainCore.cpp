@@ -28,6 +28,9 @@ extern bool isReductionAddToolsLock_II_Ok(const Grid& grid);
 extern bool isMonteCarloOK(const Grid& grid);
 extern bool isMonteCarloLongOK(const Grid& grid);
 extern bool isMonteCarloMultiGPUOK(const Grid& grid);
+extern bool isHistogrammeOKSum();
+extern bool isHistogrammeOKValues();
+extern bool isBandwidthOK();
 
 /*--------------------------------------*\
  |*		Public			*|
@@ -62,11 +65,16 @@ int mainCore()
 //    isOk &= isSliceSMOK(grid);
 //    isOk &= isReductionAddTools_I_Ok(grid);
 //    isOk &= isReductionAddTools_II_Ok(grid);
-    isOk &= isReductionAddToolsLock_I_Ok(grid);
-    isOk &= isReductionAddToolsLock_II_Ok(grid);
+//    isOk &= isReductionAddToolsLock_I_Ok(grid);
+//    isOk &= isReductionAddToolsLock_II_Ok(grid);
 //    isOk &= isMonteCarloOK(grid);
 //    isOk &= isMonteCarloLongOK(grid);
 //    isOk &= isMonteCarloMultiGPUOK(grid);
+//    isOk &= isHistogrammeOKSum();
+//    isOk &= isHistogrammeOKValues();
+    isOk &= isBandwidthOK();
+
+
     cout << "\nisOK = " << isOk << endl;
     cout << "\nEnd : mainCore" << endl;
 

@@ -1,1 +1,1 @@
-/home/arc19/CUDA/toStudent/code/WCuda/Student_Cuda/src/cpp/test/unit/07_Test_Reduction/TestReduction.h
+/home/mse1/CUDA/toStudent/code/WCuda-complete/Student_Cuda/src/cpp/test/unit/07_Test_Reduction/TestReduction.h

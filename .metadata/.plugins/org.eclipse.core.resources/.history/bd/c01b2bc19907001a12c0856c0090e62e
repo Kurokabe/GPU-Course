@@ -1,0 +1,82 @@
+
+#include <iostream>
+#include "Grid.h"
+#include "Device.h"
+#include "LimitsTools.h"
+#include "MathTools.h"
+
+#include "host/Bandwidth.h"
+
+using std::cout;
+using std::endl;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+__host__ bool isBandwidthOK();
+__host__ bool isBandwidthOK(const Grid& grid);
+
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+
+bool isBandwidthOK(const Grid& grid)
+    {
+
+    int dataMax=255 ;
+    DataCreator dataCreator(dataMax) ;
+    int* tabData = dataCreator.getTabData();
+    int n = dataCreator.getLength();
+
+    int tabFrequence[dataMax + 1];
+
+    Histogramme histogramme(grid, n, tabData, tabFrequence, dataMax);
+    histogramme.run();
+
+    int sumHisto = 0;
+    for (int i = 0; i < dataMax; i++)
+	{
+	sumHisto += tabFrequence[i];
+	}
+    int sumCalculated = ((dataMax + 1) * dataMax) / 2;
+    cout << "Sum histogramme : " << sumHisto << endl;
+    cout << "Sum calculated : " << sumCalculated << endl;
+
+    return sumHisto == sumCalculated;
+    }
+
+bool isBandwidthOK()
+    {
+    bool isOk = true;
+    dim3 dg = dim3(1,1,1);
+    dim3 db = dim3(2, 1, 1);
+    Grid grid(dg, db);
+    for(int i = 16; i<=64; ++i) //Démarrage à 16 afin d'avoir des tests assez rapides
+	{
+	dg.x = i;
+	grid.dg = dg;
+	for(int j = 4; j<=1024; j*=2)
+	    {
+	    db.x = j;
+	    grid.db = db;
+	    cout << grid << endl;
+	    isOk &= isHistogrammeOKValues(grid);
+	    }
+	}
+    return isOk;
+    }
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

@@ -1,0 +1,60 @@
+#pragma once
+
+#include "cudaTools.h"
+#include "Grid.h"
+
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+/**
+ * On passse la grille à SliceNaif pour pouvoir facilement la faire varier de l'extérieur pour trouver l'optimum, ou faire des tests avec des grilles différentes
+ */
+class Histogramme
+    {
+	/*--------------------------------------*\
+	|*		Constructor		*|
+	 \*-------------------------------------*/
+
+    public:
+
+	/**
+	 * update piHat
+	 * Hyp : nbThread est une puissance de 2
+	 */
+	Histogramme(const Grid& grid, int n, char* tabFrequence);
+	virtual ~Histogramme(void);
+
+	/*--------------------------------------*\
+	|*		Methodes		*|
+	 \*-------------------------------------*/
+
+    public:
+	void run();
+
+	/*--------------------------------------*\
+	|*		Attributs		*|
+	 \*-------------------------------------*/
+
+    private:
+	// Inputs
+	dim3 dg;
+	dim3 db;
+	int n;
+
+	// Inputs/Outputs
+	unsigned char* tabFrequence;
+
+	// Tools
+	unsigned char* ptrDevResultat; // promotion de tabeau en GM
+	size_t sizeTabGM;// [octet]
+    };
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

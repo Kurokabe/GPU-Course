@@ -1,4 +1,4 @@
-13:22:18 **** Build of configuration CudaGCC_parallel for project Student_Mandelbrot_3D_Cuda ****
+08:38:10 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -85,9 +85,9 @@ Cuda compilation tools, release 10.1, V10.1.105
 
 
 ==================================================================================
-[CBI] -> Target Name  : Tuto_Surface_Cuda_cuda_101_x86_64
+[CBI] -> Target Name  : Student_Cuda_cuda_101_x86_64
 [CBI] ->
-[CBI] -> Build        : /tmp/ramdrive/mse1/Targets/Tuto_Surface_Cuda/bin/Tuto_Surface_Cuda_cuda_101_x86_64.run
+[CBI] -> Build        : /tmp/ramdrive/mse1/Targets/Student_Cuda/bin/Student_Cuda_cuda_101_x86_64.run
 [CBI] -> Deploy       : ../RELEASE/bin
 [CBI] ->
 [CBI] -> Type	      : EXE
@@ -100,6 +100,7 @@ Cuda compilation tools, release 10.1, V10.1.105
 
 [CBI] -> SRC AUX (Recursif) :
 [CBI] ->
+[CBI] ->              : /opt/api/ext/cpptest/200/LIB_STATIC/gcc
 
 [CBI] -> CXXFLAGS (Partial) :
 [CBI] ->
@@ -125,9 +126,25 @@ Cuda compilation tools, release 10.1, V10.1.105
 [CBI] ->              : -arch=sm_52
 
 [CBI] -> INC_PATH (auto detect):
-[CBI] ->              : src/core/mandebrot3d_RGBA_uchar4/device/math/
-[CBI] ->              : src/core/mandebrot3d_RGBA_uchar4/host/
-[CBI] ->              : src/core/mandebrot3d_RGBA_uchar4/provider/
+[CBI] ->              : src/cpp/core/01_addScalar/b_objet/host/
+[CBI] ->              : src/cpp/core/02_addVector/00_tools/
+[CBI] ->              : src/cpp/core/02_addVector/01_implementation/host/
+[CBI] ->              : src/cpp/core/04_Slice/host/
+[CBI] ->              : src/cpp/core/04_Slice_sm/host/
+[CBI] ->              : src/cpp/core/05_Montecarlo/host/
+[CBI] ->              : src/cpp/core/05_MontecarloLong/host/
+[CBI] ->              : src/cpp/core/06_MontecarloMultiGPU/host/
+[CBI] ->              : src/cpp/core/07_Histogramme/host/
+[CBI] ->              : src/cpp/core/tools/
+[CBI] ->              : src/cpp/test/unit/01_Test_Hello/
+[CBI] ->              : src/cpp/test/unit/02_Test_Scalar/
+[CBI] ->              : src/cpp/test/unit/03_Test_Vector/
+[CBI] ->              : src/cpp/test/unit/04_Test_Slice/
+[CBI] ->              : src/cpp/test/unit/04_Test_Slice_sm/
+[CBI] ->              : src/cpp/test/unit/05_Test_MonteCarlo/
+[CBI] ->              : src/cpp/test/unit/05_Test_MonteCarloLong/
+[CBI] ->              : src/cpp/test/unit/06_Test_MonteCarloMultiGPU/
+[CBI] ->              : src/cpp/test/unit/07_Test_Reduction/
 
 
 [CBI] -> LIB_PATH (auto detect):
@@ -135,63 +152,6 @@ Cuda compilation tools, release 10.1, V10.1.105
 [CBI] -> LIB_PATH (auto detect):
 
 [CBI] -> API_INC :
-[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable/INC
-[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable/INC/primitives
-[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable_GL/INC
-[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable_GL/INC/primitives
-[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_FreeGlut_Tools/INC
-[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL/INC
-[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL/INC/common
-[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL/INC/cpu
-[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL_Cuda/INC
-[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL_Cuda/INC/gpu
-[CBI] ->              : /opt/api/cbi/infographie/opengl/303/Bilat_OpenGL_Tools/INC
-[CBI] ->              : /opt/api/cbi/infographie/opengl/303/Bilat_OpenGL_Tools_Cuda/INC
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/INC
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/INC/model
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/INC/model/shapes
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/INC/model/shapes/cpu
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/INC/view
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/INC/view/appearance
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/INC/view/geometry
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/INC/view/geometry/primitives
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/INC/view/geometry/shapes
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/INC/view/geometry/simple
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/INC/view/geometry/simple/cpu
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/INC/view/gl
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/INC/view/gl/primitives
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/INC/view/gl/renderer
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/INC/view/gl/shapes
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/INC/view/quadric
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL_Cuda/INC
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL_Cuda/INC/model
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL_Cuda/INC/model/shapes
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL_Cuda/INC/model/shapes/gpu
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL_Cuda/INC/view
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL_Cuda/INC/view/geometry
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL_Cuda/INC/view/geometry/simple
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL_Cuda/INC/view/geometry/simple/gpu
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL_Cuda/INC/view/gl
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL_FreeGlut/INC
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL_FreeGlut/INC/glut
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL/INC
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL/INC/algo
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL/INC/algo/cpu
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL/INC/model
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL/INC/model/cpu
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL/INC/view
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL/INC/view/geometry
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL/INC/view/geometry/cpu
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL/INC/view/gl
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL_Cuda/INC
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL_Cuda/INC/algo
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL_Cuda/INC/algo/gpu
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL_Cuda/INC/model
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL_Cuda/INC/model/gpu
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL_Cuda/INC/view
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL_Cuda/INC/view/geometry
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL_Cuda/INC/view/geometry/gpu
-[CBI] ->              : /opt/api/cbi/infographie/tools/303/Bilat_tools_dll/INC
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/303_006/INC
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/303_006/INC/namespace_cpu
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC
@@ -209,58 +169,118 @@ Cuda compilation tools, release 10.1, V10.1.105
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/header/mixte
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/nvidia
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/test_tools
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_3D/303_006/INC
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_3D/303_006/INC/3d
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_3D/303_006/INC/3d/01_sceneplan
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_3D/303_006/INC/3d/02_scenecube
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_3D/303_006/INC/surface
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_3D/303_006/INC/surface/scenesurfacestrip
-[CBI] ->              : /opt/api/ext/GLM/0975/include
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/INC/OMP_Tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/INC/OMP_Tools/header
+[CBI] ->              : /opt/api/ext/boost/1700/include
+[CBI] ->              : /opt/api/ext/boost/1700/include/boost
+[CBI] ->              : /opt/api/ext/cpptest/200/INC
+[CBI] ->              : /opt/api/ext/cpptest/200/INC/extension
 [CBI] ->              : /usr/local/cuda/include
 [CBI] ->              : /usr/local/cuda/include/CL
 [CBI] ->              : /usr/local/cuda/include/crt
 
 [CBI] -> API_BIN :
-[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable_GL/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_FreeGlut_Tools/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL_Cuda/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/opengl/303/Bilat_OpenGL_Tools/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/opengl/303/Bilat_OpenGL_Tools_Cuda/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL_Cuda/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Scene3D_GL_FreeGlut/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/scene3d/303/Bilat_Surface_GL_Cuda/BIN/gcc
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/303_006/BIN/gcc
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/BIN/gcc
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_3D/303_006/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/BIN/gcc
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/Boost-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_atomic-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_chrono-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_container-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_context-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_contract-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_coroutine-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_date_time-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_exception-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_fiber-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_fiber_numa-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_filesystem-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_graph-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_graph_parallel-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_headers-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_iostreams-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_locale-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_log-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_log_setup-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_c99-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_c99f-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_c99l-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_tr1-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_tr1f-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_tr1l-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_mpi-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_numpy-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_prg_exec_monitor-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_program_options-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_python-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_random-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_regex-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_serialization-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_addr2line-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_backtrace-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_basic-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_noop-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_windbg-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_windbg_cached-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_system-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_test_exec_monitor-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_thread-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_timer-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_type_erasure-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_unit_test_framework-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_wave-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_wserialization-1.70.0
 [CBI] ->              : /usr/local/cuda/lib64
 
 [CBI] -> API_LIBRARIES_STATIC :
+[CBI] ->              : /opt/api/ext/cpptest/200/LIB_STATIC/gcc
 
 [CBI] -> API_LIBRARIES :
 [CBI] ->              : BilatTools_CPP_303_006_gcc_x86_64
 [CBI] ->              : BilatTools_Cuda_303_006_cuda_101_x86_64
-[CBI] ->              : BilatTools_Cuda_3D_303_006_cuda_101_x86_64
-[CBI] ->              : Bilat_Fenetrage_Displayable_303_gcc_x86_64
-[CBI] ->              : Bilat_Fenetrage_Displayable_GL_303_gcc_x86_64
-[CBI] ->              : Bilat_Fenetrage_FreeGlut_Tools_303_gcc_x86_64
-[CBI] ->              : Bilat_Image_GL_303_gcc_x86_64
-[CBI] ->              : Bilat_Image_GL_Cuda_303_cuda_101_x86_64
-[CBI] ->              : Bilat_OpenGL_Tools_303_gcc_x86_64
-[CBI] ->              : Bilat_OpenGL_Tools_Cuda_303_cuda_101_x86_64
-[CBI] ->              : Bilat_Scene3D_FreeGlut_303_gcc_x86_64
-[CBI] ->              : Bilat_Scene3D_GL_303_gcc_x86_64
-[CBI] ->              : Bilat_Scene3D_GL_Cuda_303_cuda_101_x86_64
-[CBI] ->              : Bilat_Surface_GL_303_gcc_x86_64
-[CBI] ->              : Bilat_Surface_GL_Cuda_303_cuda_101_x86_64
-[CBI] ->              : GL
-[CBI] ->              : GLEW
-[CBI] ->              : GLU
+[CBI] ->              : BilatTools_OMP_303_006_gcc_x86_64
 [CBI] ->              : OpenCL
 [CBI] ->              : accinj64
+[CBI] ->              : boost_atomic-gcc740
+[CBI] ->              : boost_chrono-gcc740
+[CBI] ->              : boost_container-gcc740
+[CBI] ->              : boost_context-gcc740
+[CBI] ->              : boost_contract-gcc740
+[CBI] ->              : boost_coroutine-gcc740
+[CBI] ->              : boost_date_time-gcc740
+[CBI] ->              : boost_fiber-gcc740
+[CBI] ->              : boost_filesystem-gcc740
+[CBI] ->              : boost_graph-gcc740
+[CBI] ->              : boost_iostreams-gcc740
+[CBI] ->              : boost_locale-gcc740
+[CBI] ->              : boost_log-gcc740
+[CBI] ->              : boost_log_setup-gcc740
+[CBI] ->              : boost_math_c99-gcc740
+[CBI] ->              : boost_math_c99f-gcc740
+[CBI] ->              : boost_math_c99l-gcc740
+[CBI] ->              : boost_math_tr1-gcc740
+[CBI] ->              : boost_math_tr1f-gcc740
+[CBI] ->              : boost_math_tr1l-gcc740
+[CBI] ->              : boost_prg_exec_monitor-gcc740
+[CBI] ->              : boost_program_options-gcc740
+[CBI] ->              : boost_random-gcc740
+[CBI] ->              : boost_regex-gcc740
+[CBI] ->              : boost_serialization-gcc740
+[CBI] ->              : boost_stacktrace_addr2line-gcc740
+[CBI] ->              : boost_stacktrace_backtrace-gcc740
+[CBI] ->              : boost_stacktrace_basic-gcc740
+[CBI] ->              : boost_stacktrace_noop-gcc740
+[CBI] ->              : boost_system-gcc740
+[CBI] ->              : boost_thread-gcc740
+[CBI] ->              : boost_timer-gcc740
+[CBI] ->              : boost_type_erasure-gcc740
+[CBI] ->              : boost_unit_test_framework-gcc740
+[CBI] ->              : boost_wave-gcc740
+[CBI] ->              : boost_wserialization-gcc740
 [CBI] ->              : cudart
 [CBI] ->              : cufft
 [CBI] ->              : cufftw
@@ -268,7 +288,6 @@ Cuda compilation tools, release 10.1, V10.1.105
 [CBI] ->              : curand
 [CBI] ->              : cusolver
 [CBI] ->              : cusparse
-[CBI] ->              : glut
 [CBI] ->              : nppc
 [CBI] ->              : nppial
 [CBI] ->              : nppicc
@@ -287,458 +306,57 @@ Cuda compilation tools, release 10.1, V10.1.105
 [CBI] ->              : nvrtc
 [CBI] ->              : nvrtc-builtins
 
-[CBI] -> Create folder : /tmp/ramdrive/mse1/Targets/Tuto_Surface_Cuda/bin
-[CBI] -> Create folder : /tmp/ramdrive/mse1/Targets/Tuto_Surface_Cuda/obj
-[CBI] -> Create folder : /tmp/ramdrive/mse1/Targets/Tuto_Surface_Cuda/cubin
 
 [CBI] -> Compilation parallel (36 threads)
 
-[Tuto_Surface_Cuda_cuda_101_x86_64] -> g++ compiling .cpp : src/main.cpp
-[Tuto_Surface_Cuda_cuda_101_x86_64] -> g++ compiling .cpp : src/core/mainCore.cpp
-[Tuto_Surface_Cuda_cuda_101_x86_64] -> g++ compiling .cpp : src/core/mandebrot3d_RGBA_uchar4/provider/Mandelbrot3DProvider.cpp
-[Tuto_Surface_Cuda_cuda_101_x86_64] -> nvcc compiling .cu : src/core/mandebrot3d_RGBA_uchar4/device/mandelbrot3D_RGBA_device.cu
-[Tuto_Surface_Cuda_cuda_101_x86_64] -> nvcc compiling .cu : src/core/mandebrot3d_RGBA_uchar4/host/Mandelbrot3D_RGBA.cu
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec2.hpp(112): warning: __device__ annotation is ignored on a function("tvec2") that is explicitly defaulted on its first declaration
+[Student_Cuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/core/mainCore.cpp
 
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec2.hpp(112): warning: __host__ annotation is ignored on a function("tvec2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec2.hpp(155): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec2.hpp(155): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec3.hpp(113): warning: __device__ annotation is ignored on a function("tvec3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec3.hpp(113): warning: __host__ annotation is ignored on a function("tvec3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec3.hpp(177): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec3.hpp(177): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec4.hpp(170): warning: __device__ annotation is ignored on a function("tvec4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec4.hpp(170): warning: __host__ annotation is ignored on a function("tvec4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec4.hpp(276): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec4.hpp(276): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x2.hpp(71): warning: __device__ annotation is ignored on a function("tmat2x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x2.hpp(71): warning: __host__ annotation is ignored on a function("tmat2x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x2.hpp(128): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x2.hpp(128): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x3.hpp(67): warning: __device__ annotation is ignored on a function("tmat2x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x3.hpp(67): warning: __host__ annotation is ignored on a function("tmat2x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x3.hpp(124): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x3.hpp(124): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x4.hpp(67): warning: __device__ annotation is ignored on a function("tmat2x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x4.hpp(67): warning: __host__ annotation is ignored on a function("tmat2x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x4.hpp(126): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x4.hpp(126): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x2.hpp(67): warning: __device__ annotation is ignored on a function("tmat3x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x2.hpp(67): warning: __host__ annotation is ignored on a function("tmat3x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x2.hpp(131): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x2.hpp(131): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x3.hpp(71): warning: __device__ annotation is ignored on a function("tmat3x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x3.hpp(71): warning: __host__ annotation is ignored on a function("tmat3x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x3.hpp(135): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x3.hpp(135): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x4.hpp(67): warning: __device__ annotation is ignored on a function("tmat3x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x4.hpp(67): warning: __host__ annotation is ignored on a function("tmat3x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x4.hpp(131): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x4.hpp(131): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec2.hpp(112): warning: __device__ annotation is ignored on a function("tvec2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec2.hpp(112): warning: __host__ annotation is ignored on a function("tvec2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec2.hpp(155): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec2.hpp(155): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x2.hpp(67): warning: __device__ annotation is ignored on a function("tmat4x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x2.hpp(67): warning: __host__ annotation is ignored on a function("tmat4x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x2.hpp(136): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x2.hpp(136): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x3.hpp(67): warning: __device__ annotation is ignored on a function("tmat4x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x3.hpp(67): warning: __host__ annotation is ignored on a function("tmat4x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x3.hpp(136): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x3.hpp(136): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec3.hpp(113): warning: __device__ annotation is ignored on a function("tvec3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec3.hpp(113): warning: __host__ annotation is ignored on a function("tvec3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec3.hpp(177): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec3.hpp(177): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x4.hpp(71): warning: __device__ annotation is ignored on a function("tmat4x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x4.hpp(71): warning: __host__ annotation is ignored on a function("tmat4x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x4.hpp(140): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x4.hpp(140): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec4.hpp(170): warning: __device__ annotation is ignored on a function("tvec4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec4.hpp(170): warning: __host__ annotation is ignored on a function("tvec4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec4.hpp(276): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec1.hpp(112): warning: __device__ annotation is ignored on a function("tvec1") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec1.hpp(112): warning: __host__ annotation is ignored on a function("tvec1") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec4.hpp(276): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec1.hpp(149): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec1.hpp(149): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x2.hpp(71): warning: __device__ annotation is ignored on a function("tmat2x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x2.hpp(71): warning: __host__ annotation is ignored on a function("tmat2x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x2.hpp(128): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x2.hpp(128): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x3.hpp(67): warning: __device__ annotation is ignored on a function("tmat2x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x3.hpp(67): warning: __host__ annotation is ignored on a function("tmat2x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x3.hpp(124): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x3.hpp(124): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x4.hpp(67): warning: __device__ annotation is ignored on a function("tmat2x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x4.hpp(67): warning: __host__ annotation is ignored on a function("tmat2x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x4.hpp(126): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x4.hpp(126): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x2.hpp(67): warning: __device__ annotation is ignored on a function("tmat3x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x2.hpp(67): warning: __host__ annotation is ignored on a function("tmat3x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x2.hpp(131): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x2.hpp(131): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x3.hpp(71): warning: __device__ annotation is ignored on a function("tmat3x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x3.hpp(71): warning: __host__ annotation is ignored on a function("tmat3x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x3.hpp(135): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x3.hpp(135): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x4.hpp(67): warning: __device__ annotation is ignored on a function("tmat3x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x4.hpp(67): warning: __host__ annotation is ignored on a function("tmat3x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x4.hpp(131): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x4.hpp(131): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x2.hpp(67): warning: __device__ annotation is ignored on a function("tmat4x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x2.hpp(67): warning: __host__ annotation is ignored on a function("tmat4x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x2.hpp(136): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x2.hpp(136): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x3.hpp(67): warning: __device__ annotation is ignored on a function("tmat4x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x3.hpp(67): warning: __host__ annotation is ignored on a function("tmat4x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x3.hpp(136): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x3.hpp(136): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x4.hpp(71): warning: __device__ annotation is ignored on a function("tmat4x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x4.hpp(71): warning: __host__ annotation is ignored on a function("tmat4x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x4.hpp(140): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x4.hpp(140): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec1.hpp(112): warning: __device__ annotation is ignored on a function("tvec1") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec1.hpp(112): warning: __host__ annotation is ignored on a function("tvec1") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec1.hpp(149): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec1.hpp(149): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec2.hpp(112): warning: __device__ annotation is ignored on a function("tvec2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec2.hpp(112): warning: __host__ annotation is ignored on a function("tvec2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec2.hpp(155): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec2.hpp(155): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec3.hpp(113): warning: __device__ annotation is ignored on a function("tvec3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec3.hpp(113): warning: __host__ annotation is ignored on a function("tvec3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec3.hpp(177): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec3.hpp(177): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec4.hpp(170): warning: __device__ annotation is ignored on a function("tvec4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec4.hpp(170): warning: __host__ annotation is ignored on a function("tvec4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec4.hpp(276): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec4.hpp(276): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x2.hpp(71): warning: __device__ annotation is ignored on a function("tmat2x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x2.hpp(71): warning: __host__ annotation is ignored on a function("tmat2x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x2.hpp(128): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x2.hpp(128): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x3.hpp(67): warning: __device__ annotation is ignored on a function("tmat2x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x3.hpp(67): warning: __host__ annotation is ignored on a function("tmat2x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x3.hpp(124): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x3.hpp(124): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x4.hpp(67): warning: __device__ annotation is ignored on a function("tmat2x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x4.hpp(67): warning: __host__ annotation is ignored on a function("tmat2x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x4.hpp(126): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x4.hpp(126): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x2.hpp(67): warning: __device__ annotation is ignored on a function("tmat3x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x2.hpp(67): warning: __host__ annotation is ignored on a function("tmat3x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x2.hpp(131): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x2.hpp(131): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x3.hpp(71): warning: __device__ annotation is ignored on a function("tmat3x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x3.hpp(71): warning: __host__ annotation is ignored on a function("tmat3x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x3.hpp(135): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x3.hpp(135): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x4.hpp(67): warning: __device__ annotation is ignored on a function("tmat3x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x4.hpp(67): warning: __host__ annotation is ignored on a function("tmat3x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x4.hpp(131): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x4.hpp(131): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x2.hpp(67): warning: __device__ annotation is ignored on a function("tmat4x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x2.hpp(67): warning: __host__ annotation is ignored on a function("tmat4x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x2.hpp(136): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x2.hpp(136): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x3.hpp(67): warning: __device__ annotation is ignored on a function("tmat4x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x3.hpp(67): warning: __host__ annotation is ignored on a function("tmat4x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x3.hpp(136): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x3.hpp(136): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x4.hpp(71): warning: __device__ annotation is ignored on a function("tmat4x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x4.hpp(71): warning: __host__ annotation is ignored on a function("tmat4x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x4.hpp(140): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x4.hpp(140): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec1.hpp(112): warning: __device__ annotation is ignored on a function("tvec1") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec1.hpp(112): warning: __host__ annotation is ignored on a function("tvec1") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec1.hpp(149): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec1.hpp(149): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec2.hpp(112): warning: __device__ annotation is ignored on a function("tvec2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec2.hpp(112): warning: __host__ annotation is ignored on a function("tvec2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec2.hpp(155): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec2.hpp(155): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec3.hpp(113): warning: __device__ annotation is ignored on a function("tvec3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec3.hpp(113): warning: __host__ annotation is ignored on a function("tvec3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec3.hpp(177): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec3.hpp(177): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec4.hpp(170): warning: __device__ annotation is ignored on a function("tvec4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec4.hpp(170): warning: __host__ annotation is ignored on a function("tvec4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec4.hpp(276): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec4.hpp(276): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x2.hpp(71): warning: __device__ annotation is ignored on a function("tmat2x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x2.hpp(71): warning: __host__ annotation is ignored on a function("tmat2x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x2.hpp(128): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x2.hpp(128): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x3.hpp(67): warning: __device__ annotation is ignored on a function("tmat2x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x3.hpp(67): warning: __host__ annotation is ignored on a function("tmat2x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x3.hpp(124): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x3.hpp(124): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x4.hpp(67): warning: __device__ annotation is ignored on a function("tmat2x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x4.hpp(67): warning: __host__ annotation is ignored on a function("tmat2x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x4.hpp(126): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat2x4.hpp(126): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x2.hpp(67): warning: __device__ annotation is ignored on a function("tmat3x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x2.hpp(67): warning: __host__ annotation is ignored on a function("tmat3x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x2.hpp(131): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x2.hpp(131): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x3.hpp(71): warning: __device__ annotation is ignored on a function("tmat3x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x3.hpp(71): warning: __host__ annotation is ignored on a function("tmat3x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x3.hpp(135): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x3.hpp(135): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x4.hpp(67): warning: __device__ annotation is ignored on a function("tmat3x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x4.hpp(67): warning: __host__ annotation is ignored on a function("tmat3x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x4.hpp(131): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat3x4.hpp(131): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x2.hpp(67): warning: __device__ annotation is ignored on a function("tmat4x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x2.hpp(67): warning: __host__ annotation is ignored on a function("tmat4x2") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x2.hpp(136): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x2.hpp(136): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x3.hpp(67): warning: __device__ annotation is ignored on a function("tmat4x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x3.hpp(67): warning: __host__ annotation is ignored on a function("tmat4x3") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x3.hpp(136): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x3.hpp(136): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x4.hpp(71): warning: __device__ annotation is ignored on a function("tmat4x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x4.hpp(71): warning: __host__ annotation is ignored on a function("tmat4x4") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x4.hpp(140): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_mat4x4.hpp(140): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec1.hpp(112): warning: __device__ annotation is ignored on a function("tvec1") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec1.hpp(112): warning: __host__ annotation is ignored on a function("tvec1") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec1.hpp(149): warning: __device__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-/opt/api/ext/GLM/0975/include/glm/detail/type_vec1.hpp(149): warning: __host__ annotation is ignored on a function("operator=") that is explicitly defaulted on its first declaration
-
-
-[CBI] -> Linking to   : /tmp/ramdrive/mse1/Targets/Tuto_Surface_Cuda/bin/Tuto_Surface_Cuda_cuda_101_x86_64.run
+[CBI] -> Linking to   : /tmp/ramdrive/mse1/Targets/Student_Cuda/bin/Student_Cuda_cuda_101_x86_64.run
 
 [CBI] -> Library Link :
 [CBI] ->
 [CBI] ->              : -lBilatTools_CPP_303_006_gcc_x86_64
 [CBI] ->              : -lBilatTools_Cuda_303_006_cuda_101_x86_64
-[CBI] ->              : -lBilatTools_Cuda_3D_303_006_cuda_101_x86_64
-[CBI] ->              : -lBilat_Fenetrage_Displayable_303_gcc_x86_64
-[CBI] ->              : -lBilat_Fenetrage_Displayable_GL_303_gcc_x86_64
-[CBI] ->              : -lBilat_Fenetrage_FreeGlut_Tools_303_gcc_x86_64
-[CBI] ->              : -lBilat_Image_GL_303_gcc_x86_64
-[CBI] ->              : -lBilat_Image_GL_Cuda_303_cuda_101_x86_64
-[CBI] ->              : -lBilat_OpenGL_Tools_303_gcc_x86_64
-[CBI] ->              : -lBilat_OpenGL_Tools_Cuda_303_cuda_101_x86_64
-[CBI] ->              : -lBilat_Scene3D_FreeGlut_303_gcc_x86_64
-[CBI] ->              : -lBilat_Scene3D_GL_303_gcc_x86_64
-[CBI] ->              : -lBilat_Scene3D_GL_Cuda_303_cuda_101_x86_64
-[CBI] ->              : -lBilat_Surface_GL_303_gcc_x86_64
-[CBI] ->              : -lBilat_Surface_GL_Cuda_303_cuda_101_x86_64
-[CBI] ->              : -lGL
-[CBI] ->              : -lGLEW
-[CBI] ->              : -lGLU
+[CBI] ->              : -lBilatTools_OMP_303_006_gcc_x86_64
+[CBI] ->              : -lCpp_Test_200_gcc_x86_64
 [CBI] ->              : -lOpenCL
 [CBI] ->              : -laccinj64
+[CBI] ->              : -lboost_atomic-gcc740
+[CBI] ->              : -lboost_chrono-gcc740
+[CBI] ->              : -lboost_container-gcc740
+[CBI] ->              : -lboost_context-gcc740
+[CBI] ->              : -lboost_contract-gcc740
+[CBI] ->              : -lboost_coroutine-gcc740
+[CBI] ->              : -lboost_date_time-gcc740
+[CBI] ->              : -lboost_fiber-gcc740
+[CBI] ->              : -lboost_filesystem-gcc740
+[CBI] ->              : -lboost_graph-gcc740
+[CBI] ->              : -lboost_iostreams-gcc740
+[CBI] ->              : -lboost_locale-gcc740
+[CBI] ->              : -lboost_log-gcc740
+[CBI] ->              : -lboost_log_setup-gcc740
+[CBI] ->              : -lboost_math_c99-gcc740
+[CBI] ->              : -lboost_math_c99f-gcc740
+[CBI] ->              : -lboost_math_c99l-gcc740
+[CBI] ->              : -lboost_math_tr1-gcc740
+[CBI] ->              : -lboost_math_tr1f-gcc740
+[CBI] ->              : -lboost_math_tr1l-gcc740
+[CBI] ->              : -lboost_prg_exec_monitor-gcc740
+[CBI] ->              : -lboost_program_options-gcc740
+[CBI] ->              : -lboost_random-gcc740
+[CBI] ->              : -lboost_regex-gcc740
+[CBI] ->              : -lboost_serialization-gcc740
+[CBI] ->              : -lboost_stacktrace_addr2line-gcc740
+[CBI] ->              : -lboost_stacktrace_backtrace-gcc740
+[CBI] ->              : -lboost_stacktrace_basic-gcc740
+[CBI] ->              : -lboost_stacktrace_noop-gcc740
+[CBI] ->              : -lboost_system-gcc740
+[CBI] ->              : -lboost_thread-gcc740
+[CBI] ->              : -lboost_timer-gcc740
+[CBI] ->              : -lboost_type_erasure-gcc740
+[CBI] ->              : -lboost_unit_test_framework-gcc740
+[CBI] ->              : -lboost_wave-gcc740
+[CBI] ->              : -lboost_wserialization-gcc740
 [CBI] ->              : -lcublas
 [CBI] ->              : -lcudart
 [CBI] ->              : -lcufft
@@ -747,7 +365,6 @@ Cuda compilation tools, release 10.1, V10.1.105
 [CBI] ->              : -lcurand
 [CBI] ->              : -lcusolver
 [CBI] ->              : -lcusparse
-[CBI] ->              : -lglut
 [CBI] ->              : -lgomp
 [CBI] ->              : -lnppc
 [CBI] ->              : -lnppial
@@ -769,8 +386,8 @@ Cuda compilation tools, release 10.1, V10.1.105
 
 
 ==================================================================================
-[CBI] -> Target Name  : Tuto_Surface_Cuda_cuda_101_x86_64
-[CBI] -> Location     : /tmp/ramdrive/mse1/Targets/Tuto_Surface_Cuda/bin/Tuto_Surface_Cuda_cuda_101_x86_64.run
+[CBI] -> Target Name  : Student_Cuda_cuda_101_x86_64
+[CBI] -> Location     : /tmp/ramdrive/mse1/Targets/Student_Cuda/bin/Student_Cuda_cuda_101_x86_64.run
 [CBI] -> Deploy 	  : ../RELEASE/bin
 [CBI] ->
 [CBI] -> Type	 	  : EXE
@@ -780,14 +397,15 @@ Cuda compilation tools, release 10.1, V10.1.105
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 5 (s)
+[CBI] -> Time		  : 1 (s)
 ==================================================================================
 
+cp: cannot create regular file '../RELEASE/bin/Student_Cuda_cuda_101_x86_64.run': Text file busy
 
-[CBI] -> Deploying      : ../RELEASE/bin/Tuto_Surface_Cuda_cuda_101_x86_64.run
+[CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_cuda_101_x86_64.run
 
 [CBI] -> Symlink Project Inc
 [CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
 
-[CBI] -> Tuto_Surface_Cuda_cuda_101_x86_64 : End ALL!
+[CBI] -> Student_Cuda_cuda_101_x86_64 : End ALL!
 

@@ -1,0 +1,57 @@
+
+#include "Bandwidth.h"
+
+#include <iostream>
+#include <assert.h>
+
+#include "Device.h"
+
+
+ /*---------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+extern __global__ void kernelHistogramme(int* tabDataGM, int* tabFrequenceGM, int n, int dataMax);
+
+ /*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+ /*-------------------------------------*\
+ |*		Constructeur		*|
+ \*-------------------------------------*/
+
+Histogramme::Histogramme(const Grid& grid, int* tabData, int n) : n(n)
+    {
+    this->sizeTabDataGM = sizeof(int) * n; // [octet]
+
+    Device::malloc(&tabDataGM, sizeTabDataGM);
+    Device::memcpyHToD(tabDataGM, tabData, sizeTabDataGM);
+
+    this->dg = grid.dg;
+    this->db = grid.db;
+
+    }
+
+Histogramme::~Histogramme(void)
+    {
+    Device::free (tabDataGM);
+    }
+
+ /*-------------------------------------*\
+ |*		Methode			*|
+ \*-------------------------------------*/
+
+void Histogramme::run()
+    {
+    kernelHistogramme<<<dg,db, this->sizeTabFrequenceGM>>>(tabDataGM);
+    Device::memcpyDToH(tabDataGM);
+    }
+
+ /*---------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

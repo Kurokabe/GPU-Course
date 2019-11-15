@@ -1,1 +1,1 @@
-/home/arc19/CUDA/toStudent/code/WCuda/Student_Cuda/src/cpp/core/04_Slice_sm/host/SliceSM.h
+/home/mse1/CUDA/toStudent/code/WCuda-complete/Student_Cuda/src/cpp/core/04_Slice_sm/host/SliceSM.h

@@ -21,4 +21,5 @@
     <fullyQualifiedTypeName name="javax.swing.JTextField"/>
     <fullyQualifiedTypeName name="javax.swing.BoxLayout"/>
     <fullyQualifiedTypeName name="javax.swing.event.DocumentEvent"/>
+    <fullyQualifiedTypeName name="java.awt.Dimension"/>
 </qualifiedTypeNameHistroy>

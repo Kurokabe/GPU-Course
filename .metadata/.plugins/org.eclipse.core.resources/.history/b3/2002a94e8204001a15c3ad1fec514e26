@@ -1,0 +1,66 @@
+
+#include "Indice2D.h"
+#include "Indice1D.h"
+#include "cudaTools.h"
+#include "ReductionAddTools.h"
+#include <stdio.h>
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+__global__ void kernelHistogramme(unsigned char* tabDataGM, unsigned char* tabFrequenceGM, int n);
+__device__ void reductionIntraThreadSM(int* tabSM, int n);
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+__global__ void kernelHistogramme(int* tabDataGM, int* tabFrequenceGM, int n)
+    {
+    extern __shared__ int tabSM[];
+
+    reductionIntraThread(tabSM, n);
+    __syncthreads();
+    }
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+__device__ void reductionIntraThreadSM(float* tabSM, int nbSlice)
+    {
+    const int TID = threadIdx.x + (blockIdx.x * blockDim.x); //global à la grille
+    const int TID_LOCAL = threadIdx.x;
+    const int NB_THREAD = blockDim.x * gridDim.x; //nbThreadTotal
+
+    int s = TID;
+    float sum = 0;
+    while (s < nbSlice)
+	{
+	float xs = s * dx;
+	sum += f(xs);
+	s += NB_THREAD;
+	}
+    tabSM[TID_LOCAL] = sum;
+    }
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

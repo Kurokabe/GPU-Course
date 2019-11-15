@@ -1,0 +1,52 @@
+#include "../07_Test_Histogramme/TestHistogramme.h"
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+|*		Imported	 	*|
+ \*-------------------------------------*/
+extern bool isHistogrammeOKSum();
+extern bool isHistogrammeOKValues();
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Constructor		*|
+ \*-------------------------------------*/
+TestHistogramme::TestHistogramme()
+    {
+    TEST_ADD(TestHistogramme::isHistogrammeOKSum);
+    TEST_ADD(TestHistogramme::isHistogrammeOKValues);
+    }
+
+/*--------------------------------------*\
+|*		Methodes		*|
+ \*-------------------------------------*/
+void TestReduction::testReductionAtomicI(void)
+    {
+    TEST_ASSERT(isReductionAddTools_I_Ok());
+    }
+
+void TestReduction::testReductionAtomicII(void)
+    {
+    TEST_ASSERT(isReductionAddTools_II_Ok());
+    }
+
+void TestReduction::testReductionLockI(void)
+    {
+    TEST_ASSERT(isReductionAddToolsLock_I_Ok());
+    }
+
+void TestReduction::testReductionLockII(void)
+    {
+    TEST_ASSERT(isReductionAddToolsLock_II_Ok());
+    }
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/
+

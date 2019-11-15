@@ -1,4 +1,4 @@
-13:41:27 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
+08:38:10 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -8,7 +8,7 @@ cbicc cuda jall
 
 [cuda]        : /usr/local
 
-[jni]         : /usr/lib/jvm/java-8-oracle
+[jni]         : /usr/lib/jvm/java-11-openjdk-amd64
 
 [X11]         : /usr/include/X11
 
@@ -29,6 +29,8 @@ cbicc cuda jall
 [pleora]      : /opt/api/ext/pleora
 
 [glm]      : /opt/api/ext/GLM
+
+[dronecode]         : /opt/api/ext/dronecode
 
 [Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
 
@@ -61,52 +63,49 @@ cbicc cuda jall
      BILAT_TAU2_HOME                    = /opt/api/cbi/capteur/bilat_tau2
      BILAT_SPEECH_HOME                  = /opt/api/cbi/capteur/bilat_speech
      BILAT_GPS_HOME                     = /opt/api/cbi/capteur/bilat_gps
-     BILAT_PIPES_P2P_HOME               = /opt/api/cbi/capteur/bilat_pipes_p2p
-     BILAT_PIPES_CLIENT_HOME            = /opt/api/cbi/capteur/bilat_pipes_client
-     BILAT_PIPES_CLIENT_SERVER_JAVA_HOME= /opt/api/cbi/capteur/bilat_pipes_client_server_java
 
 --------------------------------------------------------
 [Runtime] : gcc x86 : Ready!
 --------------------------------------------------------
 
 
-g++ (Ubuntu 4.8.4-2ubuntu1~14.04.4) 4.8.4
-Copyright (C) 2013 Free Software Foundation, Inc.
+g++ (Ubuntu 7.4.0-1ubuntu1~18.04.1) 7.4.0
+Copyright (C) 2017 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 
 nvcc: NVIDIA (R) Cuda compiler driver
-Copyright (c) 2005-2016 NVIDIA Corporation
-Built on Sun_Sep__4_22:14:01_CDT_2016
-Cuda compilation tools, release 8.0, V8.0.44
+Copyright (c) 2005-2019 NVIDIA Corporation
+Built on Fri_Feb__8_19:08:17_PST_2019
+Cuda compilation tools, release 10.1, V10.1.105
 
 
 [CUDA GCC] : jall
 
 
 ==================================================================================
-[CBI] -> Target Name  : Student_Cuda_cuda_80_x86_64
+[CBI] -> Target Name  : Student_Cuda_cuda_101_x86_64
 [CBI] ->
-[CBI] -> Build        : /tmp/ramdrive/arc19/Targets/Student_Cuda/bin/Student_Cuda_cuda_80_x86_64.run
+[CBI] -> Build        : /tmp/ramdrive/mse1/Targets/Student_Cuda/bin/Student_Cuda_cuda_101_x86_64.run
 [CBI] -> Deploy       : ../RELEASE/bin
 [CBI] ->
 [CBI] -> Type	      : EXE
 [CBI] -> Arch	      : x86_64
 [CBI] -> OS	 		  : Linux
-[CBI] -> User	 	  : arc19
+[CBI] -> User	 	  : mse1
 [CBI] ->
 [CBI] -> Task		  : Compiling-Linking !
 ==================================================================================
 
 [CBI] -> SRC AUX (Recursif) :
 [CBI] ->
-[CBI] ->              : /opt/api/ext/cpptest/112/LIB_STATIC/gcc
+[CBI] ->              : /opt/api/ext/cpptest/200/LIB_STATIC/gcc
 
 [CBI] -> CXXFLAGS (Partial) :
 [CBI] ->
 [CBI] ->              : -fopenmp
-[CBI] ->              : -std=c++11
+[CBI] ->              : -std=c++14
 [CBI] ->              : -O3
 [CBI] ->              : -frerun-loop-opt
 [CBI] ->              : -fomit-frame-pointer
@@ -119,7 +118,7 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : --fmad=true
 [CBI] ->              : -arch=sm_52
 [CBI] ->              : -m64
-[CBI] ->              : -std=c++11
+[CBI] ->              : -std=c++14
 [CBI] ->              : -use_fast_math
 
 [CBI] -> NVCCLDFLAGS (Partial) :
@@ -133,15 +132,19 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : src/cpp/core/04_Slice/host/
 [CBI] ->              : src/cpp/core/04_Slice_sm/host/
 [CBI] ->              : src/cpp/core/05_Montecarlo/host/
+[CBI] ->              : src/cpp/core/05_MontecarloLong/host/
 [CBI] ->              : src/cpp/core/06_MontecarloMultiGPU/host/
+[CBI] ->              : src/cpp/core/07_Histogramme/host/
 [CBI] ->              : src/cpp/core/tools/
 [CBI] ->              : src/cpp/test/unit/01_Test_Hello/
 [CBI] ->              : src/cpp/test/unit/02_Test_Scalar/
 [CBI] ->              : src/cpp/test/unit/03_Test_Vector/
 [CBI] ->              : src/cpp/test/unit/04_Test_Slice/
 [CBI] ->              : src/cpp/test/unit/04_Test_Slice_sm/
-[CBI] ->              : src/cpp/test/unit/05_Test_Reduction/
-[CBI] ->              : src/cpp/test/unit/07_Test_MonteCarlo/
+[CBI] ->              : src/cpp/test/unit/05_Test_MonteCarlo/
+[CBI] ->              : src/cpp/test/unit/05_Test_MonteCarloLong/
+[CBI] ->              : src/cpp/test/unit/06_Test_MonteCarloMultiGPU/
+[CBI] ->              : src/cpp/test/unit/07_Test_Reduction/
 
 
 [CBI] -> LIB_PATH (auto detect):
@@ -160,70 +163,124 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/header/device
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/header/device/curand
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/header/device/reduction
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/header/device/reduction/derivate
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/header/device/synchronisation
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/header/host
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/header/mixte
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/nvidia
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/test_tools
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/INC
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/INC/OMP_Tools
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/INC/OMP_Tools/header
-[CBI] ->              : /opt/api/ext/boost/1640/include
-[CBI] ->              : /opt/api/ext/boost/1640/include/boost
-[CBI] ->              : /opt/api/ext/cpptest/112/INC
-[CBI] ->              : /opt/api/ext/cpptest/112/INC/extension
-[CBI] ->              : /usr/local/cuda-8.0/include
-[CBI] ->              : /usr/local/cuda-8.0/include/CL
-[CBI] ->              : /usr/local/cuda-8.0/include/crt
+[CBI] ->              : /opt/api/ext/boost/1700/include
+[CBI] ->              : /opt/api/ext/boost/1700/include/boost
+[CBI] ->              : /opt/api/ext/cpptest/200/INC
+[CBI] ->              : /opt/api/ext/cpptest/200/INC/extension
+[CBI] ->              : /usr/local/cuda/include
+[CBI] ->              : /usr/local/cuda/include/CL
+[CBI] ->              : /usr/local/cuda/include/crt
 
 [CBI] -> API_BIN :
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/303_006/BIN/gcc
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/BIN/gcc
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/BIN/gcc
-[CBI] ->              : /opt/api/ext/boost/1640/lib/gcc
-[CBI] ->              : /usr/local/cuda-8.0/lib64
-[CBI] ->              : /usr/local/cuda-8.0/lib64/stubs
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/Boost-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_atomic-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_chrono-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_container-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_context-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_contract-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_coroutine-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_date_time-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_exception-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_fiber-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_fiber_numa-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_filesystem-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_graph-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_graph_parallel-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_headers-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_iostreams-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_locale-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_log-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_log_setup-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_c99-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_c99f-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_c99l-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_tr1-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_tr1f-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_tr1l-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_mpi-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_numpy-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_prg_exec_monitor-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_program_options-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_python-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_random-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_regex-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_serialization-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_addr2line-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_backtrace-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_basic-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_noop-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_windbg-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_windbg_cached-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_system-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_test_exec_monitor-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_thread-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_timer-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_type_erasure-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_unit_test_framework-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_wave-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_wserialization-1.70.0
+[CBI] ->              : /usr/local/cuda/lib64
 
 [CBI] -> API_LIBRARIES_STATIC :
-[CBI] ->              : /opt/api/ext/cpptest/112/LIB_STATIC/gcc
+[CBI] ->              : /opt/api/ext/cpptest/200/LIB_STATIC/gcc
 
 [CBI] -> API_LIBRARIES :
 [CBI] ->              : BilatTools_CPP_303_006_gcc_x86_64
-[CBI] ->              : BilatTools_Cuda_303_006_cuda_80_x86_64
+[CBI] ->              : BilatTools_Cuda_303_006_cuda_101_x86_64
 [CBI] ->              : BilatTools_OMP_303_006_gcc_x86_64
 [CBI] ->              : OpenCL
-[CBI] ->              : boost_atomic-gcc484
-[CBI] ->              : boost_chrono-gcc484
-[CBI] ->              : boost_container-gcc484
-[CBI] ->              : boost_context-gcc484
-[CBI] ->              : boost_coroutine-gcc484
-[CBI] ->              : boost_date_time-gcc484
-[CBI] ->              : boost_filesystem-gcc484
-[CBI] ->              : boost_graph-gcc484
-[CBI] ->              : boost_iostreams-gcc484
-[CBI] ->              : boost_locale-gcc484
-[CBI] ->              : boost_log-gcc484
-[CBI] ->              : boost_log_setup-gcc484
-[CBI] ->              : boost_math_c99-gcc484
-[CBI] ->              : boost_math_c99f-gcc484
-[CBI] ->              : boost_math_c99l-gcc484
-[CBI] ->              : boost_math_tr1-gcc484
-[CBI] ->              : boost_math_tr1f-gcc484
-[CBI] ->              : boost_math_tr1l-gcc484
-[CBI] ->              : boost_prg_exec_monitor-gcc484
-[CBI] ->              : boost_program_options-gcc484
-[CBI] ->              : boost_random-gcc484
-[CBI] ->              : boost_regex-gcc484
-[CBI] ->              : boost_serialization-gcc484
-[CBI] ->              : boost_signals-gcc484
-[CBI] ->              : boost_system-gcc484
-[CBI] ->              : boost_thread-gcc484
-[CBI] ->              : boost_timer-gcc484
-[CBI] ->              : boost_type_erasure-gcc484
-[CBI] ->              : boost_unit_test_framework-gcc484
-[CBI] ->              : boost_wave-gcc484
-[CBI] ->              : boost_wserialization-gcc484
-[CBI] ->              : cublas
-[CBI] ->              : cuda
+[CBI] ->              : accinj64
+[CBI] ->              : boost_atomic-gcc740
+[CBI] ->              : boost_chrono-gcc740
+[CBI] ->              : boost_container-gcc740
+[CBI] ->              : boost_context-gcc740
+[CBI] ->              : boost_contract-gcc740
+[CBI] ->              : boost_coroutine-gcc740
+[CBI] ->              : boost_date_time-gcc740
+[CBI] ->              : boost_fiber-gcc740
+[CBI] ->              : boost_filesystem-gcc740
+[CBI] ->              : boost_graph-gcc740
+[CBI] ->              : boost_iostreams-gcc740
+[CBI] ->              : boost_locale-gcc740
+[CBI] ->              : boost_log-gcc740
+[CBI] ->              : boost_log_setup-gcc740
+[CBI] ->              : boost_math_c99-gcc740
+[CBI] ->              : boost_math_c99f-gcc740
+[CBI] ->              : boost_math_c99l-gcc740
+[CBI] ->              : boost_math_tr1-gcc740
+[CBI] ->              : boost_math_tr1f-gcc740
+[CBI] ->              : boost_math_tr1l-gcc740
+[CBI] ->              : boost_prg_exec_monitor-gcc740
+[CBI] ->              : boost_program_options-gcc740
+[CBI] ->              : boost_random-gcc740
+[CBI] ->              : boost_regex-gcc740
+[CBI] ->              : boost_serialization-gcc740
+[CBI] ->              : boost_stacktrace_addr2line-gcc740
+[CBI] ->              : boost_stacktrace_backtrace-gcc740
+[CBI] ->              : boost_stacktrace_basic-gcc740
+[CBI] ->              : boost_stacktrace_noop-gcc740
+[CBI] ->              : boost_system-gcc740
+[CBI] ->              : boost_thread-gcc740
+[CBI] ->              : boost_timer-gcc740
+[CBI] ->              : boost_type_erasure-gcc740
+[CBI] ->              : boost_unit_test_framework-gcc740
+[CBI] ->              : boost_wave-gcc740
+[CBI] ->              : boost_wserialization-gcc740
 [CBI] ->              : cudart
 [CBI] ->              : cufft
 [CBI] ->              : cufftw
@@ -232,7 +289,6 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : cusolver
 [CBI] ->              : cusparse
 [CBI] ->              : nppc
-[CBI] ->              : nppi
 [CBI] ->              : nppial
 [CBI] ->              : nppicc
 [CBI] ->              : nppicom
@@ -245,59 +301,63 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : nppitc
 [CBI] ->              : npps
 [CBI] ->              : nvToolsExt
-[CBI] ->              : nvblas
 [CBI] ->              : nvgraph
-[CBI] ->              : nvidia-ml
+[CBI] ->              : nvjpeg
 [CBI] ->              : nvrtc
 [CBI] ->              : nvrtc-builtins
 
 
-[CBI] -> Compilation parallel (16 threads)
+[CBI] -> Compilation parallel (36 threads)
 
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/test/mainTest.cpp
+[Student_Cuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/core/mainCore.cpp
 
-[CBI] -> Linking to   : /tmp/ramdrive/arc19/Targets/Student_Cuda/bin/Student_Cuda_cuda_80_x86_64.run
+[CBI] -> Linking to   : /tmp/ramdrive/mse1/Targets/Student_Cuda/bin/Student_Cuda_cuda_101_x86_64.run
 
 [CBI] -> Library Link :
 [CBI] ->
 [CBI] ->              : -lBilatTools_CPP_303_006_gcc_x86_64
-[CBI] ->              : -lBilatTools_Cuda_303_006_cuda_80_x86_64
+[CBI] ->              : -lBilatTools_Cuda_303_006_cuda_101_x86_64
 [CBI] ->              : -lBilatTools_OMP_303_006_gcc_x86_64
-[CBI] ->              : -lCpp_Test_112_gcc_x86_64
+[CBI] ->              : -lCpp_Test_200_gcc_x86_64
 [CBI] ->              : -lOpenCL
-[CBI] ->              : -lboost_atomic-gcc484
-[CBI] ->              : -lboost_chrono-gcc484
-[CBI] ->              : -lboost_container-gcc484
-[CBI] ->              : -lboost_context-gcc484
-[CBI] ->              : -lboost_coroutine-gcc484
-[CBI] ->              : -lboost_date_time-gcc484
-[CBI] ->              : -lboost_filesystem-gcc484
-[CBI] ->              : -lboost_graph-gcc484
-[CBI] ->              : -lboost_iostreams-gcc484
-[CBI] ->              : -lboost_locale-gcc484
-[CBI] ->              : -lboost_log-gcc484
-[CBI] ->              : -lboost_log_setup-gcc484
-[CBI] ->              : -lboost_math_c99-gcc484
-[CBI] ->              : -lboost_math_c99f-gcc484
-[CBI] ->              : -lboost_math_c99l-gcc484
-[CBI] ->              : -lboost_math_tr1-gcc484
-[CBI] ->              : -lboost_math_tr1f-gcc484
-[CBI] ->              : -lboost_math_tr1l-gcc484
-[CBI] ->              : -lboost_prg_exec_monitor-gcc484
-[CBI] ->              : -lboost_program_options-gcc484
-[CBI] ->              : -lboost_random-gcc484
-[CBI] ->              : -lboost_regex-gcc484
-[CBI] ->              : -lboost_serialization-gcc484
-[CBI] ->              : -lboost_signals-gcc484
-[CBI] ->              : -lboost_system-gcc484
-[CBI] ->              : -lboost_thread-gcc484
-[CBI] ->              : -lboost_timer-gcc484
-[CBI] ->              : -lboost_type_erasure-gcc484
-[CBI] ->              : -lboost_unit_test_framework-gcc484
-[CBI] ->              : -lboost_wave-gcc484
-[CBI] ->              : -lboost_wserialization-gcc484
+[CBI] ->              : -laccinj64
+[CBI] ->              : -lboost_atomic-gcc740
+[CBI] ->              : -lboost_chrono-gcc740
+[CBI] ->              : -lboost_container-gcc740
+[CBI] ->              : -lboost_context-gcc740
+[CBI] ->              : -lboost_contract-gcc740
+[CBI] ->              : -lboost_coroutine-gcc740
+[CBI] ->              : -lboost_date_time-gcc740
+[CBI] ->              : -lboost_fiber-gcc740
+[CBI] ->              : -lboost_filesystem-gcc740
+[CBI] ->              : -lboost_graph-gcc740
+[CBI] ->              : -lboost_iostreams-gcc740
+[CBI] ->              : -lboost_locale-gcc740
+[CBI] ->              : -lboost_log-gcc740
+[CBI] ->              : -lboost_log_setup-gcc740
+[CBI] ->              : -lboost_math_c99-gcc740
+[CBI] ->              : -lboost_math_c99f-gcc740
+[CBI] ->              : -lboost_math_c99l-gcc740
+[CBI] ->              : -lboost_math_tr1-gcc740
+[CBI] ->              : -lboost_math_tr1f-gcc740
+[CBI] ->              : -lboost_math_tr1l-gcc740
+[CBI] ->              : -lboost_prg_exec_monitor-gcc740
+[CBI] ->              : -lboost_program_options-gcc740
+[CBI] ->              : -lboost_random-gcc740
+[CBI] ->              : -lboost_regex-gcc740
+[CBI] ->              : -lboost_serialization-gcc740
+[CBI] ->              : -lboost_stacktrace_addr2line-gcc740
+[CBI] ->              : -lboost_stacktrace_backtrace-gcc740
+[CBI] ->              : -lboost_stacktrace_basic-gcc740
+[CBI] ->              : -lboost_stacktrace_noop-gcc740
+[CBI] ->              : -lboost_system-gcc740
+[CBI] ->              : -lboost_thread-gcc740
+[CBI] ->              : -lboost_timer-gcc740
+[CBI] ->              : -lboost_type_erasure-gcc740
+[CBI] ->              : -lboost_unit_test_framework-gcc740
+[CBI] ->              : -lboost_wave-gcc740
+[CBI] ->              : -lboost_wserialization-gcc740
 [CBI] ->              : -lcublas
-[CBI] ->              : -lcuda
 [CBI] ->              : -lcudart
 [CBI] ->              : -lcufft
 [CBI] ->              : -lcufftw
@@ -307,7 +367,6 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : -lcusparse
 [CBI] ->              : -lgomp
 [CBI] ->              : -lnppc
-[CBI] ->              : -lnppi
 [CBI] ->              : -lnppial
 [CBI] ->              : -lnppicc
 [CBI] ->              : -lnppicom
@@ -320,36 +379,36 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : -lnppitc
 [CBI] ->              : -lnpps
 [CBI] ->              : -lnvToolsExt
-[CBI] ->              : -lnvblas
 [CBI] ->              : -lnvgraph
-[CBI] ->              : -lnvidia-ml
+[CBI] ->              : -lnvjpeg
 [CBI] ->              : -lnvrtc
 [CBI] ->              : -lnvrtc-builtins
 
 
 ==================================================================================
-[CBI] -> Target Name  : Student_Cuda_cuda_80_x86_64
-[CBI] -> Location     : /tmp/ramdrive/arc19/Targets/Student_Cuda/bin/Student_Cuda_cuda_80_x86_64.run
+[CBI] -> Target Name  : Student_Cuda_cuda_101_x86_64
+[CBI] -> Location     : /tmp/ramdrive/mse1/Targets/Student_Cuda/bin/Student_Cuda_cuda_101_x86_64.run
 [CBI] -> Deploy 	  : ../RELEASE/bin
 [CBI] ->
 [CBI] -> Type	 	  : EXE
 [CBI] -> Arch	 	  : x86_64
 [CBI] -> OS	 	      : Linux
-[CBI] -> User	 	  : arc19
+[CBI] -> User	 	  : mse1
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 0 (s)
+[CBI] -> Time		  : 1 (s)
 ==================================================================================
 
+cp: cannot create regular file '../RELEASE/bin/Student_Cuda_cuda_101_x86_64.run': Text file busy
 
-[CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_cuda_80_x86_64.run
+[CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_cuda_101_x86_64.run
 
 [CBI] -> Symlink Project Inc
 [CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
 
-[CBI] -> Student_Cuda_cuda_80_x86_64 : End ALL!
+[CBI] -> Student_Cuda_cuda_101_x86_64 : End ALL!
 
 
-13:41:29 Build Finished. 0 errors, 0 warnings. (took 1s.434ms)
+08:38:15 Build Finished. 0 errors, 0 warnings. (took 4s.171ms)
 

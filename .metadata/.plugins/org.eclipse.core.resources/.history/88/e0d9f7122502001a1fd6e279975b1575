@@ -1,0 +1,62 @@
+
+#include "Histogramme.h"
+
+#include <iostream>
+#include <assert.h>
+
+#include "Device.h"
+
+
+ /*---------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+extern __global__ void kernelHistogramme(unsigned char* tabDataGM, unsigned char* tabFrequenceGM, int nbSlice);
+
+ /*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+ /*-------------------------------------*\
+ |*		Constructeur		*|
+ \*-------------------------------------*/
+
+Histogramme::Histogramme(const Grid& grid, int n, unsigned char* tabData, unsigned char* tabFrequence) : tabFrequence(tabFrequence), n(n)
+    {
+    this->sizeTabDataGM = sizeof(char) * n; // [octet]
+    this->sizeTabFrequenceGM = sizeof(char) * 255; // [octet]
+
+    Device::malloc(&tabDataGM, sizeTabDataGM);
+    Device::memcpyHToD(tabDataGM, tabData, sizeTabDataGM);
+
+    Device::malloc(&tabFrequenceGM, sizeTabFrequenceGM);
+    Device::memclear(tabFrequenceGM, sizeTabFrequenceGM);
+
+    this->dg = grid.dg;
+    this->db = grid.db;
+
+    }
+
+Histogramme::~Histogramme(void)
+    {
+    Device::free (tabDataGM);
+    Device::free (tabFrequenceGM);
+    }
+
+ /*-------------------------------------*\
+ |*		Methode			*|
+ \*-------------------------------------*/
+
+void Histogramme::run()
+    {
+    kernelHistogramme<<<dg,db,sizeof(char) * 255>>>(tabDataGM, tabFrequenceGM, n);
+    Device::memcpyDToH(tabFrequence, tabFrequenceGM, sizeof(char) * 255);
+    }
+
+ /*---------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

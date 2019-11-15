@@ -1,0 +1,57 @@
+
+#include "Histogramme.h"
+
+#include <iostream>
+#include <assert.h>
+
+#include "Device.h"
+
+
+ /*---------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+extern __global__ void kernelHistogramme(float* ptrDevResultat,int nbSlice);
+
+ /*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+ /*-------------------------------------*\
+ |*		Constructeur		*|
+ \*-------------------------------------*/
+
+Histogramme::Histogramme(const Grid& grid, int n, char* tabData, char* tabFrequence) : tabFrequence(tabFrequence), n(n)
+    {
+    this->sizeTabGM = sizeof(float); // [octet]
+
+    Device::malloc(&ptrDevResultat, sizeTabGM);
+    Device::memclear(ptrDevResultat, sizeTabGM);
+
+    this->dg = grid.dg;
+    this->db = grid.db;
+
+    }
+
+Histogramme::~Histogramme(void)
+    {
+    Device::free (ptrDevResultat);
+    }
+
+ /*-------------------------------------*\
+ |*		Methode			*|
+ \*-------------------------------------*/
+
+void Histogramme::run()
+    {
+    kernelHistogramme<<<dg,db,sizeof(float)*db.x>>>(ptrDevResultat,nbSlice);
+    Device::memcpyDToH(ptrPiHat, ptrDevResultat, sizeof(float));
+    }
+
+ /*---------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

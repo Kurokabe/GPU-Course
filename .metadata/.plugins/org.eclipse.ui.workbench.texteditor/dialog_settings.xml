@@ -13,12 +13,15 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="canvasImage"/>
+		<item key="selection" value="std::unique_ptr"/>
 		<item key="casesensitive" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="wrap" value="true"/>
 		<item key="wholeword" value="false"/>
 		<list key="findhistory">
+			<item value="std::auto_ptr"/>
+			<item value="error"/>
+			<item value="SliceSM"/>
 			<item value="canvasImage"/>
 			<item value="canvasIm"/>
 			<item value="panelImage"/>
@@ -31,11 +34,10 @@
 			<item value="tabGM"/>
 			<item value="tabgm"/>
 			<item value="rCarre"/>
-			<item value="testAddition"/>
-			<item value="naif"/>
-			<item value="SliceNaif"/>
 		</list>
 		<list key="replacehistory">
+			<item value="std::unique_ptr"/>
+			<item value="Histogramme"/>
 			<item value="testSlice"/>
 			<item value="Slice"/>
 			<item value="WorkGPUStream"/>
