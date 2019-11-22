@@ -13,12 +13,16 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="std::unique_ptr"/>
+		<item key="selection" value="HostAlloc"/>
 		<item key="casesensitive" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="wrap" value="true"/>
 		<item key="wholeword" value="false"/>
 		<list key="findhistory">
+			<item value="hostalloc"/>
+			<item value="alloc"/>
+			<item value="cuda"/>
+			<item value="Histogramme"/>
 			<item value="std::auto_ptr"/>
 			<item value="error"/>
 			<item value="SliceSM"/>
@@ -30,12 +34,9 @@
 			<item value="cout"/>
 			<item value="slicesm"/>
 			<item value="grid"/>
-			<item value="mem"/>
-			<item value="tabGM"/>
-			<item value="tabgm"/>
-			<item value="rCarre"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Bandwidth"/>
 			<item value="std::unique_ptr"/>
 			<item value="Histogramme"/>
 			<item value="testSlice"/>
@@ -51,7 +52,7 @@
 		<item key="DIALOG_WIDTH" value="344"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
 		<item key="DIALOG_HEIGHT" value="445"/>
-		<item key="DIALOG_Y_ORIGIN" value="147"/>
-		<item key="DIALOG_X_ORIGIN" value="1183"/>
+		<item key="DIALOG_Y_ORIGIN" value="143"/>
+		<item key="DIALOG_X_ORIGIN" value="1396"/>
 	</section>
 </section>

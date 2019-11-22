@@ -12,6 +12,15 @@
  |*		Public			*|
  \*-------------------------------------*/
 
+enum TransferType
+    {
+    HostToDevice,
+    HostToDeviceDMA,
+    DeviceToDevice,
+    DeviceToDeviceEntrelacement,
+    DeviceToDeviceOneOne,
+    };
+
 /**
  * On passse la grille à SliceNaif pour pouvoir facilement la faire varier de l'extérieur pour trouver l'optimum, ou faire des tests avec des grilles différentes
  */
@@ -27,7 +36,7 @@ class Bandwidth
 	 * update piHat
 	 * Hyp : nbThread est une puissance de 2
 	 */
-	Bandwidth(const Grid& grid, int* tabData, int n);
+	Bandwidth(const Grid& grid, int* tabData, int n, TransferType type);
 	virtual ~Bandwidth(void);
 
 	/*--------------------------------------*\
@@ -51,6 +60,8 @@ class Bandwidth
 
 	// Inputs/Outputs
 	int* tabDataGM;
+	int* tabDataGMCopy;
+	TransferType type;
 
 	// Tools
 	size_t sizeTabDataGM;// [octet]

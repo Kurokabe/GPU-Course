@@ -1,4 +1,4 @@
-08:38:10 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
+14:09:11 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -135,6 +135,7 @@ Cuda compilation tools, release 10.1, V10.1.105
 [CBI] ->              : src/cpp/core/05_MontecarloLong/host/
 [CBI] ->              : src/cpp/core/06_MontecarloMultiGPU/host/
 [CBI] ->              : src/cpp/core/07_Histogramme/host/
+[CBI] ->              : src/cpp/core/08_Bandwidth/host/
 [CBI] ->              : src/cpp/core/tools/
 [CBI] ->              : src/cpp/test/unit/01_Test_Hello/
 [CBI] ->              : src/cpp/test/unit/02_Test_Scalar/
@@ -145,6 +146,7 @@ Cuda compilation tools, release 10.1, V10.1.105
 [CBI] ->              : src/cpp/test/unit/05_Test_MonteCarloLong/
 [CBI] ->              : src/cpp/test/unit/06_Test_MonteCarloMultiGPU/
 [CBI] ->              : src/cpp/test/unit/07_Test_Reduction/
+[CBI] ->              : src/cpp/test/unit/08_Test_Histogramme/
 
 
 [CBI] -> LIB_PATH (auto detect):
@@ -309,98 +311,7 @@ Cuda compilation tools, release 10.1, V10.1.105
 
 [CBI] -> Compilation parallel (36 threads)
 
-[Student_Cuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/core/mainCore.cpp
-
-[CBI] -> Linking to   : /tmp/ramdrive/mse1/Targets/Student_Cuda/bin/Student_Cuda_cuda_101_x86_64.run
-
-[CBI] -> Library Link :
-[CBI] ->
-[CBI] ->              : -lBilatTools_CPP_303_006_gcc_x86_64
-[CBI] ->              : -lBilatTools_Cuda_303_006_cuda_101_x86_64
-[CBI] ->              : -lBilatTools_OMP_303_006_gcc_x86_64
-[CBI] ->              : -lCpp_Test_200_gcc_x86_64
-[CBI] ->              : -lOpenCL
-[CBI] ->              : -laccinj64
-[CBI] ->              : -lboost_atomic-gcc740
-[CBI] ->              : -lboost_chrono-gcc740
-[CBI] ->              : -lboost_container-gcc740
-[CBI] ->              : -lboost_context-gcc740
-[CBI] ->              : -lboost_contract-gcc740
-[CBI] ->              : -lboost_coroutine-gcc740
-[CBI] ->              : -lboost_date_time-gcc740
-[CBI] ->              : -lboost_fiber-gcc740
-[CBI] ->              : -lboost_filesystem-gcc740
-[CBI] ->              : -lboost_graph-gcc740
-[CBI] ->              : -lboost_iostreams-gcc740
-[CBI] ->              : -lboost_locale-gcc740
-[CBI] ->              : -lboost_log-gcc740
-[CBI] ->              : -lboost_log_setup-gcc740
-[CBI] ->              : -lboost_math_c99-gcc740
-[CBI] ->              : -lboost_math_c99f-gcc740
-[CBI] ->              : -lboost_math_c99l-gcc740
-[CBI] ->              : -lboost_math_tr1-gcc740
-[CBI] ->              : -lboost_math_tr1f-gcc740
-[CBI] ->              : -lboost_math_tr1l-gcc740
-[CBI] ->              : -lboost_prg_exec_monitor-gcc740
-[CBI] ->              : -lboost_program_options-gcc740
-[CBI] ->              : -lboost_random-gcc740
-[CBI] ->              : -lboost_regex-gcc740
-[CBI] ->              : -lboost_serialization-gcc740
-[CBI] ->              : -lboost_stacktrace_addr2line-gcc740
-[CBI] ->              : -lboost_stacktrace_backtrace-gcc740
-[CBI] ->              : -lboost_stacktrace_basic-gcc740
-[CBI] ->              : -lboost_stacktrace_noop-gcc740
-[CBI] ->              : -lboost_system-gcc740
-[CBI] ->              : -lboost_thread-gcc740
-[CBI] ->              : -lboost_timer-gcc740
-[CBI] ->              : -lboost_type_erasure-gcc740
-[CBI] ->              : -lboost_unit_test_framework-gcc740
-[CBI] ->              : -lboost_wave-gcc740
-[CBI] ->              : -lboost_wserialization-gcc740
-[CBI] ->              : -lcublas
-[CBI] ->              : -lcudart
-[CBI] ->              : -lcufft
-[CBI] ->              : -lcufftw
-[CBI] ->              : -lcuinj64
-[CBI] ->              : -lcurand
-[CBI] ->              : -lcusolver
-[CBI] ->              : -lcusparse
-[CBI] ->              : -lgomp
-[CBI] ->              : -lnppc
-[CBI] ->              : -lnppial
-[CBI] ->              : -lnppicc
-[CBI] ->              : -lnppicom
-[CBI] ->              : -lnppidei
-[CBI] ->              : -lnppif
-[CBI] ->              : -lnppig
-[CBI] ->              : -lnppim
-[CBI] ->              : -lnppist
-[CBI] ->              : -lnppisu
-[CBI] ->              : -lnppitc
-[CBI] ->              : -lnpps
-[CBI] ->              : -lnvToolsExt
-[CBI] ->              : -lnvgraph
-[CBI] ->              : -lnvjpeg
-[CBI] ->              : -lnvrtc
-[CBI] ->              : -lnvrtc-builtins
-
-
-==================================================================================
-[CBI] -> Target Name  : Student_Cuda_cuda_101_x86_64
-[CBI] -> Location     : /tmp/ramdrive/mse1/Targets/Student_Cuda/bin/Student_Cuda_cuda_101_x86_64.run
-[CBI] -> Deploy 	  : ../RELEASE/bin
-[CBI] ->
-[CBI] -> Type	 	  : EXE
-[CBI] -> Arch	 	  : x86_64
-[CBI] -> OS	 	      : Linux
-[CBI] -> User	 	  : mse1
-[CBI] ->
-[CBI] -> Compilateur  : g++ && nvcc
-[CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 1 (s)
-==================================================================================
-
-cp: cannot create regular file '../RELEASE/bin/Student_Cuda_cuda_101_x86_64.run': Text file busy
+make[1]: Nothing to be done for 'compilelink'.
 
 [CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_cuda_101_x86_64.run
 

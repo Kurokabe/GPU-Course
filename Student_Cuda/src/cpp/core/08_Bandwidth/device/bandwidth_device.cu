@@ -15,7 +15,8 @@
  |*		Public			*|
  \*-------------------------------------*/
 
-__global__ void kernelBandwidth(int *tabDataGM);
+__global__ void kernelBandwidthEntrelacement(int *tabDataGM,int*tabDataGMCopy, int n );
+__global__ void kernelBandwidthOneOne(int *tabDataGM,int*tabDataGMCopy, int n );
 
 /*--------------------------------------*\
  |*		Private			*|
@@ -29,8 +30,26 @@ __global__ void kernelBandwidth(int *tabDataGM);
  |*		Public			*|
  \*-------------------------------------*/
 
-__global__ void kernelBandwidth(int *tabDataGM)
+__global__ void kernelBandwidthEntrelacement(int *tabDataGM,int*tabDataGMCopy, int n )
     {
+    const int NB_THREAD = Indice2D::nbThread();
+        const int TID = Indice2D::tid();
+
+        int s = TID;
+        while (s < n)
+    	{
+    	tabDataGMCopy[s]=tabDataGM[s];
+    	s += NB_THREAD;
+    	}
+    }
+
+__global__ void kernelBandwidthOneOne(int *tabDataGM,int*tabDataGMCopy, int n )
+    {
+        const int TID = Indice2D::tid();
+
+
+    	tabDataGMCopy[TID]=tabDataGM[TID];
+
 
     }
 
