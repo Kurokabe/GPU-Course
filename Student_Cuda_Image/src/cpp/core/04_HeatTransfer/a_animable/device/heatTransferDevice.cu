@@ -41,7 +41,7 @@ __global__ void createHeater(float *ptrDevImageHeater, int *positions, int nPosi
 	    {
 	    if (s == positions[i])
 		{
-		//ptrDevImageHeater[s] = 0;
+		//ptrDevImageHeater[s] = 1;
 		}
 	    }
 
@@ -74,7 +74,7 @@ __global__ void diffusion(float *ptrDevImageA, float *ptrDevImageB, int flag, ui
 	    float west = ptrInput[IndiceTools::toS(w, i, j - 1)];
 
 	    float newT = heatTransferMath.model1(ptrInput[s], north, east, south, west);
-	    ptrOutput[s] = east;
+	    ptrOutput[s] = newT;
 	    }
 
 	s += NB_THREAD;

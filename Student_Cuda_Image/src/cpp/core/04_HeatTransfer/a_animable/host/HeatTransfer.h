@@ -55,6 +55,7 @@ class HeatTransfer: public Animable_I<uchar4>
     private:
 
 	// Inputs
+	dim3 dg, db;
 	float dt;
 	int flag;
 	int nbIter;
