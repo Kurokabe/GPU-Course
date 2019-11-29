@@ -1,4 +1,4 @@
-14:21:02 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
+19:58:54 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -417,10 +417,43 @@ Cuda compilation tools, release 10.1, V10.1.105
 [CBI] ->              : opencv_video_gcc740
 [CBI] ->              : opencv_videoio_gcc740
 
+[CBI] -> Create folder : /tmp/ramdrive/mse1/Targets/Student_Cuda_Image/bin
+[CBI] -> Create folder : /tmp/ramdrive/mse1/Targets/Student_Cuda_Image/obj
+[CBI] -> Create folder : /tmp/ramdrive/mse1/Targets/Student_Cuda_Image/cubin
 
 [CBI] -> Compilation parallel (36 threads)
 
+[Student_Cuda_Image_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
+[Student_Cuda_Image_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/core/mainImage.cpp
+[Student_Cuda_Image_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/core/mainBruteForce.cpp
+[Student_Cuda_Image_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/core/mainAnimable.cpp
+[Student_Cuda_Image_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/core/mainBarivox.cpp
+[Student_Cuda_Image_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/core/04_HeatTransfer/b_provider/HeatTransferProvider.cpp
+[Student_Cuda_Image_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/core/01_Rippling/b_provider/RipplingProvider.cpp
+[Student_Cuda_Image_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Mandelbrot/b_provider/MandelbrotProvider.cpp
+[Student_Cuda_Image_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/core/03_RayTracing/b_provider/RaytracingProvider.cpp
 [Student_Cuda_Image_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/04_HeatTransfer/a_animable/device/heatTransferDevice.cu
+[Student_Cuda_Image_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/04_HeatTransfer/a_animable/host/HeatTransfer.cu
+[Student_Cuda_Image_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Rippling/a_animable/device/ripplingDevice.cu
+[Student_Cuda_Image_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Rippling/a_animable/host/Rippling.cu
+[Student_Cuda_Image_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot/a_animable/device/mandelbrotDevice.cu
+[Student_Cuda_Image_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot/a_animable/host/Mandelbrot.cu
+[Student_Cuda_Image_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/03_RayTracing/a_animable/device/raytracingDevice.cu
+[Student_Cuda_Image_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/03_RayTracing/a_animable/host/SphereCreator.cu
+[Student_Cuda_Image_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/03_RayTracing/a_animable/host/Raytracing.cu
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z10mandelbrotP6uchar4jjN3gpu11DomaineMathEi' for 'sm_52'
+ptxas info    : Function properties for _Z10mandelbrotP6uchar4jjN3gpu11DomaineMathEi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, 388 bytes cmem[0], 12 bytes cmem[2]
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z8ripplingP6uchar4jjf' for 'sm_52'
+ptxas info    : Function properties for _Z8ripplingP6uchar4jjf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, 340 bytes cmem[0], 4 bytes cmem[2]
+ptxas info    : 0 bytes gmem
 ptxas info    : 0 bytes gmem
 ptxas info    : Compiling entry function '_Z16toScreenImageHSBP6uchar4PfN3gpu9CalibreurIfEEjj' for 'sm_52'
 ptxas info    : Function properties for _Z16toScreenImageHSBP6uchar4PfN3gpu9CalibreurIfEEjj
@@ -433,7 +466,26 @@ ptxas info    : Used 10 registers, 344 bytes cmem[0]
 ptxas info    : Compiling entry function '_Z9diffusionPfS_ijj' for 'sm_52'
 ptxas info    : Function properties for _Z9diffusionPfS_ijj
     0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 21 registers, 348 bytes cmem[0], 4 bytes cmem[2]
+ptxas info    : Used 17 registers, 348 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z12createHeaterPfPiijj' for 'sm_52'
+ptxas info    : Function properties for _Z12createHeaterPfPiijj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, 348 bytes cmem[0]
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem, 47600 bytes cmem[3]
+ptxas info    : Compiling entry function '_Z17kernelRaytacingCMP6uchar4jjfi' for 'sm_52'
+ptxas info    : Function properties for _Z17kernelRaytacingCMP6uchar4jjfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 344 bytes cmem[0], 4 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z17kernelRaytacingSMP6uchar4jjfP6Spherei' for 'sm_52'
+ptxas info    : Function properties for _Z17kernelRaytacingSMP6uchar4jjfP6Spherei
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, 356 bytes cmem[0], 4 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z17kernelRaytacingGMP6uchar4jjfP6Spherei' for 'sm_52'
+ptxas info    : Function properties for _Z17kernelRaytacingGMP6uchar4jjfP6Spherei
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, 356 bytes cmem[0], 4 bytes cmem[2]
 
 [CBI] -> Linking to   : /tmp/ramdrive/mse1/Targets/Student_Cuda_Image/bin/Student_Cuda_Image_cuda_101_x86_64.run
 

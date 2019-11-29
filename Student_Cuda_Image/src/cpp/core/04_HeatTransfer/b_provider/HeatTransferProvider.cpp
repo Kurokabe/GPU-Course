@@ -21,8 +21,8 @@ Animable_I<uchar4>* HeatTransferProvider::createAnimable()
     float dt = 2 * PI / 10;
 
     // Dimension
-    int w = 16 * 60;
-    int h = 16 * 60;
+    int w = 800;
+    int h = 800;
 
     // Grid Cuda
     int mp = Device::getMPCount();

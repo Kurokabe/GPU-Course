@@ -1,0 +1,124 @@
+#include "Indice2D.h"
+#include "cudaTools.h"
+#include "Device.h"
+
+#include "IndiceTools_GPU.h"
+
+#include "HeatTransferMath.h"
+using namespace gpu;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+__global__ void createHeater(float *ptrDevImageHeater, int *positions, int nPositions, uint w, uint h);
+__global__ void diffusion(float *ptrDevImageA, float *ptrDevImageB, int flag, uint w, uint h);
+__global__ void ecrasement(float *ptrDevImageHeater, float *ptrImage, uint w, uint h);
+__global__ void toScreenImageHSB(uchar4 *ptrDevPixels, float *ptrDevImage, Calibreur<float> calibreur, uint w, uint h);
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+__global__ void createHeater(float *ptrDevImageHeater, int *positions, int nPositions, uint w, uint h)
+    {
+    const int TID = Indice2D::tid();
+    const int NB_THREAD = Indice2D::nbThread();
+    const int WH = w * h;
+
+    int s = TID;
+    while (s < WH)
+	{
+
+	for (int i = 0; i < nPositions, i++)
+	    {
+	    if (s == positions[i])
+		{
+		ptrDevImageHeater = 1f;
+		}
+	    }
+
+	s += NB_THREAD;
+	}
+    }
+
+__global__ void diffusion(float *ptrDevImageA, float *ptrDevImageB, int flag, uint w, uint h)
+    {
+    float *ptrInput = flag == 0 ? ptrDevImageA : ptrDevImageB;
+    float *ptrOutput = flag == 0 ? ptrDevImageB : ptrDevImageA;
+
+    HeatTransferMath heatTransferMath = HeatTransferMath(w, h);
+    const int TID = Indice2D::tid();
+    const int NB_THREAD = Indice2D::nbThread();
+    const int WH = w * h;
+
+    int i;
+    int j;
+    int s = TID;
+    while (s < WH)
+	{
+	IndiceTools::toIJ(s, w, &i, &j);
+
+	if (i != 0 && j != 0 && i != h - 1 && j != w - 1)
+	    {
+	    float north = ptrInput[IndiceTools::toS(w, i - 1, j)];
+	    float south = ptrInput[IndiceTools::toS(w, i + 1, j)];
+	    float east = ptrInput[IndiceTools::toS(w, i, j + 1)];
+	    float west = ptrInput[IndiceTools::toS(w, i, j - 1)];
+
+	    float newT = heatTransferMath.model1(ptrInput[s], north, east, south, west);
+	    ptrOutput[s] = east;
+	    }
+
+	s += NB_THREAD;
+	}
+
+    }
+
+__global__ void ecrasement(float *ptrDevImageHeater, float *ptrImage, uint w, uint h)
+    {
+    HeatTransferMath heatTransferMath = HeatTransferMath(w, h);
+    const int TID = Indice2D::tid();
+    const int NB_THREAD = Indice2D::nbThread();
+    const int WH = w * h;
+
+    int s = TID;
+    while (s < WH)
+	{
+	heatTransferMath.ecrasement(ptrDevImageHeater, ptrImage, s);
+
+	s += NB_THREAD;
+	}
+    }
+
+__global__ void toScreenImageHSB(uchar4 *ptrDevPixels, float *ptrDevImage, Calibreur<float> calibreur, uint w, uint h)
+    {
+
+    HeatTransferMath heatTransferMath = HeatTransferMath(w, h);
+    const int TID = Indice2D::tid();
+    const int NB_THREAD = Indice2D::nbThread();
+    const int WH = w * h;
+
+    int s = TID;
+    while (s < WH)
+	{
+	uchar4 color;
+	heatTransferMath.temperatureToRVB(ptrDevImage[s], calibreur, &color);
+
+	ptrDevPixels[s] = color;
+
+	s += NB_THREAD;
+	}
+    }
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/
+
