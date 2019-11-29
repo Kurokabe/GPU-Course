@@ -11,6 +11,7 @@
 
 #include "MandelbrotProvider.h"
 #include "RaytracingProvider.h"
+#include "HeatTransferProvider.h"
 using namespace gpu;
 
 using std::cout;

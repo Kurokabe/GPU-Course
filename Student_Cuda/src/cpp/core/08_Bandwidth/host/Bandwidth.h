@@ -17,6 +17,9 @@ enum TransferType
     HostToDevice,
     HostToDeviceDMA,
     DeviceToDevice,
+    DeviceToDeviceMultiGPU,
+    DeviceToDeviceMultiGPUEntrelacement,
+    DeviceToDeviceMultiGPUOneOne,
     DeviceToDeviceEntrelacement,
     DeviceToDeviceOneOne,
     };

@@ -1,0 +1,70 @@
+#include "Indice2D.h"
+#include "cudaTools.h"
+#include "Device.h"
+
+#include "IndiceTools_GPU.h"
+
+#include "HeatTransferMath.h"
+using namespace gpu;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+__global__ void diffusion(float *ptrDevImageA, float *ptrDevImageB, int flag);
+__global__ void ecrasement(uchar4 *ptrDevPixels, uint w, uint h, float t);
+__global__ void toScreenImageHSB(uchar4 *ptrDevPixels, uint w, uint h, float t);
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+__global__ void diffusion(float *ptrDevImageA, float *ptrDevImageB, int flag)
+    {
+//    HeatTransferMath heatTransferMath = HeatTransferMath(w, h);
+//    const int TID = Indice2D::tid();
+//    const int NB_THREAD = Indice2D::nbThread();
+//    const int WH = w * h;
+//
+//    int i;
+//    int j;
+//    int s = TID;
+//    while (s < WH)
+//	{
+//	IndiceTools::toIJ(s, w, &i, &j);
+//	heatTransferMath.colorIJ(&ptrDevPixels[s], i, j, t);
+//	s += NB_THREAD;
+//	}
+    float *ptrOutput = flag == 0 ? ptrDevImageA : ptrDevImageB;
+    float *ptrInput = flag == 0 ? ptrDevImageB : ptrDevImageA;
+
+    HeatTransferMath heatTransferMath = HeatTransferMath(w, h);
+    const int TID = Indice2D::tid();
+    const int NB_THREAD = Indice2D::nbThread();
+    const int WH = w * h;
+
+    int i;
+    int j;
+    int s = TID;
+    while (s < WH)
+	{
+	IndiceTools::toIJ(s, w, &i, &j);
+	heatTransferMath.colorIJ(&ptrDevPixels[s], i, j, t);
+	heatTransferMath.model1(ptrInput[s], n, e, s, w)
+	s += NB_THREAD;
+	}
+
+    }
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/
+

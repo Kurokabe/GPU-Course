@@ -1,0 +1,96 @@
+#include <iostream>
+#include <assert.h>
+
+#include "Device.h"
+#include <assert.h>
+#include "HeatTransfer.h"
+
+using std::cout;
+using std::endl;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+extern __global__ void diffusion(float *ptrDevImageA, float *ptrDevImageB, int flag, uint w, uint h);
+extern __global__ void ecrasement(float *ptrDevImageHeater, float *ptrImage, uint w, uint h);
+extern __global__ void toScreenImageHSB(uchar4 *ptrDevPixels, float* ptrDevImage, Calibreur calibreur, uint w, uint h);
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+/*-------------------------*\
+ |*	Constructeur	    *|
+ \*-------------------------*/
+
+HeatTransfer::HeatTransfer(const Grid &grid, uint w, uint h, float dt) :
+	Animable_I<uchar4>(grid, w, h, "HeatTransfer_Cuda_RGBA_uchar4")
+    {
+    assert(w == h); // specific HeatTransfer
+
+    Interval<float> start(0, 1); // chaleur min,nax
+    Interval<float> end(0.7, 1); // hue min,max
+    calibreur = new Calibreur<float>(start, stop);
+
+    // Animation
+    this->dt = dt;
+    this->t = 0; // protected dans Animable
+    }
+
+HeatTransfer::~HeatTransfer()
+    {
+    // rien
+    }
+
+/*-------------------------*\
+ |*	Methode		    *|
+ \*-------------------------*/
+
+/**
+ * Override
+ * Call periodicly by the API
+ *
+ * Note : domaineMath pas use car image pas zoomable
+ */
+void HeatTransfer::process(uchar4 *ptrDevPixels, uint w, uint h, const DomaineMath &domaineMath)
+    {
+    float *ptrDevImage = flag == 0 ? ptrDevImageA : ptrDevImageB;
+    diffusion<<<dg, db>>>(ptrDevImageA, ptrDevImageB, flag, w, h);
+    ecrasement<<<dg, db>>>(ptrDevImageHeater, ptrDevImage, w, h);
+    if (nbIter >= NB_ITER_AVEUGLE)
+	{
+	toScreenImageHSB<<<dg, db>>>(ptrDevPixels, ptrDevImage, calibreur, w, h);
+	nbIter = 0;
+	}
+
+    }
+
+/**
+ * Override
+ * Call periodicly by the API
+ */
+void HeatTransfer::animationStep()
+    {
+    t += dt;
+    nbIter++;
+    flag = (flag + 1) % 2;
+
+    }
+
+void HeatTransfer::setDT(int dt)
+    {
+    this->dt = dt;
+    }
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/
+

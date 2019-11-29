@@ -35,11 +35,11 @@ __host__ void printResults(std::vector<double> times, int n,float GO);
 bool isBandwidthOK(const Grid &grid)
     {
     //Device::p2pEnableALL();
-    int nbrIter = 5;
+    int nbrIter = 1;
 
     int nbrIntFor1MB = 1000000 / sizeof(int);
     int nbrIntFor1GB = nbrIntFor1MB * 1000;
-    for (int n = nbrIntFor1GB * 5; n <= nbrIntFor1GB*8; n += nbrIntFor1MB * 250)
+    for (int n = nbrIntFor1MB*10; n <= nbrIntFor1GB*8; n += nbrIntFor1MB * 10)
 	{
 	std::vector<double> times;
 	for (int i = 0; i < nbrIter; i++)
@@ -47,12 +47,12 @@ bool isBandwidthOK(const Grid &grid)
 
 	    int *tabData = (int*) malloc(sizeof(int) * n);
 
-	    Bandwidth bandwidth(grid, tabData, n, TransferType::DeviceToDeviceEntrelacement);
+	    Bandwidth bandwidth(grid, tabData, n, TransferType::HostToDeviceDMA);
 	    times.push_back(bandwidth.getElapsedTime());
 	    free(tabData);
 	    }
 
-	printResults(times, nbrIter, n*sizeof(int)/(float)1000000000);
+	//printResults(times, nbrIter, n*sizeof(int)/(float)1000000000);
 	}
     //bandwidth.run();
 

@@ -1,0 +1,84 @@
+#include <iostream>
+#include <assert.h>
+
+#include "Device.h"
+#include <assert.h>
+#include "HeatTransfer.h"
+
+using std::cout;
+using std::endl;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+extern __global__ void heatTransfer(uchar4* ptrDevPixels,uint w, uint h,float t);
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+/*-------------------------*\
+ |*	Constructeur	    *|
+ \*-------------------------*/
+
+HeatTransfer::HeatTransfer(const Grid& grid, uint w, uint h, float dt) :
+	Animable_I<uchar4>(grid, w, h, "HeatTransfer_Cuda_RGBA_uchar4")
+    {
+    assert(w == h); // specific HeatTransfer
+
+    Interval<float> start(0,1); // chaleur min,nax
+    Interval<float> end(0.7,1); // hue min,max
+    calibreur = new Calibreur(start,stop);
+
+    // Animation
+    this->dt = dt;
+    this->t = 0; // protected dans Animable
+    }
+
+HeatTransfer::~HeatTransfer()
+    {
+    // rien
+    }
+
+/*-------------------------*\
+ |*	Methode		    *|
+ \*-------------------------*/
+
+/**
+ * Override
+ * Call periodicly by the API
+ *
+ * Note : domaineMath pas use car image pas zoomable
+ */
+void HeatTransfer::process(uchar4* ptrDevPixels, uint w, uint h, const DomaineMath& domaineMath)
+    {
+    diffusion<<<dg, db>>>(ptrDevImageA, ptrDevImageB, (flag++) % 2, w, h);
+    }
+
+/**
+ * Override
+ * Call periodicly by the API
+ */
+void HeatTransfer::animationStep()
+    {
+    t += dt;
+    }
+
+void HeatTransfer::setDT(int dt)
+    {
+    this->dt = dt;
+    }
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/
+

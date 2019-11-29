@@ -1,0 +1,63 @@
+#pragma once
+
+#include <math.h>
+#include "MathTools.h"
+
+#include "ColorTools_GPU.h"
+using namespace gpu;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+class HeatTransferMath
+    {
+	/*--------------------------------------*\
+	|*		Constructeur		*|
+	 \*-------------------------------------*/
+
+    public:
+
+	__device__ HeatTransferMath(uint w, uint h)
+	    {
+	    this->dim2 = w / 2.f;
+	    }
+
+	// constructeur copie: pas besoin car pas attribut ptr
+
+	__device__
+	      virtual ~HeatTransferMath(void)
+	    {
+	    // rien
+	    }
+
+	/*--------------------------------------*\
+	|*		Methode			*|
+	 \*-------------------------------------*/
+
+    public:
+
+	  float model1(float T, float n, float e, float s, float w)
+	      {
+
+	  return T + k*(n+e+s+w - 4*T);
+	      }
+	/*--------------------------------------*\
+	|*		Attribut			*|
+	 \*-------------------------------------*/
+
+    private:
+
+	// Tools
+	float dim2;
+	float k = 0.1;
+
+    };
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

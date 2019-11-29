@@ -43,12 +43,22 @@ Bandwidth::Bandwidth(const Grid &grid, int *tabData, int n, TransferType type) :
 	    Device::malloc(&tabDataGM, sizeTabDataGM);
 	    break;
 	case TransferType::HostToDeviceDMA:
-	    Device::hostMalloc(&tabDataGM, sizeTabDataGM, HostMemoryType::PRIORITYDEVICE);
+	    Device::hostMalloc(&tabDataGM, sizeTabDataGM, HostMemoryType::MAPPED_MULTIGPU);
 	    break;
 	case TransferType::DeviceToDevice:
 	    Device::malloc(&tabDataGM, sizeTabDataGM);
 	    Device::malloc(&tabDataGMCopy, sizeTabDataGM);
 
+	    Device::memcpyHToD(tabDataGM, tabData, sizeTabDataGM);
+	    break;
+	case TransferType::DeviceToDeviceMultiGPUEntrelacement:
+	case TransferType::DeviceToDeviceMultiGPUOneOne:
+	case TransferType::DeviceToDeviceMultiGPU:
+	    Device::setDevice(0);
+	    Device::malloc(&tabDataGM, sizeTabDataGM);
+	    Device::setDevice(1);
+	    Device::malloc(&tabDataGMCopy, sizeTabDataGM);
+	    Device::setDevice(0);
 	    Device::memcpyHToD(tabDataGM, tabData, sizeTabDataGM);
 	    break;
 	case TransferType::DeviceToDeviceEntrelacement:
@@ -58,6 +68,10 @@ Bandwidth::Bandwidth(const Grid &grid, int *tabData, int n, TransferType type) :
 	    break;
 	}
 
+    int mp = Device::getMPCount();
+    int coreMP = Device::getCoreCountMP();
+    dim3 dg = dim3(mp*12, 1, 1);
+    dim3 db = dim3(coreMP, 1, 1);
     Chrono chrono;
     switch (type)
 	{
@@ -65,18 +79,21 @@ Bandwidth::Bandwidth(const Grid &grid, int *tabData, int n, TransferType type) :
 	case TransferType::HostToDeviceDMA:
 	    Device::memcpyHToD(tabDataGM, tabData, sizeTabDataGM);
 	    break;
+	case TransferType::DeviceToDeviceMultiGPU:
 	case TransferType::DeviceToDevice:
 	    Device::memcpyDToD(tabDataGMCopy, tabDataGM, sizeTabDataGM);
 	    Device::synchronize();
 	    break;
+	case TransferType::DeviceToDeviceMultiGPUEntrelacement:
 	case TransferType::DeviceToDeviceEntrelacement:
 	    kernelBandwidthEntrelacement<<<dg,db>>>(tabDataGM,tabDataGMCopy,n);
 	    Device::synchronize();
 	    break;
+	case TransferType::DeviceToDeviceMultiGPUOneOne:
 	case TransferType::DeviceToDeviceOneOne:
-	    dim3 dg = dim3(n/1024, 1, 1);
-	    dim3 db = dim3(1024, 1, 1);
-	    kernelBandwidthOneOne<<<dg,db>>>(tabDataGM,tabDataGMCopy,n);
+//	    dim3 dg = dim3(n/1024, 1, 1);
+//	    dim3 db = dim3(1024, 1, 1);
+//	    kernelBandwidthOneOne<<<dg,db>>>(tabDataGM,tabDataGMCopy,n);
 	    Device::synchronize();
 	    break;
 
@@ -85,7 +102,7 @@ Bandwidth::Bandwidth(const Grid &grid, int *tabData, int n, TransferType type) :
     chrono.stop();
 
     elapsedTime = chrono.getElapseTimeS();
-    cout << "Elapsed time : " << elapsedTime << " (s)" << endl;
+    cout << elapsedTime<< endl;
 
     }
 
@@ -101,17 +118,18 @@ Bandwidth::~Bandwidth(void)
 	    Device::hostFree(tabDataGM);
 	    break;
 	case TransferType::DeviceToDevice:
-	    Device::free(tabDataGM);
-	    Device::free(tabDataGMCopy);
-	    break;
 	case TransferType::DeviceToDeviceEntrelacement:
-	    Device::free(tabDataGM);
-	    Device::free(tabDataGMCopy);
-
-	    break;
 	case TransferType::DeviceToDeviceOneOne:
 	    Device::free(tabDataGM);
 	    Device::free(tabDataGMCopy);
+	    break;
+	case TransferType::DeviceToDeviceMultiGPUEntrelacement:
+	case TransferType::DeviceToDeviceMultiGPUOneOne:
+	case TransferType::DeviceToDeviceMultiGPU:
+	    Device::free(tabDataGM);
+	    Device::setDevice(1);
+	    Device::free(tabDataGMCopy);
+	    Device::setDevice(0);
 	    break;
 	}
     }

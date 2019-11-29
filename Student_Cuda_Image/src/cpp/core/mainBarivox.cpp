@@ -8,6 +8,7 @@
 #include "RipplingProvider.h"
 #include "MandelbrotProvider.h"
 #include "RaytracingProvider.h"
+#include "HeatTransferProvider.h"
 using namespace gpu;
 
 using std::cout;
@@ -35,6 +36,7 @@ int mainBarivox(Settings& settings);
 static void rippling();
 static void mandelbrot();
 static void raytracing();
+static void heatTransfer();
 
 // Tools
 template<typename T>
@@ -55,7 +57,8 @@ int mainBarivox(Settings& settings)
     // Please, un a la fois!
     //rippling();
     //mandelbrot(); // Conseil : use nFixe (by example nMin=nMax=80)
-    raytracing();
+//    raytracing();
+    heatTransfer();
 
     cout << "\n[Barivox] end" << endl;
 
@@ -88,6 +91,14 @@ void raytracing()
 
     RaytracingProvider provider;
     barivox<uchar4>(&provider, "Raytracing_RGBA_uchar4",NB_ITERATION);
+    }
+
+void heatTransfer()
+    {
+    const int NB_ITERATION = 1000;
+
+    HeatTransferProvider provider;
+    barivox<uchar4>(&provider, "HeatTransfer_RGBA_uchar4",NB_ITERATION);
     }
 
 /*-----------------------------------*\

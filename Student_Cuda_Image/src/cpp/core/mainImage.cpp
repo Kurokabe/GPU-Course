@@ -11,6 +11,7 @@
 
 #include "MandelbrotProvider.h"
 #include "RaytracingProvider.h"
+#include "HeatTransferProvider.h"
 using namespace gpu;
 
 using std::cout;
@@ -53,9 +54,10 @@ int mainImage(Settings& settings)
     ImageOption zoomable(true, true, true, true);
     ImageOption nozoomable(false, true, false, false);
 
-    Viewer<RipplingProvider> vague(nozoomable, 0, 0); // imageOption px py
+//    Viewer<RipplingProvider> vague(nozoomable, 0, 0); // imageOption px py
 //    Viewer<MandelbrotProvider> mandelbrot(zoomable, 0, 0); // imageOption px py
 //    Viewer<RaytracingProvider> raytracing(nozoomable, 0, 0); // imageOption px py
+    Viewer<HeatTransferProvider> vague(nozoomable, 0, 0); // imageOption px py
 
     // Common
     GLUTImageViewers::runALL(); // Bloquant, Tant qu'une fenetre est ouverte

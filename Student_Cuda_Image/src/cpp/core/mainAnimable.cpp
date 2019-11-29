@@ -7,6 +7,7 @@
 
 #include "MandelbrotProvider.h"
 #include "RaytracingProvider.h"
+#include "HeatTransferProvider.h"
 using namespace gpu;
 
 using std::cout;
@@ -33,6 +34,7 @@ int mainAnimable(Settings& settings);
 static void rippling();
 static void mandelbrot();
 static void raytracing();
+static void heatTransfer();
 
 // Tools
 template<typename T>
@@ -86,6 +88,15 @@ void raytracing()
     const int NB_ITERATION = 500;
 
     RaytracingProvider provider;
+    animer<uchar4>(&provider, NB_ITERATION);
+    }
+
+
+void heatTransfer()
+    {
+    const int NB_ITERATION = 500;
+
+    HeatTransferProvider provider;
     animer<uchar4>(&provider, NB_ITERATION);
     }
 
